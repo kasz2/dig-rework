@@ -1,0 +1,51 @@
+pocket_battleship = {
+	type = naval
+	sprite = HeavyCruiser
+	active = yes
+	capital = yes
+	can_be_pride = yes
+
+	hull = 1.1
+	
+	#Size Definitions
+	max_strength = 100
+	default_organisation = 30
+	default_morale = 0.30
+	officers = 0
+
+	#Building Costs
+	build_cost_ic = 6.50
+	build_cost_manpower = 1.75
+	build_time = 380
+	repair_cost_multiplier = 0.05
+
+	#Misc Abilities
+	maximum_speed = 22.00
+	transport_capability = 0.00
+	supply_consumption = 0.50
+	fuel_consumption = 0.70
+	range = 5900.00
+	distance = 0.29
+	radio_strength = 1
+
+	#Detection Abilities
+	surface_detection = 2.00
+	air_detection = 0.80
+	sub_detection = 0.10
+	visibility = 60.00
+
+	#Defensive Abilities
+	sea_defence = 5.00
+	air_defence = 4.00
+
+	#Offensive Abilities
+	convoy_attack = 15.00
+	sea_attack = 12.00
+	sub_attack = 0.50
+	air_attack = 3.00
+	shore_bombardment = 4.00
+
+	completion_size = 2.0
+	on_completion = cruiser_practical
+	priority = 7
+}

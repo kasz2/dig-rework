@@ -1,0 +1,756 @@
+submarine_coastal_systems = {
+
+	submarine_coastal = {
+		hull = 0.05
+		visibility = 0.50
+	}
+	
+	allow = {		
+		or = {
+			has_country_flag = submarines
+			1861 = { controlled_by = this }
+		}
+	} 
+
+	research_bonus_from = {
+		submarine_engineering = 0.3
+		submarine_practical = 0.6
+		sealane_interdiction_doctrine = 0.1
+	}
+		
+	on_completion = submarine_engineering
+	
+	difficulty = 3
+	start_year = 1938	
+	first_offset = 1940	
+	additional_offset = 2
+	max_level = 12
+	folder = submarine_folder
+	can_upgrade = no
+}
+
+
+submarine_mr_systems = {
+
+	submarine_mr = {
+		hull = 0.05
+		visibility = 0.50
+	}
+	
+	allow = {		
+		or = {
+			has_country_flag = submarines
+			1861 = { controlled_by = this }
+		}
+	}
+ 
+	research_bonus_from = {
+		submarine_engineering = 0.3
+		submarine_practical = 0.6
+		sealane_interdiction_doctrine = 0.1
+	}	
+	
+	on_completion = submarine_engineering
+	
+	difficulty = 5
+	start_year = 1938	
+	first_offset = 1940	
+	additional_offset = 2	
+	max_level = 12
+	folder = submarine_folder
+	can_upgrade = no
+}
+
+submarine_lr_systems = {
+
+	activate_unit = submarine_lr
+
+	submarine_lr = {
+		hull = 0.05
+		visibility = 0.50
+	}
+	
+	allow = {
+		or = {
+			has_country_flag = submarines
+			1861 = { controlled_by = this }
+		}
+	}
+ 
+	research_bonus_from = {
+		submarine_engineering = 0.3
+		submarine_practical = 0.6
+		sealane_interdiction_doctrine = 0.1
+	}
+		
+	on_completion = submarine_engineering
+	
+	difficulty = 5
+	start_year = 1937	
+	first_offset = 1940	
+	additional_offset = 2	
+	max_level = 12
+	folder = submarine_folder
+	can_upgrade = no
+}
+
+###################################
+# Electronics
+###############################
+
+submarine_hydrophone_equipment = {
+	
+	submarine_coastal = {
+		sea_attack = 0.2
+		sub_attack = 0.2
+		night = { 
+			attack = 0.01
+		}
+		surface_detection = 0.5
+		sub_detection = 0.25
+	}
+	
+	submarine_mr = {
+		sea_attack = 0.2
+		sub_attack = 0.2
+		night = { 
+			attack = 0.01
+		}
+		surface_detection = 0.5
+		sub_detection = 0.25
+	}
+
+	submarine_lr = {
+		sea_attack = 0.2
+		sub_attack = 0.2
+		night = { 
+			attack = 0.01
+		}
+		surface_detection = 0.5
+		sub_detection = 0.25
+	}
+
+	allow = {
+		or = {
+			submarine_coastal_systems = 2
+			submarine_mr_systems = 2
+			submarine_lr_systems = 2
+		}
+		NOT = { submarine_hydrophone_equipment = 3 }
+	}
+ 
+	research_bonus_from = {
+		electornicegineering_theory = 0.5
+		submarine_practical = 0.9
+	}
+	
+	on_completion = electornicegineering_theory  
+
+	difficulty = 3
+	start_year = 1938
+	first_offset = 1940	#2nd model is from 1936
+	additional_offset = 4	#one new every 4 year
+	max_level = 12
+	folder = submarine_folder
+	can_upgrade = yes
+}
+
+submarine_sonar_equipment = {
+	
+	submarine_coastal = {
+		sea_attack = 0.2
+		sub_attack = 0.2		
+		night = { 
+			attack = 0.01
+		}
+		surface_detection = 0.5
+		sub_detection = 0.25
+	}
+	
+	submarine_mr = {
+		sea_attack = 0.2
+		sub_attack = 0.2
+		night = { 
+			attack = 0.01
+		}
+		surface_detection = 0.5
+		sub_detection = 0.25
+	}
+
+	submarine_lr = {
+		sea_attack = 0.2
+		sub_attack = 0.2
+		night = { 
+			attack = 0.01
+		}
+		surface_detection = 0.5
+		sub_detection = 0.25
+	}
+
+
+	allow = {
+		NOT = { submarine_sonar_equipment = 2}	
+		radar = 2
+	}
+ 
+
+	research_bonus_from = {
+		electornicegineering_theory = 0.5
+		submarine_practical = 0.9
+	}
+	
+	on_completion = electornicegineering_theory  
+
+	difficulty = 3
+	start_year = 1942
+	first_offset = 1944	#2nd model is from 1936
+	additional_offset = 1	#one new every 2 year
+	max_level = 12
+	folder = submarine_folder
+	can_upgrade = yes
+}
+
+submarine_radar_equipment = {
+	submarine_coastal = {
+		surface_detection = 1.00
+		air_detection = 0.30
+		night = { 
+			attack = 0.05
+			defence = 0.05
+		}
+	}
+	submarine_mr = {
+		surface_detection = 1.00
+		air_detection = 0.30
+		night = { 
+			attack = 0.05
+			defence = 0.05
+		}
+	}
+	
+	submarine_lr = {
+		surface_detection = 1.00
+		air_detection = 0.30
+		night = { 
+			attack = 0.05
+			defence = 0.05
+		}
+	}
+		
+	allow = {
+		NOT = { submarine_radar_equipment = 4}	
+		radar = 2
+	}
+
+	research_bonus_from = {
+		cruiser_practical = 0.25
+		destroyer_practical = 0.25
+		electornicegineering_theory  = 0.50
+	}
+
+	on_completion = electornicegineering_theory
+
+	difficulty = 2
+	start_year = 1941
+	first_offset = 1941
+	additional_offset = 2
+	max_level = 12
+	folder = submarine_folder
+	can_upgrade = yes
+}
+
+submarine_radar_detector_equipment = {
+	
+	submarine_coastal = {
+		air_detection = 1
+		night = { 
+			defence = 0.01
+		}
+	}
+
+	submarine_mr = {
+		air_detection = 1
+		night = { 
+			defence = 0.01
+		}
+	}
+
+	submarine_lr = {
+		air_detection = 1
+		night = { 
+			defence = 0.01
+		}
+	}
+	
+	allow = {
+		NOT = { submarine_radar_detector_equipment = 7}
+		radar = 2
+	} 
+
+	research_bonus_from = {
+		electornicegineering_theory  = 0.3
+		submarine_practical = 0.7
+	}
+	
+	on_completion = electornicegineering_theory  
+
+	difficulty = 2
+	start_year = 1942
+	first_offset = 1943	
+	additional_offset = 1	
+	max_level = 12
+	folder = submarine_folder
+	can_upgrade = yes
+}
+
+
+
+######################
+# Anti-Aircraft
+####################
+
+submarine_coastal_antiaircraft = {
+	submarine_coastal = {
+		air_attack = 0.33
+		air_defence = 0.33
+	}
+	
+	allow = {
+		submarine_coastal_systems = 1
+	}
+
+	research_bonus_from = {
+		submarine_engineering = 0.3
+		submarine_practical = 0.6
+		sealane_interdiction_doctrine = 0.1
+	}
+	
+	on_completion = submarine_engineering
+
+	difficulty = 1
+	start_year = 1935
+	first_offset = 1936	#2nd model is from 1936
+	additional_offset = 4	#one new every 3 years
+	max_level = 12
+	folder = submarine_folder
+	can_upgrade = yes
+}
+
+submarine_mr_antiaircraft = {
+	submarine_mr = {
+		air_attack = 0.33
+		air_defence = 0.33
+	}
+
+	allow = {
+		submarine_mr_systems = 1	
+	}
+ 
+	research_bonus_from = {
+		submarine_engineering = 0.3
+		submarine_practical = 0.6
+		sealane_interdiction_doctrine = 0.1
+	}
+	
+	on_completion = submarine_engineering
+
+	difficulty = 1
+	start_year = 1935
+	first_offset = 1936	#2nd model is from 1936
+	additional_offset = 4	#one new every 3 years
+	max_level = 12
+	folder = submarine_folder
+	can_upgrade = yes
+}
+
+submarine_lr_antiaircraft = {
+	submarine_lr = {
+		air_attack = 0.33
+		air_defence = 0.33
+	}
+
+	allow = {
+		submarine_lr_systems = 1
+	} 
+
+	research_bonus_from = {
+		submarine_engineering = 0.3
+		submarine_practical = 0.6
+		sealane_interdiction_doctrine = 0.1
+	}
+	
+	on_completion = submarine_engineering
+
+	difficulty = 1
+	start_year = 1935
+	first_offset = 1936	#2nd model is from 1936
+	additional_offset = 4	#one new every 3 years
+	max_level = 12
+	folder = submarine_folder
+	can_upgrade = yes
+}
+
+
+#################################################################
+# Projects
+#################################################################
+
+schnorkel = {
+	submarine_coastal = {
+		sea_attack = 1
+		convoy_attack = 4
+		positioning = 0.05
+	}
+
+	submarine_mr = {
+		sea_attack = 1
+		convoy_attack = 4
+		positioning = 0.05
+	}
+
+	submarine_lr = {
+		sea_attack = 1
+		convoy_attack = 4
+		positioning = 0.05
+	}
+
+	convoy_raid = {
+		efficiency = 0.05
+	}		
+
+	allow = {
+		has_country_flag = amsterdam_conquered
+		1910 = { controlled_by = THIS }
+	}
+ 
+	research_bonus_from = {
+		submarine_practical = 0.7
+	}
+	
+	on_completion = submarine_engineering
+
+	difficulty = 7
+	start_year = 1943
+	folder = submarine_folder
+	can_upgrade = yes
+}
+
+submarine_antisonar_coating = {
+
+	submarine_coastal = {
+		positioning = 0.01
+	}
+
+	submarine_mr = {
+		positioning = 0.02
+	}
+
+	submarine_lr = {
+		positioning = 0.02
+	}
+
+	
+	allow = {
+		or = {
+			submarine_coastal_systems = 3
+			submarine_mr_systems = 3
+			submarine_lr_systems = 3
+		}
+		radar = 2
+	}
+ 
+	research_bonus_from = {
+		submarine_practical = 0.7
+	}
+	
+	on_completion = submarine_engineering
+
+	difficulty = 10
+	start_year = 1944
+	folder = submarine_folder
+}
+
+submarine_antiradar_coating = {
+
+	submarine_coastal = {
+		positioning = 0.01
+	}
+
+	submarine_mr = {
+		positioning = 0.02
+	}
+
+	submarine_lr = {
+		positioning = 0.02
+	}
+
+	allow = {
+		or = {
+			submarine_coastal_systems = 3
+			submarine_mr_systems = 3
+			submarine_lr_systems = 3
+		}
+		schnorkel = 1
+		radar = 2
+	}
+ 
+	research_bonus_from = {
+		submarine_practical = 0.7
+	}
+	
+	on_completion = submarine_engineering
+
+	difficulty = 10
+	start_year = 1944
+	folder = submarine_folder
+}
+
+submarine_food_storage = {
+
+	submarine_coastal = {
+		range = 200		
+	}
+
+	submarine_mr = {
+		range = 600		
+	}
+
+	submarine_lr = {
+		range = 2000
+	}
+
+	allow = {
+		or = {
+			submarine_coastal_systems = 3
+			submarine_mr_systems = 3
+			submarine_lr_systems = 3
+		}
+		has_country_flag = germany_is_at_war
+	}
+	
+ 	research_bonus_from = {
+		submarine_engineering = 0.3
+		submarine_practical = 0.6
+		sealane_interdiction_doctrine = 0.1
+	}
+	
+	on_completion = submarine_engineering
+
+	difficulty = 5
+	start_year = 1943
+	folder = submarine_folder
+}
+
+submarine_advanced_engines = {
+	
+	submarine_mr = {
+		positioning = 0.05
+		sea_defence = 1.0
+	}
+
+	submarine_lr = {
+		positioning = 0.05
+		sea_defence = 1.0
+	}
+
+	convoy_raid = {
+		efficiency = 0.15
+	}
+
+	allow = {
+		has_country_flag = germany_is_at_war
+		NOT = { submarine_advanced_engines = 2 }
+	}
+ 
+	research_bonus_from = {
+		submarine_practical = 0.7
+	}
+	
+	on_completion = submarine_engineering
+
+	difficulty = 10
+	start_year = 1943
+	first_offset = 1944
+	additional_offset = 2	
+	max_level = 12
+	folder = submarine_folder
+	can_upgrade = no
+}
+
+refueling_submarine = {
+	
+	submarine_coastal = {
+		range = 700	
+	}
+
+	submarine_mr = {
+		range = 1500	
+	}
+
+	submarine_lr = {
+		range = 2500	
+	}
+
+	convoy_raid = {
+		efficiency = 0.05
+		reduction_modifier = -0.50
+	}
+	
+
+	allow = {
+		or = {
+			submarine_coastal_systems = 3
+			submarine_mr_systems = 3
+			submarine_lr_systems = 3
+		}
+		has_country_flag = germany_is_at_war
+	}
+ 
+	research_bonus_from = {
+		submarine_practical = 0.7
+	}
+	
+	on_completion = submarine_engineering
+
+	difficulty = 5
+	start_year = 1940
+	folder = submarine_folder
+	can_upgrade = yes
+	
+}
+
+###################
+
+submarine_sonar_decoys = {
+	
+	submarine_coastal = {
+		sea_defence = 1	
+		visibility = -0.50
+	}
+
+	submarine_mr = {
+		sea_defence = 1	
+		visibility = -0.50
+	}
+
+	submarine_lr = {
+		sea_defence = 1	
+		visibility = -0.50
+	}
+
+	allow = {
+		or = {
+			submarine_coastal_systems = 1
+			submarine_mr_systems = 1
+			submarine_lr_systems = 1
+		}
+		radar = 2		
+	}
+ 
+	research_bonus_from = {
+		submarine_practical = 0.7
+	}
+		
+	on_completion = submarine_engineering
+
+	difficulty = 3
+	start_year = 1939
+	first_offset = 1941	
+	additional_offset = 4	
+	max_level = 12
+	folder = submarine_folder
+	can_upgrade = yes
+	
+}
+
+submarine_radar_decoys = {
+	
+	submarine_coastal = {
+		sea_defence = 1	
+		visibility = -0.50
+	}
+
+	submarine_mr = {
+		sea_defence = 1	
+		visibility = -0.50
+	}
+
+	submarine_lr = {
+		sea_defence = 1	
+		visibility = -0.50
+	}
+		
+	allow = {
+		or = {
+			submarine_coastal_systems = 1
+			submarine_mr_systems = 1
+			submarine_lr_systems = 1
+		}
+		radar = 2	
+	}
+ 
+	research_bonus_from = {
+		submarine_practical = 0.7
+	}
+		
+	on_completion = submarine_engineering
+
+	difficulty = 3
+	start_year = 1939
+	first_offset = 1941	
+	additional_offset = 4	
+	max_level = 12
+	folder = submarine_folder
+	can_upgrade = yes
+	
+}
+
+##DW INSERTED
+
+acoustic_torpedoes = {
+
+	submarine_coastal = {
+		sea_attack = 1
+		sub_attack = 1
+		convoy_attack = 1
+	}
+
+	submarine_mr = {
+		sea_attack = 1
+		sub_attack = 1
+		convoy_attack = 1
+	}
+
+	submarine_lr = {
+		sea_attack = 1
+		sub_attack = 1
+		convoy_attack = 1
+	}
+
+	submarine = {
+		sea_attack = 1
+		convoy_attack = 2
+		sub_attack = 1
+	}
+
+	allow = {		
+		electric_powered_torpedo = 1
+	}
+	
+	research_bonus_from = {
+		submarine_engineering = 0.3
+		submarine_practical = 0.3
+		sealane_interdiction_doctrine = 0.1
+	}
+	
+	on_completion = submarine_engineering
+
+	difficulty = 10
+	
+	start_year = 1943
+	first_offset = 1944	
+	additional_offset = 5
+	max_level = 12
+	folder = submarine_folder
+	can_upgrade = yes
+}

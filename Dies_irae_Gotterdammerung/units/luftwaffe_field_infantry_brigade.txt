@@ -1,0 +1,43 @@
+luftwaffe_field_infantry_brigade = {
+	type = land
+	sprite = Infantry
+	unit_group = infantry_unit_type
+	active = no
+
+	#Size Definitions
+	max_strength = 20
+	default_organisation = 20
+	default_morale = 0.20
+	officers = 75
+
+	#Building Costs
+	build_cost_ic = 1.33
+	build_cost_manpower = 1.00
+	build_time = 65
+	repair_cost_multiplier = 0.05
+
+	#Misc Abilities
+	maximum_speed = 4.00
+	transport_weight = 5.00
+	supply_consumption = 0.50
+	fuel_consumption = 0.00
+	radio_strength = 1
+
+	#Defensive Abilities
+	defensiveness = 2.50
+	toughness = 2.50
+	softness = 1.00
+	air_defence = 4.00
+
+	#Offensive Abilities
+	suppression = 1.00
+	soft_attack = 1.00
+	hard_attack = 0.33
+	air_attack = 3.00
+
+	combat_width = 1
+	
+	completion_size = 0.2
+	on_completion = militia_practical
+	priority = 6
+}

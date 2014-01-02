@@ -1,0 +1,142 @@
+###############################################################
+#################### DIES IRAE FATE OF SLOVAKIA ###############
+###############################################################
+## Based on a suggestion by Metz
+
+#### FATE OF SLOVAKIA - GER CHOICE
+
+	country_event = {
+
+		id = 1215
+		
+		trigger = {
+			tag = GER
+			exists = SLO
+			exists = HUN
+			war = no
+			not = { year = 1940 }
+			not = { exists = CZE }
+			not = { has_country_flag = fate_of_slovakia }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		title = "EVTNAME1215"
+		desc = "EVTDESC1215"
+		picture = "DIG_fate_of_slovakia"
+		
+		option = {
+			name = "EVTOPTA1215" 			# Leave as it is
+			dissent = -2
+			set_country_flag = fate_of_slovakia
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "EVTOPTB1215" 			# Annex SLO
+			set_country_flag = fate_of_slovakia
+			inherit = SLO
+			dissent = 5
+			neutrality = -5
+			threat = { who = all value = 10 }
+			relation = { who = FRA value = -25 }
+			relation = { who = ENG value = -25 }
+			change_variable = {
+				which = "world_at_war"
+				value = +2
+			}
+			ai_chance = { factor = 0 }
+		}
+		
+		option = {
+			name = "EVTOPTC1215"			 # Give to Hungary (join axis)
+			set_country_flag = fate_of_slovakia		
+			relation = { who = HUN value = 25 }		
+			HUN = { country_event = 1216 }
+			change_variable = {
+				which = "world_at_war"
+				value = +1
+			}
+			ai_chance = { factor = 0 }
+		}
+		
+	}
+	
+#### FATE OF SLOVAKIA - HUN RESPONSE
+
+	country_event = {
+
+		id = 1216
+		
+		is_triggered_only = yes
+		
+		title = "EVTNAME1215"
+		desc = "EVTDESC1215"
+		picture = "DIG_fate_of_slovakia"
+
+		option = {
+			name = "EVTOPTD1215" 			# Accept
+			dissent = 5
+			inherit = SLO
+			join_faction = axis
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "EVTOPTE1215"			# Refuse
+			dissent = -5
+			ai_chance = { factor = 0 }
+		}
+		
+	}
+
+#### FATE OF SLOVAKIA - GER CHOICE - HUNGARY NOT EXISTS
+
+	country_event = {
+
+		id = 1217
+		
+		trigger = {
+			tag = GER
+			exists = SLO
+			war = no
+			not = { year = 1940 }
+			not = { exists = CZE }
+			not = { exists = HUN }
+			not = { has_country_flag = fate_of_slovakia }
+		}
+		
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		title = "EVTNAME1215"
+		desc = "EVTDESC1215"
+		picture = "DIG_fate_of_slovakia"
+		
+		option = {
+			name = "EVTOPTA1215" 			# Leave as it is
+			dissent = -2
+			set_country_flag = fate_of_slovakia
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "EVTOPTB1215" 			# Annex SLO
+			set_country_flag = fate_of_slovakia
+			inherit = SLO
+			dissent = 5
+			neutrality = -5
+			threat = { who = all value = 10 }
+			relation = { who = FRA value = -25 }
+			relation = { who = ENG value = -25 }
+			change_variable = {
+				which = "world_at_war"
+				value = +2
+			}
+			ai_chance = { factor = 0 }
+		}
+		
+	}

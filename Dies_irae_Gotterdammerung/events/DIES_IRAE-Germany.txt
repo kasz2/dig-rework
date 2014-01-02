@@ -1,0 +1,1068 @@
+###############################################################
+### 		Dies Irae Gotterdammerung German Events			###
+### 				By DiDay from I.C.E.					###
+###############################################################
+
+# PLAYER DOESN'T PLAY GERMANY
+country_event = {
+
+	id = 10500
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME10500"
+	desc = "EVTDESC10500"
+	picture = ""
+
+	option = {
+		name = "Please reload the game as Germany"
+	}
+}
+
+
+### ALLOW FOREIGN WEHRMACHT UNITS
+
+	country_event = {
+
+		id = 10200
+			
+		trigger = {
+			tag = GER
+			not = { has_country_flag = foreign_wehrmacht_units_decision }
+			not = { has_country_flag = foreign_wehrmacht_units_decision_ok }
+			date = 1940.4.1
+			or = {
+				2613 = { controlled_by = this } # Paris
+				812  = { controlled_by = this } # Oslo
+				1482 = { controlled_by = this } # Copenhaggen
+				2311 = { controlled_by = this } # Brussels
+				1910 = { controlled_by = this } # Amsterdam
+				1928 = { controlled_by = this } # Warsaw
+			}
+		}
+		
+		mean_time_to_happen = {
+			months = 1
+		}
+		
+		title = "EVTNAME10200"
+		desc = "EVTDESC10200"
+		picture = "DIG_foreign_wehrmacht"
+
+		
+		option = {
+			name = "Allow foreign recruitment"
+			set_country_flag = foreign_wehrmacht_units_decision_ok
+			load_oob = EVTOOB10200.txt
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "No need to"
+			set_country_flag = foreign_wehrmacht_units_decision
+			ai_chance = { factor = 0 }
+		}
+		
+	}
+	
+###################################
+# CIVIL EVENTS
+###################################
+
+#### OLYMPIC GAMES - 1936
+
+	country_event = {
+
+		id = 10201
+			
+		trigger = {
+			tag = GER
+			date = 1936.8.16
+			not = { year = 1937 }
+			war = no
+			not = { has_country_flag = olympics_1936 }
+		}
+		
+		mean_time_to_happen =  {
+			days = 1
+		}
+		
+		title = "EVTNAME10201"
+		desc = "EVTDESC10201"
+		picture = "DIG_olympics_1936"
+
+		
+		option = {
+			name = "Let's the games begin!"
+			set_country_flag = olympics_1936
+			supplies = -2500
+			dissent = -1
+			money = -500
+			relation = { who = USA value = 10 }
+			relation = { who = ENG value = 10 }
+			relation = { who = FRA value = 10 }
+			relation = { who = ITA value = 10 }
+			relation = { who = JAP value = 10 }
+			relation = { who = FIN value = 10 }
+			relation = { who = SWE value = 10 }
+			relation = { who = HOL value = 10 }
+			relation = { who = HUN value = 10 }
+			relation = { who = SPR value = -10 }
+			relation = { who = PRU value = -5 }
+			relation = { who = COL value = -5 }
+			ai_chance = { factor = 100 }
+		}
+		
+	}
+	
+###################################
+# NUREMBERG RALLIES
+###################################
+	
+#### NUREMBERG RALLY - 1936
+## Fire only if Rhineland is militarized without a war
+
+	country_event = {
+
+		id = 10202
+			
+		trigger = {
+			tag = GER
+			date = 1936.9.14
+			not = { year = 1937 }
+			war = no
+			ideology = national_socialist
+			has_country_flag = reoccupation_of_the_rhineland
+			not = { has_country_flag = rhineland_war_ok }
+			not = { has_country_flag = nuremberg_rally_1936 }
+		}
+		
+		mean_time_to_happen =  {
+			days = 1
+		}
+		
+		title = "EVTNAME10202"
+		desc = "EVTDESC10202"
+		picture = "DIG_nuremberg_rally_1936"
+
+		
+		option = {
+			name = "Reichsparteitag der Ehre"
+			set_country_flag = nuremberg_rally_1936
+			supplies = -500
+			money = -50
+			add_country_modifier = {
+				name = "propaganda"
+				duration = 60
+			}
+			national_socialist = { organisation = 10 popularity = 10 }
+			relation = { who = SOV value = -10 }
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "No"
+			set_country_flag = nuremberg_rally_1936
+			ai_chance = { factor = 0 }
+		}
+		
+	}
+	
+#### NUREMBERG RALLY - 1937
+## Fire only if Japan signed the anti comintern pact in 36 and CHI not in the axis
+	country_event = {
+
+		id = 10203
+			
+		trigger = {
+			tag = GER
+			date = 1937.9.14
+			not = { year = 1938 }
+			war = no
+			not = { CHI = { faction = axis } }
+			ideology = national_socialist
+			has_country_flag = anti_comintern
+			not = { has_country_flag = nuremberg_rally_1937 }
+		}
+		
+		mean_time_to_happen =  {
+			days = 1
+		}
+		
+		title = "EVTNAME10203"
+		desc = "EVTDESC10203"
+		picture = "DIG_nuremberg_rally_1937"
+
+		
+		option = {
+			name = "Reichsparteitag der Arbeit"
+			set_country_flag = nuremberg_rally_1937
+			supplies = -2500
+			money = -250
+			relation = { who = JAP value = 20 }
+			add_country_modifier = {
+				name = "propaganda"
+				duration = 90
+			}
+			national_socialist = { organisation = 10 popularity = 10 }
+			random_owned = { limit = { not = { industry = 8 } } industry = 1 }
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "No"
+			set_country_flag = nuremberg_rally_1937
+			ai_chance = { factor = 0 }
+		}
+		
+	}
+	
+
+## Fire only if China signed the anti comintern pact in 36 and JAP not in the axis	
+	country_event = {
+
+		id = 10230
+			
+		trigger = {
+			tag = GER
+			date = 1937.9.14
+			not = { year = 1938 }
+			war = no
+			not = { JAP = { faction = axis } }
+			ideology = national_socialist
+			has_country_flag = anti_comintern_chi
+			not = { has_country_flag = nuremberg_rally_1937 }
+		}
+		
+		mean_time_to_happen =  {
+			days = 1
+		}
+		
+		title = "EVTNAME10230"
+		desc = "EVTDESC10230"
+		picture = "DIG_nuremberg_rally_1937"
+
+		
+		option = {
+			name = "Reichsparteitag der Arbeit"
+			set_country_flag = nuremberg_rally_1937
+			supplies = -2500
+			money = -250
+			relation = { who = CHI value = 20 }
+			add_country_modifier = {
+				name = "propaganda"
+				duration = 90
+			}
+			national_socialist = { organisation = 10 popularity = 10 }
+			random_owned = { limit = { not = { industry = 8 } } industry = 1 }
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "No"
+			set_country_flag = nuremberg_rally_1937
+			ai_chance = { factor = 0 }
+		}
+		
+	}
+	
+#### NUREMBERG RALLY - 1938
+## Fire if Anschluss has occured and if Sudetenland is under German control
+
+	country_event = {
+
+		id = 10204
+			
+		trigger = {
+			tag = GER
+			date = 1938.9.14
+			not = { year = 1939 }
+			war = no
+			3026 = { controlled_by = GER } # Wien
+			sudetenland = { controlled_by = GER }
+			ideology = national_socialist
+			not = { has_country_flag = nuremberg_rally_1938 }
+		}
+		
+		mean_time_to_happen =  {
+			days = 1
+		}
+		
+		title = "EVTNAME10204"
+		desc = "EVTDESC10204"
+		picture = "DIG_nuremberg_rally_1938"
+
+		
+		option = {
+			name = "Reichsparteitag Groﬂdeutschland"
+			set_country_flag = nuremberg_rally_1938
+			supplies = -1000
+			money = -100
+			add_country_modifier = {
+				name = "propaganda"
+				duration = 90
+			}
+			national_socialist = { organisation = 10 popularity = 10 }
+			random_owned = { limit = { not = { industry = 8 } } industry = 1 }
+			random_owned = { limit = { not = { industry = 8 } } industry = 1 }
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "No"
+			set_country_flag = nuremberg_rally_1938
+			ai_chance = { factor = 0 }
+		}
+		
+	}
+	
+#### NUREMBERG RALLY - 1939
+## Fire only if Germany is at war
+
+	country_event = {
+
+		id = 10205
+			
+		trigger = {
+			tag = GER
+			date = 1939.9.14
+			not = { year = 1940 }
+			war = yes
+			ideology = national_socialist
+			not = { has_country_flag = nuremberg_rally_1939 }
+		}
+		
+		mean_time_to_happen =  {
+			days = 1
+		}
+		
+		title = "EVTNAME10205"
+		desc = "EVTDESC10205"
+		picture = "DIG_nuremberg_rally_1939"
+
+		
+		option = {
+			name = "Too bad for peace"
+			set_country_flag = nuremberg_rally_1939
+			ai_chance = { factor = 100 }
+		}
+		
+	}
+	
+###################################
+# ELITE UNITS OF THE REICH
+###################################
+
+### GROﬂDEUTSCHLAND
+## INFANTRY REGIMENT GROﬂDEUTSCHLAND
+
+	country_event = {
+
+		id = 10210
+			
+		trigger = {
+			tag = GER
+			date = 1939.6.14
+			not = { year = 1940 }
+			controls = 1861 # Berlin
+			not = { has_country_flag = infantry_grossdeutschland }
+			not = { has_country_flag = grossdeutschland_stop }
+		}
+		
+		mean_time_to_happen =  {
+			days = 1
+		}
+		
+		title = "EVTNAME10210"
+		desc = "EVTDESC10210"
+		picture = "DIG_infantry_grossdeutschland"
+
+		
+		option = {
+			name = "EVTOPTA10210" # Good
+			set_country_flag = infantry_grossdeutschland
+			manpower = -5
+			add_country_modifier = {
+				name = "patriotic_fervour"
+				duration = 30
+			}
+			load_oob = zDIG_GD_39.txt
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "EVTOPTB10210" # No need to
+			set_country_flag = infantry_grossdeutschland
+			set_country_flag = grossdeutschland_stop
+		}
+		
+	}
+
+### GROﬂDEUTSCHLAND
+## INFANTERIE-DIVISION GROﬂDEUTSCHLAND (MOT)
+
+	country_event = {
+
+		id = 10211
+			
+		trigger = {
+			tag = GER
+			or = {
+				date = 1942.4.1
+				2857 = { controller = { faction = axis } } #Stalingrad
+			}
+			controls = 1861 # Berlin
+			not = { has_country_flag = mot_grossdeutschland }
+			not = { has_country_flag = grossdeutschland_stop }
+			#grossdeutschland_motorized_brigade = 1 # the regiment is still alive
+		}
+		
+		mean_time_to_happen =  {
+			days = 1
+		}
+		
+		title = "EVTNAME10211"
+		desc = "EVTDESC10211"
+		picture = "DIG_mot_grossdeutschland"
+
+		
+		option = {
+			name = "EVTOPTA10210"
+			set_country_flag = mot_grossdeutschland
+			manpower = -5
+			add_country_modifier = {
+				name = "patriotic_fervour"
+				duration = 30
+			}
+			load_oob = zDIG_GD_42.txt
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "EVTOPTB10211"
+			set_country_flag = mot_grossdeutschland
+			set_country_flag = grossdeutschland_stop
+		}
+		
+	}
+
+### GROﬂDEUTSCHLAND
+## PANZERGRENADIER DIVISION GROﬂDEUTSCHLAND
+
+	country_event = {
+
+		id = 10212
+			
+		trigger = {
+			tag = GER
+			controls = 1861 # Berlin
+			not = { has_country_flag = mech_grossdeutschland }
+			not = { has_country_flag = grossdeutschland_stop }
+			grossdeutchland_mech = 1
+		}
+		
+		mean_time_to_happen =  {
+			months = 1
+		}
+		
+		title = "EVTNAME10212"
+		desc = "EVTDESC10212"
+		picture = "DIG_mech_grossdeutschland"
+
+		
+		option = {
+			name = "EVTOPTA10210"
+			set_country_flag = mech_grossdeutschland
+			manpower = -5
+			add_country_modifier = {
+				name = "patriotic_fervour"
+				duration = 30
+			}
+			load_oob = zDIG_GD_43.txt
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "EVTOPTB10211"
+			set_country_flag = mech_grossdeutschland
+			set_country_flag = grossdeutschland_stop
+		}
+		
+	}
+
+### BRANDENBURG REGIMENT
+
+	country_event = {
+
+		id = 10213
+			
+		trigger = {
+			tag = GER
+			date = 1939.12.15
+			controls = 1861 # Berlin
+			not = { has_country_flag = brandenburg_regiment }
+		}
+		
+		mean_time_to_happen =  {
+			days = 1
+		}
+		
+		title = "EVTNAME10213"
+		desc = "EVTDESC10213"
+		picture = "DIG_brandenburg_regiment"
+
+		
+		option = {
+			name = "EVTOPTA10213" # Good
+			set_country_flag = brandenburg_regiment
+			manpower = -2
+			load_oob = zDIG_Brandenburg.txt
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "EVTOPTB10213" # No need to
+			set_country_flag = brandenburg_regiment
+		}
+		
+	}
+
+### PANZER LEHR DIVISION
+
+	country_event = {
+
+		id = 10214
+			
+		trigger = {
+			tag = GER
+			date = 1944.1.9
+			controls = 1861 # Berlin
+			controls = 1920 # Potsdam
+			not = { has_country_flag = panzer_lehr }
+		}
+		
+		mean_time_to_happen =  {
+			days = 1
+		}
+		
+		title = "EVTNAME10214"
+		desc = "EVTDESC10214"
+		picture = "DIG_panzer_lehr"
+
+		
+		option = {
+			name = "EVTOPTA10213" # Good
+			set_country_flag = panzer_lehr
+			manpower = -12
+			load_oob = zDIG_panzer_lehr.txt
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "EVTOPTB10213" # No need to
+			set_country_flag = panzer_lehr
+		}
+		
+	}
+
+### FALLSCHIRM-PANZER DIVISION 1 HERMANN G÷RING
+## REGIMENT GENERAL G÷RING
+
+	country_event = {
+
+		id = 10215
+			
+		trigger = {
+			tag = GER
+			date = 1936.1.18
+			or = {
+				chief_of_air = 10 # Hermann Goering
+				head_of_state = 10
+				head_of_government = 10
+				armament_minister = 10
+			}
+			not = { year = 1937 }
+			controls = 1861 # Berlin
+			not = { has_country_flag = regiment_georing }
+			not = { has_country_flag = no_georing }
+		}
+		
+		mean_time_to_happen =  {
+			months = 3
+		}
+		
+		title = "EVTNAME10215"
+		desc = "EVTDESC10215"
+		picture = "DIG_regiment_georing"
+
+		
+		option = {
+			name = "EVTOPTA10213" # Good
+			set_country_flag = regiment_georing
+			manpower = -1
+			load_oob = zDIG_georing_regiment.txt
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "EVTOPTB10213" # No need to
+			set_country_flag = no_georing
+		}
+		
+	}
+
+### FALLSCHIRM-PANZER DIVISION 1 HERMANN G÷RING
+## BRIGADE HERMANN G÷RING
+# HANDLED WITH TECH
+
+### FALLSCHIRM-PANZER DIVISION 1 HERMANN G÷RING
+## DIVISION HERMANN G÷RING
+
+	country_event = {
+
+		id = 10216
+			
+		trigger = {
+			tag = GER
+			date = 1942.10.9
+			brigade_hermann_goering = 1
+			or = {
+				chief_of_air = 10 # Hermann Goering
+				head_of_state = 10
+				head_of_government = 10
+				armament_minister = 10
+			}
+			controls = 1861 # Berlin
+			not = { has_country_flag = division_georing }
+			not = { has_country_flag = no_georing }
+		}
+		
+		mean_time_to_happen =  {
+			days = 1
+		}
+		
+		title = "EVTNAME10216"
+		desc = "EVTDESC10216"
+		picture = "DIG_division_georing"
+
+		
+		option = {
+			name = "EVTOPTA10213" # Good
+			set_country_flag = division_georing
+			manpower = -5
+			load_oob = zDIG_goering_division.txt
+			ai_chance = { factor = 100 }
+		}
+		
+		option = {
+			name = "EVTOPTB10213" # No need to
+			set_country_flag = no_georing
+		}
+		
+	}
+
+### FALLSCHIRM-PANZER DIVISION 1 HERMANN G÷RING
+# HANDLED WITH TECH
+
+###################################
+# FOREIGN WEHRMACHT
+###################################
+
+## Division Azul
+
+	country_event = {
+
+		id = 10217
+		
+		trigger = {
+			tag = GER
+			exists = SPA
+			war_with = SOV
+			not = { war_with = SPA }
+			1861 = { controller = { faction = axis } }
+			not = { has_country_flag = foreign_wehrmacht_Azul }
+			has_country_flag = german_intervention_spanish_civil_war # Legion condor
+			has_country_flag = foreign_wehrmacht_units_decision_ok
+		}
+		
+		mean_time_to_happen =  {
+			months = 3
+		}
+		
+		title = "EVTNAME10217"
+		desc = "EVTDESC10217"
+		picture = "DIG_division_azul"
+		
+		option = {
+			name = "EVTOPTA10217"
+			relation = { who = SPA value = 50 }
+			SPA = { neutrality = -20 }
+			load_oob = zDIG_Division_azul.txt
+			set_country_flag = foreign_wehrmacht_Azul
+		}
+		option = {
+			name = "EVTOPTB10217"
+			relation = { who = SPA value = -50 }
+			SPA = { neutrality = 10 }
+			set_country_flag = foreign_wehrmacht_Azul
+		}
+	}
+	
+## Turkoman Division
+
+	country_event = {
+
+		id = 10218
+		
+		trigger = {
+			tag = GER
+			war_with = SOV
+			controls = 1861 #Berlin
+			controls = 3449 # Kerck (near sevastopol)
+			not = { has_country_flag = foreign_wehrmacht_Turk }
+			has_country_flag = foreign_wehrmacht_units_decision_ok
+		}
+		
+		mean_time_to_happen =  {
+			months = 6
+		}
+		
+		title = "EVTNAME10218"
+		desc = "EVTDESC10218"
+		picture = "DIG_EVT10218"
+		
+		option = {
+			name = "EVTOPTA10217"
+			load_oob = zDIG_Turkoman.txt
+			set_country_flag = foreign_wehrmacht_Turk
+		}
+		option = {
+			name = "EVTOPTB10217"
+			manpower = 2
+			set_country_flag = foreign_wehrmacht_Turk
+		}
+	}
+	
+## 369th Reinforced Infantry Regiment
+
+	country_event = {
+
+		id = 10219
+		
+		trigger = {
+			tag = GER
+			war_with = SOV
+			exists = CRO
+			controls = 1861 #Berlin
+			3633 = { controller = { faction = axis } } # Zagreb
+			not = { has_country_flag = foreign_wehrmacht_369th }
+			has_country_flag = foreign_wehrmacht_units_decision_ok
+		}
+		
+		mean_time_to_happen =  {
+			months = 2
+		}
+		
+		title = "EVTNAME10219"
+		desc = "EVTDESC10219"
+		picture = "DIG_EVT10219"
+		
+		option = {
+			name = "EVTOPTA10217"
+			load_oob = zDIG_369_reinforced.txt
+			set_country_flag = foreign_wehrmacht_369th
+		}
+		option = {
+			name = "EVTOPTB10217"
+			manpower = 2
+			set_country_flag = foreign_wehrmacht_369th
+		}
+	}
+	
+## 392nd (Croat) Infantry Division
+
+	country_event = {
+
+		id = 10220
+		
+		trigger = {
+			tag = GER
+			year = 1943
+			controls = 1861 #Berlin
+			3633 = { controller = { faction = axis } } # Zagreb
+			2890 = { controller = { faction = axis } } # Zwettle - Austria
+			not = { has_country_flag = foreign_wehrmacht_392nd }
+			has_country_flag = foreign_wehrmacht_units_decision_ok
+		}
+		
+		mean_time_to_happen =  {
+			months = 6
+		}
+		
+		title = "EVTNAME10220"
+		desc = "EVTDESC10220"
+		picture = "DIG_EVT10220"
+		
+		option = {
+			name = "EVTOPTA10217"
+			load_oob = zDIG_392_croat_div.txt
+			set_country_flag = foreign_wehrmacht_392nd
+		}
+		option = {
+			name = "EVTOPTB10217"
+			manpower = 2
+			set_country_flag = foreign_wehrmacht_392nd
+		}
+	}
+	
+## Free Corps Denmark
+
+	country_event = {
+
+		id = 10222
+		
+		trigger = {
+			tag = GER
+			controls = 1482 # Copenhagen
+			controls = 1861 #Berlin
+			war_with = SOV
+			not = { has_country_flag = foreign_wehrmacht_Denmark }
+			has_country_flag = foreign_wehrmacht_units_decision_ok
+			has_country_flag = disabled # unhistorical, they were lot less than a division
+		}
+		
+		mean_time_to_happen =  {
+			months = 1
+		}
+		
+		title = "EVTNAME10222"
+		desc = "EVTDESC10222"
+		picture = "DIG_EVT10222"
+		
+		option = {
+			name = "EVTOPTA10217"
+			load_oob = zDIG_Danish_free_corps.txt
+			set_country_flag = foreign_wehrmacht_Denmark
+		}
+		option = {
+			name = "EVTOPTB10217"
+			manpower = 2
+			set_country_flag = foreign_wehrmacht_Denmark
+		}
+	}
+	
+## Georgian Legion
+
+	country_event = {
+
+		id = 10223
+		
+		trigger = {
+			tag = GER
+			war_with = SOV
+			controls = 2769 # Stanislawow - West Ukraine
+			controls = 3380
+			controls = 1861
+			not = { has_country_flag = foreign_wehrmacht_Georgian }
+			has_country_flag = foreign_wehrmacht_units_decision_ok
+		}
+		
+		mean_time_to_happen =  {
+			months = 9
+		}
+		
+		title = "EVTNAME10223"
+		desc = "EVTDESC10223"
+		picture = "DIG_EVT10223"
+		
+		option = {
+			name = "EVTOPTA10217"
+			load_oob = zDIG_Georgian_legion.txt
+			set_country_flag = foreign_wehrmacht_Georgian
+		}
+		option = {
+			name = "EVTOPTB10217"
+			manpower = 2
+			set_country_flag = foreign_wehrmacht_Georgian
+		}
+	}
+	
+## Indische Legion
+
+	country_event = {
+
+		id = 10224
+		
+		trigger = {
+			tag = GER
+			year = 1942
+			controls = 1861
+			controls = 2843
+			not = { has_country_flag = foreign_wehrmacht_Indische }
+			has_country_flag = foreign_wehrmacht_units_decision_ok
+		}
+		
+		mean_time_to_happen =  {
+			months = 6
+		}
+		
+		title = "EVTNAME10224"
+		desc = "EVTDESC10224"
+		picture = "DIG_EVT10224"
+		
+		option = {
+			name = "OK"
+			load_oob = zDIG_Indische_legion.txt
+			set_country_flag = foreign_wehrmacht_Indische
+		}
+		option = {
+			name = "EVTOPTB10217"
+			manpower = 2
+			set_country_flag = foreign_wehrmacht_Indische
+		}
+	}
+	
+## Kalmykian Voluntary Cavalry Corps
+
+	country_event = {
+
+		id = 10225
+		
+		trigger = {
+			tag = GER
+			year = 1942
+			war_with = SOV
+			controls = 1861
+			controls = 3181
+			not = { 2857 = { controller = { faction = axis } } }	#Stalingrad
+			not = { has_country_flag = foreign_wehrmacht_Kalmykian }
+			has_country_flag = foreign_wehrmacht_units_decision_ok
+		}
+		
+		mean_time_to_happen =  {
+			months = 5
+		}
+		
+		title = "EVTNAME10225"
+		desc = "EVTDESC10225"
+		picture = "DIG_EVT10225"
+		
+		option = {
+			name = "OK"
+			load_oob = zDIG_Kalmykian.txt
+			set_country_flag = foreign_wehrmacht_Kalmykian
+		}
+		option = {
+			name = "EVTOPTB10217"
+			manpower = 2
+			set_country_flag = foreign_wehrmacht_Kalmykian
+		}
+	}
+	
+## Legion of French Volunteers Against Bolshevism
+
+	country_event = {
+
+		id = 10226
+		
+		trigger = {
+			tag = GER
+			war_with = SOV
+			controls = 1861
+			controls = 2613
+			not = { has_country_flag = foreign_wehrmacht_LVF }
+			has_country_flag = foreign_wehrmacht_units_decision_ok
+		}
+		
+		mean_time_to_happen =  {
+			months = 4
+		}
+		
+		title = "EVTNAME10226"
+		desc = "EVTDESC10226"
+		picture = "DIG_EVT10226"
+		
+		option = {
+			name = "OK"
+			load_oob = zDIG_French_Volunteers.txt
+			set_country_flag = foreign_wehrmacht_LVF
+		}
+		option = {
+			name = "EVTOPTB10217"
+			manpower = 1
+			set_country_flag = foreign_wehrmacht_LVF
+		}
+	}
+	
+## Russian Corps
+
+	country_event = {
+
+		id = 10227
+		
+		trigger = {
+			tag = GER
+			3912 = { controller = { faction = axis } } # Beograd
+			controls = 1861
+			war_with = SOV
+			not = { has_country_flag = foreign_wehrmacht_Russian }
+			has_country_flag = foreign_wehrmacht_units_decision_ok
+		}
+		
+		mean_time_to_happen =  {
+			months = 2
+		}
+		
+		title = "EVTNAME10227"
+		desc = "EVTDESC10227"
+		picture = "DIG_EVT10227"
+		
+		option = {
+			name = "EVTOPTA10217"
+			load_oob = zDIG_Russian_corps.txt
+			set_country_flag = foreign_wehrmacht_Russian
+		}
+		option = {
+			name = "EVTOPTB10217"
+			manpower = 3
+			set_country_flag = foreign_wehrmacht_Russian
+		}
+	}
+	
+## Russian Liberation Army
+
+	country_event = {
+
+		id = 10228
+		
+		trigger = {
+			tag = GER
+			war_with = SOV
+			controls = 1861
+			lost_national = 0.15
+			2562 = { controller = { faction = axis } }  # Praha
+			2952 = { controller = { faction = axis } }  # Munich
+			3019 = { controller = { faction = axis } }  # Kempten
+			not = { has_country_flag = foreign_wehrmacht_Russian_lib }
+			has_country_flag = foreign_wehrmacht_units_decision_ok
+		}
+		
+		mean_time_to_happen =  {
+			days = 1
+		}
+		
+		title = "EVTNAME10228"
+		desc = "EVTDESC10228"
+		picture = "DIG_EVT10228"
+		
+		option = {
+			name = "EVTOPTA10217"
+			load_oob = zDIG_Russian_liberation_army.txt
+			set_country_flag = foreign_wehrmacht_Russian_lib
+		}
+		option = {
+			name = "EVTOPTB10217"
+			manpower = 3
+			set_country_flag = foreign_wehrmacht_Russian_lib
+		}
+	}

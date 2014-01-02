@@ -1,0 +1,1320 @@
+###############################################
+###			BARBAROSSA THEATRE				###
+###			By DiDay from I.C.E.			###
+###############################################
+
+diplomatic_decisions = {
+
+#### BARBAROSSA
+
+	barbarossa_decision = {
+		potential = {
+			tag = SOV
+			not = { has_global_flag = operation_barbarossa }
+			war_with = GER
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_global_flag = operation_barbarossa
+		}
+		
+		ai_will_do = {
+			factor = 1.0
+		}
+	}
+
+###########################
+### SOVIET WORKERS		###
+###########################
+
+###ODESSA
+	
+	odessa_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = odessa_people_decision }
+			3309 = { controlled_by = SOV } #odessa
+			or = {
+				3377 = { controller = { faction = axis } }
+				3308 = { controller = { faction = axis } }
+				3241 = { controller = { faction = axis } }
+				3174 = { controller = { faction = axis } }
+				3108 = { controller = { faction = axis } }
+				3041 = { controller = { faction = axis } }
+				3109 = { controller = { faction = axis } }
+				3176 = { controller = { faction = axis } }
+				3244 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = odessa_people_decision
+			manpower = 75
+			partisan_brigade = 3309
+			partisan_brigade = 3309
+			partisan_brigade = 3309
+			partisan_brigade = 3309
+			partisan_brigade = 3309
+			partisan_brigade = 3309
+			partisan_brigade = 3309
+			partisan_brigade = 3309
+			YUG_4493 = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 720
+				}
+			}
+			YUG_3499 = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 720
+				}
+			}
+			YUG_4239 = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 720
+				}
+			}
+			YUG_3912 = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 360
+				}
+			}
+			YUG_4432 = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "heavy_resistance"
+					duration = 90
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###sebastopol
+	
+	sebastopol_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = sebastopol_people_decision }
+			3581 = { controlled_by = SOV } #sebastopol.
+			or = {
+				3311 = { controller = { faction = axis } }
+				3448 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = sebastopol_people_decision
+			manpower = 75
+			partisan_brigade = 3581
+			partisan_brigade = 3581
+			partisan_brigade = 3581
+			partisan_brigade = 3581
+			partisan_brigade = 3581
+			partisan_brigade = 3581
+			partisan_brigade = 3581
+			partisan_brigade = 3581
+			partisan_brigade = 3581
+			partisan_brigade = 3581
+			partisan_brigade = 3581
+			partisan_brigade = 3581
+			SOV_7289 = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 360
+				}
+			}
+			SOV_3380 = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 180
+				}
+			}
+			SOV_2856 = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "heavy_resistance"
+					duration = 90
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###dnip
+	
+	dnip_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = dnip_people_decision }
+			2843 = { controlled_by = SOV } #dnip
+			or = {
+				3044 = { controller = { faction = axis } }
+				2975 = { controller = { faction = axis } }
+				2908 = { controller = { faction = axis } }
+				2842 = { controller = { faction = axis } }
+				2712 = { controller = { faction = axis } }
+				2647 = { controller = { faction = axis } }
+				2582 = { controller = { faction = axis } }
+				2648 = { controller = { faction = axis } }
+				2714 = { controller = { faction = axis } }
+				2844 = { controller = { faction = axis } }
+				2977 = { controller = { faction = axis } }
+				3045 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = dnip_people_decision
+			manpower = 75
+			partisan_brigade = 2843
+			partisan_brigade = 2843
+			partisan_brigade = 2843
+			partisan_brigade = 2843
+			partisan_brigade = 2843
+			partisan_brigade = 2843
+			partisan_brigade = 2843
+			partisan_brigade = 2843
+			YUG_4116 = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 720
+				}
+			}
+			YUG_3772 = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 90
+				}
+			}
+			YUG_4115 = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 180
+				}
+			}
+			france_calais = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 360
+				}
+			}
+			YUG_4368 = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "heavy_resistance"
+					duration = 360
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###stalino
+	
+	stalino_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = stalino_people_decision }
+			2911 = { controlled_by = SOV } #stalino
+			or = {
+				2910 = { controller = { faction = axis } }
+				3045 = { controller = { faction = axis } }
+				3113 = { controller = { faction = axis } }
+				2779 = { controller = { faction = axis } }
+				2714 = { controller = { faction = axis } }
+				2780 = { controller = { faction = axis } }
+				2715 = { controller = { faction = axis } }
+				2781 = { controller = { faction = axis } }
+				2846 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = stalino_people_decision
+			manpower = 75
+			partisan_brigade = 2911
+			partisan_brigade = 2911
+			partisan_brigade = 2911
+			partisan_brigade = 2911
+			partisan_brigade = 2911
+			partisan_brigade = 2911
+			partisan_brigade = 2911
+			partisan_brigade = 2911
+			france_brest = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 360
+				}
+			}
+			france_lille = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 90
+				}
+			}
+			france_ronchamp = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 180
+				}
+			}
+			france_alsace = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 90
+				}
+			}
+			france_north_maginot = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 80
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###rostov
+	
+	rostov_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = rostov_people_decision }
+			2913 = { controlled_by = SOV } #rostov
+			or = {
+				2782 = { controller = { faction = axis } }
+				2717 = { controller = { faction = axis } }
+				2652 = { controller = { faction = axis } }
+				2718 = { controller = { faction = axis } }
+				2784 = { controller = { faction = axis } }
+				2914 = { controller = { faction = axis } }
+				2981 = { controller = { faction = axis } }
+				3047 = { controller = { faction = axis } }
+				3115 = { controller = { faction = axis } }
+				3181 = { controller = { faction = axis } }
+				3116 = { controller = { faction = axis } }
+				3049 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = rostov_people_decision
+			manpower = 75
+			partisan_brigade = 2913
+			partisan_brigade = 2913
+			partisan_brigade = 2913
+			partisan_brigade = 2913
+			partisan_brigade = 2913
+			partisan_brigade = 2913
+			partisan_brigade = 2913
+			partisan_brigade = 2913
+			norway_region = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 180
+				}
+			}
+			france_besancon = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 360
+				}
+			}
+			FRA_3280 = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "heavy_resistance"
+					duration = 90
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###stalingrad
+	
+	stalingrad_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = stalingrad_people_decision }
+			2857 = { controlled_by = SOV } #stalingrad
+			or = {
+				2856 = { controller = { faction = axis } }
+				2988 = { controller = { faction = axis } }
+				3057 = { controller = { faction = axis } }
+				2989 = { controller = { faction = axis } }
+				3058 = { controller = { faction = axis } }
+				2990 = { controller = { faction = axis } }
+				2858 = { controller = { faction = axis } }
+				2728 = { controller = { faction = axis } }
+				2662 = { controller = { faction = axis } }
+				2596 = { controller = { faction = axis } }
+				2661 = { controller = { faction = axis } }
+				2726 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = stalingrad_people_decision
+			manpower = 75
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			partisan_brigade = 2857
+			denmark_south_jylland = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 360
+				}
+			}
+			denmark_fyn = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 90
+				}
+			}
+			belgium_north = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 180
+				}
+			}
+			holland_denhaag = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 320
+				}
+			}
+			poland_bydgoszgz = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 200
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###kiev
+	
+	kiev_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = kiev_people_decision }
+			2223 = { controlled_by = SOV } #kiev
+			or = {
+				2222 = { controller = { faction = axis } }
+				2336 = { controller = { faction = axis } }
+				2394 = { controller = { faction = axis } }
+				2395 = { controller = { faction = axis } }
+				2338 = { controller = { faction = axis } }
+				2224 = { controller = { faction = axis } }
+				2108 = { controller = { faction = axis } }
+				2049 = { controller = { faction = axis } }
+				1991 = { controller = { faction = axis } }
+				2048 = { controller = { faction = axis } }
+				2106 = { controller = { faction = axis } }
+				2163 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = kiev_people_decision
+			manpower = 75
+			partisan_brigade = 2223
+			partisan_brigade = 2223
+			partisan_brigade = 2223
+			partisan_brigade = 2223
+			partisan_brigade = 2223
+			partisan_brigade = 2223
+			partisan_brigade = 2223
+			partisan_brigade = 2223
+			baltic_states_region = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 1440
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###homyel
+	
+	homyel_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = homyel_people_decision }
+			1991 = { controlled_by = SOV } #homyel
+			or = {
+				1990 = { controller = { faction = axis } }
+				2106 = { controller = { faction = axis } }
+				2164 = { controller = { faction = axis } }
+				2223 = { controller = { faction = axis } }
+				2165 = { controller = { faction = axis } }
+				2108 = { controller = { faction = axis } }
+				2050 = { controller = { faction = axis } }
+				1937 = { controller = { faction = axis } }
+				1877 = { controller = { faction = axis } }
+				1816 = { controller = { faction = axis } }
+				1815 = { controller = { faction = axis } }
+				1875 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = homyel_people_decision
+			manpower = 75
+			partisan_brigade = 1991
+			partisan_brigade = 1991
+			partisan_brigade = 1991
+			partisan_brigade = 1991
+			partisan_brigade = 1991
+			partisan_brigade = 1991
+			partisan_brigade = 1991
+			partisan_brigade = 1991
+			poland_wisla = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 180
+				}
+			}
+			poland_brieg = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 360
+				}
+			}
+			poland_jordanow = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 200
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###minsk
+	
+	minsk_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = minsk_people_decision }
+			1694 = { controlled_by = SOV } #minsk
+			or = {
+				1693 = { controller = { faction = axis } }
+				1813 = { controller = { faction = axis } }
+				1874 = { controller = { faction = axis } }
+				1934 = { controller = { faction = axis } }
+				1990 = { controller = { faction = axis } }
+				1875 = { controller = { faction = axis } }
+				1815 = { controller = { faction = axis } }
+				1695 = { controller = { faction = axis } }
+				1582 = { controller = { faction = axis } }
+				1584 = { controller = { faction = axis } }
+				1446 = { controller = { faction = axis } }
+				1491 = { controller = { faction = axis } }
+				1533 = { controller = { faction = axis } }
+				1580 = { controller = { faction = axis } }
+				1633 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = minsk_people_decision
+			manpower = 75
+			partisan_brigade = 1694
+			partisan_brigade = 1694
+			partisan_brigade = 1694
+			partisan_brigade = 1694
+			partisan_brigade = 1694
+			partisan_brigade = 1694
+			partisan_brigade = 1694
+			partisan_brigade = 1694
+			poland_poznan = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "heavy_resistance"
+					duration = 60
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###smolensk
+	
+	smolensk_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = smolensk_people_decision }
+			1535 = { controlled_by = SOV } #smolensk
+			or = {
+				1581 = { controller = { faction = axis } }
+				1635 = { controller = { faction = axis } }
+				1695 = { controller = { faction = axis } }
+				1696 = { controller = { faction = axis } }
+				1637 = { controller = { faction = axis } }
+				1584 = { controller = { faction = axis } }
+				1536 = { controller = { faction = axis } }
+				1448 = { controller = { faction = axis } }
+				1403 = { controller = { faction = axis } }
+				1402 = { controller = { faction = axis } }
+				1446 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = smolensk_people_decision
+			manpower = 75
+			partisan_brigade = 1535
+			partisan_brigade = 1535
+			partisan_brigade = 1535
+			partisan_brigade = 1535
+			partisan_brigade = 1535
+			partisan_brigade = 1535
+			partisan_brigade = 1535
+			partisan_brigade = 1535
+			POL_1868 = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "heavy_resistance"
+					duration = 720
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###novgorod
+	
+	novgorod_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = novgorod_people_decision }
+			999 = { controlled_by = SOV } #novgorod
+			or = {
+				821 = { controller = { faction = axis } }
+				865 = { controller = { faction = axis } }
+				948 = { controller = { faction = axis } }
+				989 = { controller = { faction = axis } }
+				1027 = { controller = { faction = axis } }
+				1028 = { controller = { faction = axis } }
+				991 = { controller = { faction = axis } }
+				951 = { controller = { faction = axis } }
+				868 = { controller = { faction = axis } }
+				823 = { controller = { faction = axis } }
+				783 = { controller = { faction = axis } }
+				822 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = novgorod_people_decision
+			manpower = 75
+			partisan_brigade = 999
+			partisan_brigade = 999
+			partisan_brigade = 999
+			partisan_brigade = 999
+			partisan_brigade = 999
+			partisan_brigade = 999
+			partisan_brigade = 999
+			partisan_brigade = 999
+			belgium_south = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "heavy_resistance"
+					duration = 30
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###leningrad
+	
+	leningrad_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = leningrad_people_decision }
+			782 = { controlled_by = SOV } #leningrad
+			or = {
+				820 = { controller = { faction = axis } }
+				865 = { controller = { faction = axis } }
+				908 = { controller = { faction = axis } }
+				866 = { controller = { faction = axis } }
+				867 = { controller = { faction = axis } }
+				783 = { controller = { faction = axis } }
+				658 = { controller = { faction = axis } }
+				698 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = leningrad_people_decision
+			manpower = 75
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			partisan_brigade = 782
+			western_russia_region = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 30
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###brjansk
+	
+	brjansk_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = brjansk_people_decision }
+			1819 = { controlled_by = SOV } #brjansk
+			or = {
+				1698 = { controller = { faction = axis } }
+				1758 = { controller = { faction = axis } }
+				1818 = { controller = { faction = axis } }
+				1938 = { controller = { faction = axis } }
+				1994 = { controller = { faction = axis } }
+				2052 = { controller = { faction = axis } }
+				1995 = { controller = { faction = axis } }
+				1940 = { controller = { faction = axis } }
+				1881 = { controller = { faction = axis } }
+				1761 = { controller = { faction = axis } }
+				1700 = { controller = { faction = axis } }
+				1640 = { controller = { faction = axis } }
+				1586 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = brjansk_people_decision
+			manpower = 75
+			partisan_brigade = 1819
+			partisan_brigade = 1819
+			partisan_brigade = 1819
+			partisan_brigade = 1819
+			partisan_brigade = 1819
+			partisan_brigade = 1819
+			partisan_brigade = 1819
+			partisan_brigade = 1819
+			western_russia_region = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 15
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###kursk
+	
+	kursk_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = kursk_people_decision }
+			2170 = { controlled_by = SOV } #kursk
+			or = {
+				2053 = { controller = { faction = axis } }
+				2111 = { controller = { faction = axis } }
+				2227 = { controller = { faction = axis } }
+				2284 = { controller = { faction = axis } }
+				2285 = { controller = { faction = axis } }
+				2286 = { controller = { faction = axis } }
+				2230 = { controller = { faction = axis } }
+				2172 = { controller = { faction = axis } }
+				2114 = { controller = { faction = axis } }
+				2055 = { controller = { faction = axis } }
+				1997 = { controller = { faction = axis } }
+				1941 = { controller = { faction = axis } }
+				1996 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = kursk_people_decision
+			manpower = 75
+			partisan_brigade = 2170
+			partisan_brigade = 2170
+			partisan_brigade = 2170
+			partisan_brigade = 2170
+			partisan_brigade = 2170
+			partisan_brigade = 2170
+			partisan_brigade = 2170
+			partisan_brigade = 2170
+			western_russia_region = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 20
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###kharkov
+	
+	kharkov_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = kharkov_people_decision }
+			2401 = { controlled_by = SOV } #kharkov
+			or = {
+				2285 = { controller = { faction = axis } }
+				2342 = { controller = { faction = axis } }
+				2458 = { controller = { faction = axis } }
+				2519 = { controller = { faction = axis } }
+				2582 = { controller = { faction = axis } }
+				2648 = { controller = { faction = axis } }
+				2583 = { controller = { faction = axis } }
+				2521 = { controller = { faction = axis } }
+				2461 = { controller = { faction = axis } }
+				2403 = { controller = { faction = axis } }
+				2345 = { controller = { faction = axis } }
+				2287 = { controller = { faction = axis } }
+				2230 = { controller = { faction = axis } }
+				2171 = { controller = { faction = axis } }
+				2229 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = kharkov_people_decision
+			manpower = 75
+			partisan_brigade = 2401
+			partisan_brigade = 2401
+			partisan_brigade = 2401
+			partisan_brigade = 2401
+			partisan_brigade = 2401
+			partisan_brigade = 2401
+			partisan_brigade = 2401
+			partisan_brigade = 2401
+			western_russia_region = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "medium_resistance"
+					duration = 40
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###orel
+	
+	orel_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = orel_people_decision }
+			1941 = { controlled_by = SOV } #orel
+			or = {
+				1761 = { controller = { faction = axis } }
+				1820 = { controller = { faction = axis } }
+				1940 = { controller = { faction = axis } }
+				2053 = { controller = { faction = axis } }
+				2054 = { controller = { faction = axis } }
+				2113 = { controller = { faction = axis } }
+				2055 = { controller = { faction = axis } }
+				1998 = { controller = { faction = axis } }
+				1942 = { controller = { faction = axis } }
+				1822 = { controller = { faction = axis } }
+				1762 = { controller = { faction = axis } }
+				1701 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = orel_people_decision
+			manpower = 75
+			partisan_brigade = 1941
+			partisan_brigade = 1941
+			partisan_brigade = 1941
+			partisan_brigade = 1941
+			partisan_brigade = 1941
+			partisan_brigade = 1941
+			partisan_brigade = 1941
+			partisan_brigade = 1941
+			western_russia_region = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 30
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###voronez
+	
+	voronez_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = voronez_people_decision }
+			2233 = { controlled_by = SOV } #voronez
+			or = {
+				2116 = { controller = { faction = axis } }
+				2232 = { controller = { faction = axis } }
+				2346 = { controller = { faction = axis } }
+				2347 = { controller = { faction = axis } }
+				2348 = { controller = { faction = axis } }
+				2291 = { controller = { faction = axis } }
+				2234 = { controller = { faction = axis } }
+				2118 = { controller = { faction = axis } }
+				2059 = { controller = { faction = axis } }
+				2058 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = voronez_people_decision
+			manpower = 75
+			partisan_brigade = 2233
+			partisan_brigade = 2233
+			partisan_brigade = 2233
+			partisan_brigade = 2233
+			partisan_brigade = 2233
+			partisan_brigade = 2233
+			partisan_brigade = 2233
+			partisan_brigade = 2233
+			western_russia_region = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 12
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###tula
+	
+	tula_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = tula_people_decision }
+			1589 = { controlled_by = SOV } #tula
+			or = {
+				1498 = { controller = { faction = axis } }
+				1540 = { controller = { faction = axis } }
+				1641 = { controller = { faction = axis } }
+				1701 = { controller = { faction = axis } }
+				1702 = { controller = { faction = axis } }
+				1763 = { controller = { faction = axis } }
+				1703 = { controller = { faction = axis } }
+				1590 = { controller = { faction = axis } }
+				1500 = { controller = { faction = axis } }
+				1499 = { controller = { faction = axis } }
+				1453 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = tula_people_decision
+			manpower = 75
+			partisan_brigade = 1589
+			partisan_brigade = 1589
+			partisan_brigade = 1589
+			partisan_brigade = 1589
+			partisan_brigade = 1589
+			partisan_brigade = 1589
+			partisan_brigade = 1589
+			partisan_brigade = 1589
+			western_russia_region = {
+				limit = { controller = { faction = axis } }
+				add_province_modifier = {
+					name = "little_resistance"
+					duration = 20
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###moscou
+	
+	moscou_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = moscou_people_decision }
+			1409 = { controlled_by = SOV } #moscou
+			or = {
+				1319 = { controller = { faction = axis } }
+				1363 = { controller = { faction = axis } }
+				1452 = { controller = { faction = axis } }
+				1498 = { controller = { faction = axis } }
+				1541 = { controller = { faction = axis } }
+				1542 = { controller = { faction = axis } }
+				1500 = { controller = { faction = axis } }
+				1410 = { controller = { faction = axis } }
+				1366 = { controller = { faction = axis } }
+				1321 = { controller = { faction = axis } }
+				1275 = { controller = { faction = axis } }
+				1320 = { controller = { faction = axis } }
+				1274 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = moscou_people_decision
+			manpower = 75
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+			partisan_brigade = 1409
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###MOSCOU HAS FALLEN
+	
+	moscou_has_fallen_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = moscou_has_fallen_decision }
+			not = { capital = 1409 }
+			not = { capital = 8528 }
+			controls = 8528 #Omsk far east
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = moscou_has_fallen_decision
+			manpower = 750
+			capital = 8528 #Omsk
+			energy = 50000
+			metal = 50000
+			rare_materials = 50000
+			crude_oil = 50000
+			supplies = 50000
+			fuel = 50000
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###MOSCOU ENCIRCLED
+	
+	moscou_encircled_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = moscou_encircled_decision }
+			capital = 1409
+			1319 = { controller = { faction = axis } }
+			1363 = { controller = { faction = axis } }
+			1452 = { controller = { faction = axis } }
+			1498 = { controller = { faction = axis } }
+			1541 = { controller = { faction = axis } }
+			1542 = { controller = { faction = axis } }
+			1500 = { controller = { faction = axis } }
+			1410 = { controller = { faction = axis } }
+			1366 = { controller = { faction = axis } }
+			1321 = { controller = { faction = axis } }
+			1275 = { controller = { faction = axis } }
+			1320 = { controller = { faction = axis } }
+			1274 = { controller = { faction = axis } }
+			controls = 8528 #Omsk far east
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = moscou_encircled_decision
+			manpower = 750
+			capital = 8528 #Omsk
+			energy = 50000
+			metal = 50000
+			rare_materials = 50000
+			crude_oil = 50000
+			supplies = 50000
+			fuel = 50000
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###kalinin
+	
+	kalinin_people_decision = {
+		potential = {
+			tag = SOV
+			war_with = GER
+			not = { has_country_flag = kalinin_people_decision }
+			1231 = { controlled_by = SOV } #kalinin
+			or = {
+				1147 = { controller = { faction = axis } }
+				1187 = { controller = { faction = axis } }
+				1229 = { controller = { faction = axis } }
+				1272 = { controller = { faction = axis } }
+				1318 = { controller = { faction = axis } }
+				1336 = { controller = { faction = axis } }
+				1364 = { controller = { faction = axis } }
+				1320 = { controller = { faction = axis } }
+				1232 = { controller = { faction = axis } }
+				1149 = { controller = { faction = axis } }
+				1108 = { controller = { faction = axis } }
+				1070 = { controller = { faction = axis } }
+				1107 = { controller = { faction = axis } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_country_flag = kalinin_people_decision
+			manpower = 75
+			partisan_brigade = 1231
+			partisan_brigade = 1231
+			partisan_brigade = 1231
+			partisan_brigade = 1231
+			partisan_brigade = 1231
+			partisan_brigade = 1231
+			partisan_brigade = 1231
+			partisan_brigade = 1231
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#EOF
+}

@@ -1,0 +1,437 @@
+#######################
+# Spanish Civil War - #
+#######################
+# Republican Spain
+country_event = {
+
+	id = 2001
+
+	major = yes
+
+	trigger = {
+		tag = SPR
+		not = { exists = SPA }
+		war = no
+		not = { government = national_socialism }
+		not = { government = fascist_republic }
+		not = { government = germanic_fascist_republic }
+		not = { government = right_wing_republic }
+		not = { government = hungarian_right_wing_republic }
+		not = { government = right_wing_autocrat }
+		not = { government = absolute_monarchy }
+		not = { government = imperial }
+		not = { has_country_flag = spanish_civil_war }
+		date = 1936.7.17
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	title = "EVTNAME2001"
+	desc = "EVTDESC2001"
+	picture = "DIG_SCW"
+
+	option = {
+		name = "EVTOPTA2001"		# En la Defensa de la Democracia!
+		set_country_flag = spanish_civil_war
+		eastern_spain_region = { add_core = SPA }
+		northern_spain_region = { add_core = SPA }
+		SPR_5321 = { add_core = SPA }
+		SPR_5289 = { add_core = SPA }
+		islas_baleares_region = { add_core = SPA }
+		SPR_10729 = { add_core = SPA }
+		9506 = { add_core = SPA }
+		sahara_espanol_region = { add_core = SPA }
+		SPR_10002 = { add_core = SPA }
+		9451 = { add_core = SPA }
+		9569 = { add_core = SPA }
+		4592 = { add_core = SPA }
+		5647 = { add_core = SPA }
+		
+		northern_spain_region = { secede_province = SPA }	# Nationalist Spain
+		sahara_espanol_region = { secede_province = SPA }
+		SPR_10729 = { secede_province = SPA }
+		4159 = { secede_province = SPA }
+		4293 = { secede_province = SPA }
+		4096 = { secede_province = SPA }
+		4025 = { secede_province = SPA }
+		SPR_5321 = { secede_province = SPA }
+		SPR_5289 = { secede_province = SPA }
+		10002 = { secede_province = SPA }
+		9451 = { secede_province = SPA }
+		9569 = { secede_province = SPA }
+		4592 = { secede_province = SPA }
+		5647 = { secede_province = SPA }
+		5156 = { secede_province = SPA }
+		5097 = { secede_province = SPA }
+		4856 = { secede_province = SPA }
+		5125 = { secede_province = SPA }
+		5129 = { secede_province = SPA }
+		5030 = { secede_province = SPA }
+		4954 = { secede_province = SPA }
+		islas_baleares_region = { secede_province = SPA }
+		5002 = { secede_province = SPA }
+		head_of_state = 11033			# Azaña
+		head_of_government = 11039		# Largo Caballero
+		foreign_minister = 11034		# Barcia Trelles
+		armament_minister = 11144		# Giner de los Rios
+		minister_of_security = 11189	# Azcarate
+		minister_of_intelligence = 11217# Balboa
+		chief_of_staff = 11007			# Miaja
+		chief_of_army = 11007			# Miaja
+		chief_of_navy = 11067			# Giral
+		chief_of_air = 11321			# Hidalgo de Cisneros
+		relation = { who = ENG value = 10 }
+		relation = { who = FRA value = 10 }
+		relation = { who = SOV value = 5 }
+		relation = { who = USA value = 5 }
+		relation = { who = GER value = -15 }
+		relation = { who = ITA value = -10 }
+		relation = { who = POR value = -10 }
+		dissent = 15
+		SPR = {	war = {	
+					target = SPA 
+					attacker_goal = { casus_belli = civil_war }
+					defender_goal = { casus_belli = civil_war }
+					} 
+				}
+		SPA = { split_troops = 0.55 }
+		4540 = { infantry_brigade = current }
+		4540 = { infantry_brigade = current }
+		threat = { who = all value = -150 }
+		national_unity = 50
+		SPA = {
+			set_country_flag = spanish_civil_war
+			capital = 4155
+			country_event = 2002
+		}
+	}
+}
+
+# Spanish Civil War - Nationalist Spain
+country_event = {
+
+	id = 2002
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2002"
+	desc = "EVTDESC2002"
+	picture = "DIG_SPA_fascist"
+
+	option = {
+		name = "EVTOPTA2002"		# Anarchism and Communism must fall!
+		national_unity = 50
+		head_of_state = 10001
+		head_of_government = 10002
+		foreign_minister = 10003
+		armament_minister = 10004
+		minister_of_security = 10005
+		minister_of_intelligence = 10006
+		chief_of_staff = 10008
+		chief_of_army = 10008
+		chief_of_navy = 10009
+		chief_of_air = 10010
+		rare_materials = 2000
+		crude_oil = 4000
+		supplies = 10000
+		energy = 5000
+		metal = 5000
+		money = 400
+		government = right_wing_autocrat
+		set_country_flag = new_units
+		manpower = 100
+
+		# Burgos
+		4155 = { infantry_brigade = current }
+		4155 = { infantry_brigade = current }
+		4155 = { infantry_brigade = current }
+		4155 = { infantry_brigade = current }
+		
+		# Zaragoza
+		4353 = { infantry_brigade = current }
+		4353 = { infantry_brigade = current }
+		4353 = { infantry_brigade = current }
+		4353 = { infantry_brigade = current }
+		
+		# Càceres
+		4593 = { infantry_brigade = current }
+		4593 = { infantry_brigade = current }
+		
+		# Cádiz
+		5125 = { infantry_brigade = current }
+		5125 = { infantry_brigade = current }
+		
+		# Tenerife
+		10729 = { infantry_brigade = current }
+		
+		# Zaragoza
+		4353 = { infantry_brigade = current }
+		4353 = { infantry_brigade = current }
+		4353 = { infantry_brigade = current }
+
+		# Tanger
+		5319 = { infantry_brigade = current }
+		
+		# Mallorca
+		4913 =  { infantry_brigade = current }
+	}
+}
+
+
+# Troops Defect
+country_event = {
+
+	id = 2005
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2005"
+	desc = "EVTDESC2005"
+	picture = "DIG_SCW"
+
+	option = {
+		name = "EVTOPTA2005"			# OK
+		
+		SPR = {
+			split_troops = 0.45
+			4540 = { infantry_brigade = current }
+			4540 = { infantry_brigade = current }
+			4540 = { infantry_brigade = current }
+		}
+		
+		# Burgos
+		4155 = { infantry_brigade = current }
+		4155 = { infantry_brigade = current }
+		4155 = { infantry_brigade = current }
+		4155 = { infantry_brigade = current }
+		
+		# Zaragoza
+		4353 = { infantry_brigade = current }
+		4353 = { infantry_brigade = current }
+		4353 = { infantry_brigade = current }
+		4353 = { infantry_brigade = current }
+		
+		# Càceres
+		4593 = { infantry_brigade = current }
+		4593 = { infantry_brigade = current }
+		
+		# Cádiz
+		5125 = { infantry_brigade = current }
+		5125 = { infantry_brigade = current }
+		
+		# Tenerife
+		10729 = { infantry_brigade = current }
+
+		# Tanger
+		5319 = { infantry_brigade = current }
+		
+		# Mallorca
+		4913 =  { infantry_brigade = current }
+	}
+}
+
+# Troops defect
+country_event = {
+
+	id = 2006
+
+	trigger = {
+		exists = SPA
+		exists = SPR
+		or = {
+			tag = SPA
+			tag = SPR
+		}
+		SPA = { war_with = SPR }
+		not = { has_country_flag = new_units }	
+	}
+
+	mean_time_to_happen = {
+		months = 5
+	}
+
+	title = "EVTNAME2006"
+	desc = "EVTDESC2006"
+	picture = "DIG_SCW"
+
+	option = {
+		name = "EVTOPTA2006"			# Just in time!
+		set_country_flag = new_units
+		random_owned = {
+			infantry_brigade = current
+			infantry_brigade = current
+		}
+		random_owned = {
+			infantry_brigade = current
+			infantry_brigade = current
+		}
+	}
+}
+
+# Spanish Civil War - French Intervention
+country_event = {
+
+	id = 2007
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2007"
+	desc = "EVTDESC2007"
+	picture = "DIG_SCW"
+
+	option = {
+		name = "EVTOPTA2007"
+		load_oob = zDD-SPR-FRA_intervention.txt
+		supplies = 1000
+	}
+}
+
+# Spanish Civil War - British Intervention
+country_event = {
+
+	id = 2008
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2008"
+	desc = "EVTDESC2007"
+	picture = "DIG_SCW"
+
+	option = {
+		name = "EVTOPTA2007"
+		load_oob = zDD-SPR-ENG_intervention.txt
+		supplies = 1000
+	}
+}
+
+# Spanish Civil War - Soviet Intervention
+country_event = {
+
+	id = 2009
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2009"
+	desc = "EVTDESC2007"
+	picture = "DIG_SCW"
+
+	option = {
+		name = "EVTOPTA2007"
+		load_oob = zDD-SPR-SOV_intervention.txt
+		supplies = 15000
+		fuel = 5000
+	}
+}
+
+# Spanish Civil War - German Intervention
+country_event = {
+
+	id = 2010
+
+	is_triggered_only = yes
+
+	title = "Legion Condor has arrived"
+	desc = "EVTDESC2007"
+	picture = "DIG_SCW"
+
+	option = {
+		name = "EVTOPTA2007"
+		set_country_flag = legion_condor
+		load_oob = zDD-SPA_GER_intervention.txt
+		supplies = 25000
+		fuel = 15000
+		set_country_flag = GER_intervention
+	}
+}
+
+# Spanish Civil War - Italian Intervention
+country_event = {
+
+	id = 2011
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2011"
+	desc = "EVTDESC2007"
+	picture = "DIG_SCW"
+
+	option = {
+		name = "EVTOPTA2007"
+		load_oob = zDD-SPA_ITA_intervention.txt
+		supplies = 25000
+		fuel = 15000
+		set_country_flag = ITA_intervention
+	}
+}
+
+# Legion Condor go home
+country_event = {
+
+	id = 2012
+	
+	trigger = {
+		has_country_flag = german_intervention_spanish_civil_war
+		not = { has_country_flag = condor_home }
+	}
+
+	is_triggered_only = yes
+
+	title = "EVTNAME2012"
+	desc = "EVTDESC2012"
+	picture = "DIG_legion_condor"
+
+	option = {
+		name = "Welcome back, guys!"
+		set_country_flag = condor_home
+		tac_pilot_training = 60
+		fighter_pilot_training = 60
+		fighter_ground_control = 60
+		ground_attack_tactics = 60
+		aa_barrell_ammo = 60
+		aa_carriage_sights = 60 
+		load_oob = zDIG_Legion_Condor.txt
+	}
+}
+
+# Spanish Civil War - Victory
+country_event = {
+	
+	id = 2013
+	
+	trigger = {
+		tag = SPA
+		SPR = { exists = no }
+		NOT = { has_country_flag = spanish_civil_war_over }
+	}
+	
+	title = "SCWVIC"
+	desc = "SCWVICDESC"
+	picture = "SPA_Victory"
+
+	option = {
+		name = "EVTOPTA1406"
+		GER = { country_event = 2012 }
+		capital = 4540
+		eastern_spain_region = { add_core = SPA }
+		northern_spain_region = { add_core = SPA }
+		eastern_spain_region = { remove_core = SPR }
+		northern_spain_region = { remove_core = SPR }
+		SPR_5321 = { add_core = SPA }
+		SPR_5289 = { add_core = SPA }
+		islas_baleares_region = { add_core = SPA }
+		9506 = { add_core = SPA }
+		SPR_10729 = { add_core = SPA }
+		sahara_espanol_region = { add_core = SPA }
+		SPR_10002 = { add_core = SPA }
+		SPR_5321 = { remove_core = SPR }
+		SPR_5289 = { remove_core = SPR }
+		islas_baleares_region = { remove_core = SPR }
+		9506 = { remove_core = SPR }
+		SPR_10729 = { add_core = SPA }
+		sahara_espanol_region = { remove_core = SPR }
+		SPR_10002 = { remove_core = SPR }
+		set_country_flag = spanish_civil_war_over
+	}
+}
