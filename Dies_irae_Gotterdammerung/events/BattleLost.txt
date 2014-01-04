@@ -168,7 +168,10 @@ province_event = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
 		}
-		faction = allies
+		or = {
+			tag = GER
+			faction = allies
+		}
 		year = 1942
 	}
 	
@@ -206,7 +209,10 @@ province_event = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
 		}
-		tag = GER
+		or = {
+			tag = GER
+			faction = allies
+		}
 		year = 1942
 	}
 	
@@ -243,7 +249,10 @@ province_event = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
 		}
-		tag = GER
+		or = {
+			tag = GER
+			faction = allies
+		}
 		year = 1942
 	}
 	
@@ -280,7 +289,10 @@ province_event = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
 		}
-		faction = allies
+		or = {
+			tag = GER
+			faction = allies
+		}
 		not = { year = 1941 }
 	}
 	
@@ -318,7 +330,10 @@ province_event = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
 		}
-		faction = allies
+		or = {
+			tag = GER
+			faction = allies
+		}
 		year = 1942
 	}
 	
@@ -356,7 +371,10 @@ province_event = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
 		}
-		tag = GER
+		or = {
+			tag = GER
+			faction = allies
+		}
 		year = 1942
 	}
 	
@@ -393,7 +411,10 @@ province_event = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
 		}
-		tag = GER
+		or = {
+			tag = GER
+			faction = allies
+		}
 		year = 1942
 	}
 	
@@ -470,8 +491,11 @@ province_event = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
 		}		
-		tag = GER
-		year = 1943
+		or = {
+			tag = GER
+			faction = allies
+		}
+		year = 1942
 	}
 	
 	option = {
@@ -508,7 +532,10 @@ province_event = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
 		}		
-		tag = GER
+		or = {
+			tag = GER
+			faction = allies
+		}
 		year = 1942
 	}
 	
@@ -546,7 +573,10 @@ province_event = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
 		}		
-		tag = GER
+		or = {
+			tag = GER
+			faction = allies
+		}
 		year = 1942
 	}
 	
@@ -1010,7 +1040,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 2209
+		province_id = 2265
 		OR = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
@@ -1132,7 +1162,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 2031 #Halberstadt
+		province_id = 2034 #Lübben
 		OR = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
@@ -1218,7 +1248,10 @@ province_event = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
 		}
-		tag = GER
+		or = {
+			tag = GER
+			faction = allies
+		}
 		year = 1943
 	}
 	
@@ -1255,7 +1288,10 @@ province_event = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
 		}
-		tag = GER
+		or = {
+			tag = GER
+			faction = allies
+		}
 		year = 1943
 	}
 	
@@ -1292,7 +1328,10 @@ province_event = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
 		}
-		tag = GER
+		or = {
+			tag = GER
+			faction = allies
+		}
 		year = 1943
 	}
 	
@@ -1329,7 +1368,10 @@ province_event = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
 		}
-		tag = GER
+		or = {
+			tag = GER
+			faction = allies
+		}
 		year = 1943
 	}
 	
@@ -1894,7 +1936,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 1746
+		province_id = 1867
 		or = {
 			tag = GER
 			tag = POL
@@ -1934,7 +1976,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 2447
+		province_id = 2508
 		or = {
 			tag = GER
 			tag = POL
@@ -2092,7 +2134,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 2157
+		province_id = 2216
 		or = {
 			tag = GER
 			tag = POL
@@ -2210,4 +2252,3 @@ province_event = {
 		}
 	}
 }
-

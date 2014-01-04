@@ -13,6 +13,7 @@ province_event = {
 	
 	trigger = {
 		province_id = 2613
+		year = 1939
 		tag = GER
 	}
 	
@@ -95,7 +96,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 1982
+		province_id = 2098
 		not = { year = 1940 }
 		tag = GER
 		OR = {
@@ -133,7 +134,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 1987
+		province_id = 2044
 		not = { year = 1940 }
 		tag = GER
 		OR = {
@@ -170,7 +171,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 2390
+		province_id = 2099
 		not = { year = 1940 }
 		tag = GER
 		OR = {
@@ -245,6 +246,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		year = 1941
 		province_id = 2857
 		tag = GER
 	}
@@ -279,7 +281,7 @@ province_event = {
 	
 	trigger = {
 		OR = {
-			province_id =  1694
+			province_id = 1694
 			province_id = 1810
 			}
 		OR = {
@@ -356,7 +358,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 1274
+		province_id = 2450
 		OR = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
@@ -430,7 +432,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 1535
+		province_id = 1536
 		OR = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
@@ -579,7 +581,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 986
+		province_id = 1986
 		not = { year = 1940 }
 		tag = GER
 		OR = {
@@ -1175,7 +1177,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 161
+		province_id = 180
 		OR = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
@@ -1229,7 +1231,7 @@ province_event = {
 	
 	option = {
 		name = "EVTOPTA600"
-		GER = { kill_leader = 600308 }
+		# GER = { kill_leader = 600308 } leader doesnt exist
 		add_country_modifier = {
 			name = lille_battle_won
 			duration = 25
@@ -1811,7 +1813,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 2209
+		province_id = 2265
 		OR = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
@@ -1933,7 +1935,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 2031 #Halberstadt
+		province_id = 2034 #Lübben
 		OR = {
 			last_battle_winner_losses = 1000
 			last_battle_loser_losses = 1000
@@ -2699,7 +2701,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 1746
+		province_id = 1867
 		or = {
 			tag = GER
 			tag = POL
@@ -2739,7 +2741,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 2447
+		province_id = 2508
 		or = {
 			tag = GER
 			tag = POL
@@ -2901,7 +2903,7 @@ province_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		province_id = 2157
+		province_id = 2216
 		or = {
 			tag = GER
 			tag = POL
@@ -3034,6 +3036,7 @@ province_event = {
 	
 	trigger = {
 		province_id = 782
+		year = 1941
 		or = {
 			tag = GER
 			tag = SOV
