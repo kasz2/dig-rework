@@ -394,21 +394,21 @@ spriteTypes = {
 	spriteType = {
         norefcount = yes
 		name = "GFX_land_xp"
-		texturefile = "mod\\Dies_irae_Gotterdammerung\\gfx\\interface\\land_xp.dss"
+		texturefile = "mod\\Dies_irae_Gotterdammerung\\gfx\\interface\\land_xp.dds"
 		noOfFrames = 11
 	}
 
 	spriteType = {
         norefcount = yes
 		name = "GFX_naval_xp"
-		texturefile = "mod\\Dies_irae_Gotterdammerung\\gfx\\interface\\naval_xp.dss"
+		texturefile = "mod\\Dies_irae_Gotterdammerung\\gfx\\interface\\naval_xp.dds"
 		noOfFrames = 11
 	}
 
 	spriteType = {
         norefcount = yes
 		name = "GFX_air_xp"
-		texturefile = "mod\\Dies_irae_Gotterdammerung\\gfx\\interface\\air_xp.dss"
+		texturefile = "mod\\Dies_irae_Gotterdammerung\\gfx\\interface\\air_xp.dds"
 		noOfFrames = 11
 	}
 

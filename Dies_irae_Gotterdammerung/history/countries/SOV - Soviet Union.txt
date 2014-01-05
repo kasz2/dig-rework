@@ -658,7 +658,7 @@ civil_law = totalitarian_system
 	transport_practical = 2.5
 	construction_practical = 5
 	officers_ratio = 0.8
-	set_global_flag = operation_barbarossa
+	#set_global_flag = operation_barbarossa
 }
 1941.12.8 = {
 	decision = great_patriotic_war
