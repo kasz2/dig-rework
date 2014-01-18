@@ -512,11 +512,11 @@ infantry_at = {
 	}
 	panzer_lehr_brigade = {
 		hard_attack = 0.25
-		ap_attack = 1
+		#ap_attack = 1
 	}
 	fallschirmjager_panzer_brigade = {
 		hard_attack = 0.25
-		ap_attack = 1
+		#ap_attack = 1
 	}
 	luftwaffe_field_infantry_brigade = {
 		hard_attack = 0.20
