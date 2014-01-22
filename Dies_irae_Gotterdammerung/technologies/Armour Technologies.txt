@@ -26,12 +26,12 @@ lighttank_gun = {
 		maximum_speed = -0.1
 	}
 
-        mechanized_brigade = {
-            soft_attack = 0.3
-	    hard_attack = 0.2
-	    toughness  = -0.1
-	    maximum_speed = -0.1
-        }
+	mechanized_brigade = {
+		soft_attack = 0.3
+		hard_attack = 0.2
+		toughness  = -0.1
+		maximum_speed = -0.1
+	}
 
 	allow = {
 		lighttank_brigade = 1
@@ -66,9 +66,9 @@ lighttank_engine = {
         toughness  = -0.1
     }
 	summer_mechanized_brigade = {
-        maximum_speed = 0.5
-        toughness  = -0.1
-    }
+		maximum_speed = 0.5
+		toughness  = -0.1
+	}
 
     motorized_brigade = {
         maximum_speed = 0.2
@@ -243,12 +243,12 @@ tank_gun = {
 		toughness  = -0.5
 		maximum_speed = -0.25
 	}
-	grossdeutschland_mechanized_brigade = {
-		soft_attack = 0.33
-		hard_attack = 0.33
-		ap_attack = 1
-		toughness  = -0.5
-	}
+	#grossdeutschland_mechanized_brigade = {
+	#	soft_attack = 0.33
+	#	hard_attack = 0.33
+	#	ap_attack = 1
+	#	toughness  = -0.5
+	#}
 	panzer_lehr_brigade = {
 		soft_attack = 0.50
 		hard_attack = 0.70
@@ -401,11 +401,11 @@ tank_armour = {
 		toughness = 0.2
 	}
 	
-	grossdeutschland_mechanized_brigade = {
-		defensiveness  = 0.6
-		toughness = 0.2
-		armor_value = 1
-	}
+	#grossdeutschland_mechanized_brigade = {
+	#	defensiveness  = 0.6
+	#	toughness = 0.2
+	#	armor_value = 1
+	#}
 	
 	panzer_lehr_brigade = {
 		maximum_speed = -0.25
@@ -472,9 +472,9 @@ tank_reliability = {
 		toughness = 0.4
 	}
 	
-	grossdeutschland_mechanized_brigade = {
-		toughness = 0.4
-	}
+	#grossdeutschland_mechanized_brigade = {
+	#	toughness = 0.4
+	#}
 	
 	panzer_lehr_brigade = {
 		toughness = 1.0
@@ -552,6 +552,13 @@ heavy_tank_gun = {
 		toughness  = -0.25
 		maximum_speed = -0.25
 	}
+	
+	grossdeutschland_mechanized_brigade = {
+		soft_attack = 0.33
+		hard_attack = 0.33
+		ap_attack = 1
+		toughness  = -0.5
+	}
 
 	allow = {
 		heavy_tank_brigade = 1
@@ -624,6 +631,12 @@ heavy_tank_armour = {
 		toughness = 0.25
 		armor_value = 1
 	}
+	
+	grossdeutschland_mechanized_brigade = {
+		defensiveness  = 0.6
+		toughness = 0.2
+		armor_value = 1
+	}
 
 	tank_destroyer_brigade = {
 		maximum_speed = -0.25
@@ -662,6 +675,10 @@ heavy_tank_reliability = {
 	
 	super_heavy_armor_brigade = {
 		toughness = 0.75
+	}
+	
+	grossdeutschland_mechanized_brigade = {
+		toughness = 0.4
 	}
 
 	allow = {

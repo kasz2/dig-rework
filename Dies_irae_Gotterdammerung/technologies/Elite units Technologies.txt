@@ -1,0 +1,207 @@
+#########################
+# ELITE TECHNOLOGIES
+########################
+
+### GROßDEUTSCHLAND
+grossdeutchland_tigers = {
+
+	grossdeutschland_motorized_brigade = {
+	#Misc Abilities
+		maximum_speed = -1.00 #7.00
+		transport_weight = 5.00 #20.000
+		supply_consumption = 1.00 #2.67
+		fuel_consumption = 1.00 # 2.67		
+	#Defensive Abilities
+		armor_value = 11
+		defensiveness = 1.00
+		softness = -0.40 #0.50
+	#Offensive Abilities
+		soft_attack = 1.00
+		hard_attack = 2.00
+		ap_attack = 6
+	}
+
+	allow = {
+		or = {
+			year = 1942
+			2857 = { controller = { faction = axis } } #Stalingrad
+		}
+		heavy_tank_gun = 3
+		heavy_tank_engine = 3
+		heavy_tank_armour = 3
+		heavy_tank_reliability = 3
+	}
+
+	research_bonus_from = {
+		mobile_theory = 0.3
+		mobile_practical = 0.6
+		superior_firepower_theory = 0.1
+	}
+	
+	on_completion = mobile_theory
+
+	difficulty = 1
+	start_year = 1942
+	folder = armour_folder
+}
+
+grossdeutchland_mech = {
+
+	activate_unit = grossdeutschland_mechanized_brigade
+
+	allow = {
+		grossdeutchland_tigers = 1
+		mechanised_infantry = 1
+		tank_reliability = 4
+		tank_armour = 4
+		tank_engine = 4
+		tank_gun = 4
+	} 
+
+	research_bonus_from = {
+		mobile_theory = 0.3
+		mobile_practical = 0.6
+		superior_firepower_theory = 0.1
+	}
+	
+	on_completion = mobile_theory
+
+	difficulty = 1
+	start_year = 1943
+	folder = armour_folder
+}
+
+###HERMANN GOERING
+brigade_hermann_goering = {
+
+	fallschirmjager_para_brigade = {
+		max_strength = 25
+	#Misc Abilities
+		transport_weight = 10.00
+		supply_consumption = 1.00
+	#Offensive Abilities
+		soft_attack = 2.00
+		hard_attack = 0.67
+		
+		combat_width = 1
+	}
+
+	allow = {
+		paratrooper_infantry = 1
+		airborne_warfare_equipment = 1
+		or = {
+			chief_of_air = 10 # Hermann Goering
+			head_of_state = 10
+			head_of_government = 10
+			armament_minister = 10
+		}
+		has_country_flag = regiment_georing
+	}
+
+	research_bonus_from = {
+		grand_battleplan_theory = 0.3
+		land_doctrine_practical = 0.7
+	}
+
+	on_completion = grand_battleplan_theory
+	
+	change = no
+
+	difficulty = 1
+	start_year = 1942
+	folder = armour_folder
+}
+
+fallschirmpanzer_hermann_goering = {
+
+	activate_unit = fallschirmjager_panzer_brigade
+
+	allow = {
+		brigade_hermann_goering = 1		
+		tank_gun = 4
+		tank_engine = 4
+		tank_armour = 4
+		tank_reliability = 4
+		or = {
+			chief_of_air = 10 # Hermann Goering
+			head_of_state = 10
+			head_of_government = 10
+			armament_minister = 10
+		}
+	}
+	
+	research_bonus_from = {
+		automotive_theory = 0.3
+		armour_practical = 0.7
+	}
+	
+	on_completion = automotive_theory
+
+	difficulty = 1
+	start_year = 1944
+	folder = armour_folder
+}
+
+#### LUFTWAFFE FIELD DIVISION
+
+luftwaffe_field_activation = {
+
+	activate_unit = luftwaffe_field_infantry_brigade
+	
+	radar_impact = -0.05
+	ground_attack = { reduction_modifier = 0.05 }
+	interdiction = { reduction_modifier = 0.05 }
+	naval_strike = { reduction_modifier = 0.05 }
+	port_strike = { reduction_modifier = 0.05 }
+	strategic_bomb = { reduction_modifier = 0.05 }
+
+	allow = {
+		not = { total_amount_of_planes = 50 }
+		not = { manpower = 500 }
+		or = {
+			chief_of_air = 10 # Hermann Goering
+			head_of_state = 10
+			head_of_government = 10
+			armament_minister = 10
+		}
+		year = 1941
+	}
+	
+	research_bonus_from = {
+		militia_theory = 0.3
+		militia_practical = 0.6
+		artillery_practical = 0.2
+	}
+	
+	on_completion = militia_theory
+
+	difficulty = 1
+	start_year = 1942
+	folder = infantry_folder
+}
+
+## LIGHT JAEGERS
+
+light_jager_activation = {
+
+	activate_unit = light_jager_brigade
+
+	allow = {
+		infantry_guns = 3
+		infantry_support = 3
+		smallarms_technology = 3
+		infantry_at = 3
+	}
+
+	research_bonus_from = {
+		infantry_theory = 0.3
+		infantry_practical = 0.6
+		superior_firepower_theory = 0.1
+	}
+	
+	on_completion = infantry_theory
+
+	difficulty = 2
+	start_year = 1938
+	folder = infantry_folder
+}

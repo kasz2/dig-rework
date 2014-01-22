@@ -33,12 +33,14 @@ grossdeutschland_mechanized_brigade = {
 	toughness = 4.00
 	softness = 0.40
 	air_defence = 1.50
+	armor_value = 8
 
 	#Offensive Abilities
 	suppression = 1.00
 	soft_attack = 3.67
 	hard_attack = 3.67
 	air_attack = 0.33
+	ap_attack = 8
 	
 	urban = {
 		attack = -0.20
