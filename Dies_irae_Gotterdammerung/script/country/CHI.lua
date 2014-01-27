@@ -267,6 +267,7 @@ end
 
 -- END OF PRODUTION OVERIDES
 -- #######################################
+--[[ DI:G China can join any faction
 function P.DiploScore_InviteToFaction(voDiploScoreObj)
 	local japTag = CCountryDataBase.GetTag("JAP")
 	
@@ -283,6 +284,7 @@ function P.DiploScore_InviteToFaction(voDiploScoreObj)
 	
 	return voDiploScoreObj.Score
 end
+--]]
 
 function P.DiploScore_GiveMilitaryAccess(viScore, voAI, voCountry)
 	local lsCountry = tostring(voCountry)

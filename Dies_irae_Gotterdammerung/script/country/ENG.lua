@@ -417,7 +417,6 @@ function P.AirRatio(voProductionData)
 	local laArray = {
 		interceptor = 10,
 		multi_role = 0,
-		rocket_interceptor = 0,
 		cas = 0,
 		tactical_bomber = 3,
 		naval_bomber = 1,
@@ -431,7 +430,6 @@ function P.NavalRatio(voProductionData)
 	local laArray = {
 		destroyer = 9,
 		submarine = 0,
-		nuclear_submarine = 0,
 		light_cruiser = 6,
 		heavy_cruiser = 0,
 		battleship = 3,

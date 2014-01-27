@@ -45,11 +45,10 @@ function P.LandTechs(voTechnologyData)
 			{"cavalry_guns", 3}, 
 			{"cavalry_at", 3},
 			{"marine_infantry", 0},
-			{"tank_brigade", 0},
-			{"tank_gun", 0},
-			{"tank_engine", 0},
-			{"tank_armour", 0},
-			{"tank_reliability", 0},
+			{"lighttank_gun", 2},
+			{"lighttank_engine", 2},
+			{"lighttank_armour", 2},
+			{"lighttank_reliability", 2},
 			{"heavy_tank_brigade", 0},
 			{"heavy_tank_gun", 0},
 			{"heavy_tank_engine", 0},
@@ -327,11 +326,11 @@ end
 -- Land ratio distribution
 function P.LandRatio(voProductionData)
 	local laArray = {
-		garrison_brigade = 4,
-		infantry_brigade = 20,
-		motorized_brigade = 4,
+		garrison_brigade = 5,
+		infantry_brigade = 15,
+		motorized_brigade = 1,
 		mechanized_brigade = 1,
-		light_armor_brigade = 1,
+		armor_brigade = 1,
 		militia_brigade = 1,
 		cavalry_brigade = 1};
 	
@@ -370,7 +369,7 @@ end
 function P.NavalRatio(voProductionData)
 	local laArray = {
 		destroyer = 4,
-		submarine = 2,
+		submarine = 0,
 		heavy_cruiser = 2,
 		battleship = 1};
 	
@@ -513,6 +512,8 @@ end
 
 --##########################
 -- Foreign Minister Hooks
+-- We want Italy declaring war on Greece either or not they are prepared (historically they lost)
+--[[
 function P.ForeignMinister_EvaluateDecision(voDecision, voForeignMinisterData)
 	if voDecision.Name == "the_future_of_greece" then
 		local fraTag = CCountryDataBase.GetTag("FRA")
@@ -538,6 +539,7 @@ function P.ForeignMinister_EvaluateDecision(voDecision, voForeignMinisterData)
 	
 	return voDecision.Score
 end
+--]]
 
 function P.ForeignMinister_ProposeWar(voForeignMinisterData)
 	-- Only process this if Italy is part of the Axis
