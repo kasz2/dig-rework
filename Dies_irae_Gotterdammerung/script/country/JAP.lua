@@ -88,11 +88,6 @@ function P.LandTechs(voTechnologyData)
 		{"rocket_carriage_sights", 0}};
 		
 	local preferTech = {
-		"militia_smallarms",
-		"militia_support",
-		"militia_guns",
-		"militia_at",
-		"infantry_activation",
 		"smallarms_technology",
 		"infantry_support",
 		"infantry_guns",
