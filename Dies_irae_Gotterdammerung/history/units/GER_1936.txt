@@ -410,8 +410,8 @@ navy = {
 	name = "Schlachtflotte"
 	base = 1570
 	location = 1570
-	ship = { type = heavy_cruiser name = "Deutschland" historical_model = 3 }
-	ship = { type = heavy_cruiser name = "Admiral Scheer" historical_model = 3 }
+	ship = { type = pocket_battleship name = "Deutschland" historical_model = 3 }
+	ship = { type = pocket_battleship name = "Admiral Scheer" historical_model = 3 }
 	ship = { type = light_cruiser name = "Nürnberg" historical_model = 3 }
 	ship = { type = light_cruiser name = "Leipzig" historical_model = 2 }
 	ship = { type = light_cruiser name = "Königsberg" historical_model = 2 }
@@ -424,14 +424,14 @@ navy = {
 	name = "II. Unterseebootsflotte"
 	base = 1572
 	location = 1572
-	ship = { type = submarine name = "2. Unterseebootsflottille" historical_model = 1 }
-	ship = { type = submarine name = "3. Unterseebootsflottille" historical_model = 1 }
+	ship = { type = submarine_coastal name = "2. Unterseebootsflottille" historical_model = 1 }
+	ship = { type = submarine_mr name = "3. Unterseebootsflottille" historical_model = 1 }
 }
 navy = {
 	name = "I. Unterseebootsflotte"
 	base = 1570
 	location = 1570
-	ship = { type = submarine name = "1. Unterseebootsflottille" historical_model = 0 }
+	ship = { type = submarine_coastal name = "1. Unterseebootsflottille" historical_model = 0 }
 }
 navy = {
 	name = "Reserveflotte"
@@ -481,8 +481,6 @@ air = {
 	wing = { type = tactical_bomber name = "KG 4 'General Wever'" historical_model = 0 }
 }
 
-
-
 military_construction = {
 	country = GER
 	pocket_battleship = {
@@ -503,4 +501,3 @@ military_construction = {
 	progress = 0
 	duration = 61
 }
-
