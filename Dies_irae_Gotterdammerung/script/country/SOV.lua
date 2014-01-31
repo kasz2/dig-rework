@@ -473,7 +473,7 @@ function P.NavalRatio(voProductionData)
 		destroyer = 6,
 		submarine = 4,
 		nuclear_submarine = 0,
-		light_cruiser = 3
+		light_cruiser = 3,
 		heavy_cruiser = 1,
 		battleship = 1};
 	
