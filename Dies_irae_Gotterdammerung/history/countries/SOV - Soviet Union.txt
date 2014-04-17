@@ -93,6 +93,9 @@ cavalry_guns = 3
 cavalry_at = 3
 mortorised_infantry = 1
 lighttank_brigade = 1
+lighttank_gun = 1
+lighttank_armour = 1
+lighttank_reliability = 1
 single_engine_aircraft_design = 1
 twin_engine_aircraft_design = 1
 battleship_technology = 1
@@ -391,10 +394,6 @@ civil_law = totalitarian_system
 	construction_practical = 5
 	officers_ratio = 0.65
 }
-#1939.8.23 = {
-#	neutrality = 30
-#	set_country_flag = mol_rib_pact
-#} # Molotov-Ribbentrop pact
 1939.9.17 = {
 	conscription_law = one_year_draft
 	neutrality = 0
@@ -471,7 +470,8 @@ civil_law = totalitarian_system
 	cas_groundcrew_training = 2
 	construction_practical = 5
 	officers_ratio = 0.7
-	threat = 10 		
+	threat = 10 
+	
 }
 1941.6.22 = {
 	head_of_state = 4001
@@ -587,7 +587,7 @@ civil_law = totalitarian_system
 }
 1941.12.7 = {
 	oob = "SOV_DayOfInfamy.txt"
-
+	
 	destroyer_armament = 2
 	destroyer_antiaircraft = 1
 	destroyer_armour = 1
@@ -658,7 +658,8 @@ civil_law = totalitarian_system
 	transport_practical = 2.5
 	construction_practical = 5
 	officers_ratio = 0.8
-	#set_global_flag = operation_barbarossa
+	set_global_flag = operation_barbarossa	
+
 }
 1941.12.8 = {
 	decision = great_patriotic_war
@@ -714,6 +715,7 @@ civil_law = totalitarian_system
 	construction_practical = 7.5
 	officers_ratio = 0.85
 }
+
 1943.2.1 = { oob = "SOV_TheTideHasTurned.txt"
 	set_country_flag = Soviet_industry
 	infantry_theory = 10

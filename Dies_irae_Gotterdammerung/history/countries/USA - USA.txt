@@ -71,6 +71,8 @@ militia_support = 1
 militia_guns = 1
 militia_at = 1
 infantry_activation = 1
+lighttank_brigade = 1
+lighttank_engine = 1
 single_engine_aircraft_design = 1
 basic_aeroengine = 1 
 basic_small_fueltank = 1 
@@ -193,7 +195,6 @@ civil_defence = 1
 
 ## DIES IRAE
 escort_strikes_back = 3
-
 
 oob = "USA_1936.txt"
 
@@ -492,9 +493,12 @@ civil_law = open_society
 	}
 }
 1941.3.1 = { neutrality = 60 set_country_flag = the_destroyers_for_bases_agreement } # The lend lease act
-1941.4.10 = { neutrality = 40 } # US occupation of Iceland and Greenland
-1941.5.27={
+1941.4.10 = { neutrality = 40 set_country_flag = lend_lease_act }
+1941.5.27 = {
 	decision = unlimted_national_emergency
+}
+1941.7.7 = {
+	set_country_flag = us_occuption_of_iceland_and_greenland
 }
 1941.6.22 = {
 	head_of_state = 6001
@@ -530,9 +534,9 @@ civil_law = open_society
 	four_engine_airframe = 1
 	strategic_bomber_armament = 1 
 	large_navagation_radar = 1
-	aeroengine = 3
-	single_engine_airframe = 3
-	single_engine_aircraft_armament = 3
+	aeroengine = 2
+	single_engine_airframe = 2
+	single_engine_aircraft_armament = 2
 	small_bomb = 1
 	multi_role_fighter_development = 1
 	infantry_theory = 5
@@ -648,6 +652,7 @@ civil_law = open_society
 	battlecruiser_antiaircraft = 3
 	battlecruiser_engine = 4
 	battlecruiser_armour = 4
+	largewarship_radar = 1
 	heavycruiser_armament = 3
 	heavycruiser_antiaircraft = 3
 	heavycruiser_engine = 4
@@ -745,6 +750,7 @@ civil_law = open_society
 	battlecruiser_antiaircraft = 3
 	battlecruiser_engine = 4
 	battlecruiser_armour = 4
+	largewarship_radar = 1
 	heavycruiser_armament = 3
 	heavycruiser_antiaircraft = 3
 	heavycruiser_engine = 4
@@ -998,6 +1004,7 @@ civil_law = open_society
 	supply_organisation = 4
 	civil_defence = 3
 	construction_practical = 10
+	amphibious_invasion_craft = 1
 }
 1944.6.20 = {
 	head_of_state = 6001
@@ -1022,6 +1029,9 @@ civil_law = open_society
 	destroyer_antiaircraft = 4
 	destroyer_engine = 4
 	twin_engine_airframe = 2
+	medium_bomb = 2 
+	medium_airsearch_radar = 1 
+	aeroengine = 3 
 	large_fueltank = 3
 	four_engine_airframe = 3
 	strategic_bomber_armament = 3
@@ -1147,6 +1157,9 @@ civil_law = open_society
 	supply_organisation = 6
 	civil_defence = 4
 	construction_practical = 15
+	amphibious_invasion_technology = 1
+	amphibious_assault_units = 1
+	advanced_invasion_craft = 1
 }
 1944.11.7 = {
 	popularity = { 
