@@ -407,7 +407,7 @@ theatre = {
 		
 
 navy = {
-	name = "Schlachtflotte"
+	name = "Kriegsmarine"
 	base = 1570
 	location = 1570
 	ship = { type = pocket_battleship name = "Deutschland" historical_model = 3 }
@@ -421,20 +421,25 @@ navy = {
 	ship = { type = destroyer name = "4. Zerstörergeschwader" historical_model = 1 }
 }
 navy = {
-	name = "II. Unterseebootsflotte"
-	base = 1572
-	location = 1572
-	ship = { type = submarine_coastal name = "2. Unterseebootsflottille" historical_model = 1 }
-	ship = { type = submarine_mr name = "3. Unterseebootsflottille" historical_model = 1 }
-}
-navy = {
 	name = "I. Unterseebootsflotte"
 	base = 1570
 	location = 1570
 	ship = { type = submarine_coastal name = "1. Unterseebootsflottille" historical_model = 0 }
 }
 navy = {
-	name = "Reserveflotte"
+	name = "II. Unterseebootsflotte"
+	base = 1572
+	location = 1572
+	ship = { type = submarine_coastal name = "2. Unterseebootsflottille" historical_model = 1 }
+}
+navy = {
+	name = "III. Unterseebootsflotte"
+	base = 1572
+	location = 1572
+	ship = { type = submarine_mr name = "3. Unterseebootsflottille" historical_model = 1 }
+}
+navy = {
+	name = "Baltische Flotte"
 	base = 1527
 	location = 1527
 	ship = { type = battlecruiser name = "Schleswig-Holstein" historical_model = 0 }
