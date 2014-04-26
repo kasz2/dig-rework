@@ -4,7 +4,7 @@ waffen_brigade = {
 	sprite = Elite
 	is_mobile = yes
 	unit_group = infantry_unit_type # Combined arms type. Other types are support_unit_type, direct_fire_unit_type, armor_unit_type, and artillery_unit_type.
-	is_buildable = no
+	active = no
 
 	#limitations
 	minimum_of_type = 6 #You can always build this many
