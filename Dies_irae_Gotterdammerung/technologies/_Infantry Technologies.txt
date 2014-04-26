@@ -187,7 +187,6 @@ smallarms_technology = {
 	summer_infantry_brigade = {
 		soft_attack = 0.6		
 	}
-	
 	marine_brigade = {
 		soft_attack = 0.6		
 	}
@@ -200,7 +199,6 @@ smallarms_technology = {
 	fallschirmjager_para_brigade = {
 		soft_attack = 0.6		
 	}
-	
 	motorized_brigade = {
 		soft_attack = 0.6		
 	}
@@ -210,7 +208,6 @@ smallarms_technology = {
 	grossdeutschland_motorized_brigade = {
 		soft_attack = 0.6		
 	}
-	
 	mechanized_brigade = {
 		soft_attack = 0.6		
 	}
@@ -226,7 +223,6 @@ smallarms_technology = {
 	fallschirmjager_panzer_brigade = {
 		soft_attack = 0.4		
 	}
-	
 	luftwaffe_field_infantry_brigade = {
 		soft_attack = 0.4		
 	}
@@ -284,7 +280,6 @@ infantry_support = {
 	summer_infantry_brigade = {
 		defensiveness = 0.8		
 	}
-	
 	marine_brigade = {
 		defensiveness = 0.8		
 	}
@@ -297,7 +292,6 @@ infantry_support = {
 	fallschirmjager_para_brigade = {
 		defensiveness = 0.8		
 	}
-	
 	motorized_brigade = {
 		defensiveness = 0.8		
 	}
@@ -307,7 +301,6 @@ infantry_support = {
 	grossdeutschland_motorized_brigade = {
 		defensiveness = 0.8		
 	}
-	
 	mechanized_brigade = {
 		defensiveness = 0.8		
 	}
@@ -323,7 +316,6 @@ infantry_support = {
 	fallschirmjager_panzer_brigade = {
 		defensiveness = 0.8		
 	}
-	
 	luftwaffe_field_infantry_brigade = {
 		defensiveness = 0.6		
 	}
@@ -376,7 +368,6 @@ infantry_guns = {
 	summer_infantry_brigade = {
 		toughness = 0.6		
 	}
-	
 	marine_brigade = {
 		toughness = 0.6		
 	}
@@ -389,7 +380,6 @@ infantry_guns = {
 	fallschirmjager_para_brigade = {
 		toughness = 0.6		
 	}
-	
 	motorized_brigade = {
 		toughness = 0.6		
 	}
@@ -399,7 +389,6 @@ infantry_guns = {
 	grossdeutschland_motorized_brigade = {
 		toughness = 0.6		
 	}
-	
 	mechanized_brigade = {
 		toughness = 0.6		
 	}
@@ -415,7 +404,6 @@ infantry_guns = {
 	fallschirmjager_panzer_brigade = {
 		toughness = 0.6		
 	}
-	
 	luftwaffe_field_infantry_brigade = {
 		toughness = 0.3		
 	}
