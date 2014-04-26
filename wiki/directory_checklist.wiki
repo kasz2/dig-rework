@@ -7,5 +7,5 @@
  * localisation - mostly complete, maybe delete all language except english
  * map - most file deleted-> using TFH 4.02 map, later maybe CMP map
  * script - all files revised, changing only if bug found
- * technologies - mostly complete, need to revise files
- * units - mostly complete, need to revise files, elite units will be disabled
+ * technologies - mostly complete, need to revise files(ONLY NAVAL TECH)
+ * units - complete, later activating TFH elite units
