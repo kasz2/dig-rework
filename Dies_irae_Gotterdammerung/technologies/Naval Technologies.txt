@@ -670,13 +670,13 @@ battlecruiser_armour = {
 
 battleship_antiaircraft = {
 	battleship = {
-		air_attack = 0.25
-		air_defence = 0.50
+		air_attack = 0.5
+		air_defence = 1.00
 	}
 	
 	super_heavy_battleship = {
-		air_attack = 0.25
-		air_defence = 0.50
+		air_attack = 0.35
+		air_defence = 0.65
 	}
 
 
@@ -948,7 +948,7 @@ carrier_armour = {
 
 	research_bonus_from = {
 		naval_engineering = 0.3
-		carrier_practical = 0.5
+		carrier_practical = 0.6
 		base_strike_doctrine = 0.1
 	}
 	
@@ -966,11 +966,11 @@ carrier_armour = {
 carrier_hanger = {
 
 	carrier = {
-		visibility = -5
+		visibility = -3
 	}
 
 	escort_carrier = {
-		visibility = -4
+		visibility = -3
 	}
 
 	allow = {
@@ -979,7 +979,7 @@ carrier_hanger = {
  
 	research_bonus_from = {
 		naval_engineering = 0.3
-		carrier_practical = 0.5
+		carrier_practical = 0.6
 		base_strike_doctrine = 0.1
 	}
 	
@@ -998,25 +998,48 @@ largewarship_radar = {
 	heavy_cruiser = {
 		surface_detection = 1.00
 		air_detection = 1.00
+		night = { 
+			attack = 0.1
+		}
 	}
 	battlecruiser = {
 		surface_detection = 1.00
 		air_detection = 1.00
+		night = { 
+			attack = 0.1
+		}
 	}
 
 	battleship = {
 		surface_detection = 1.00
 		air_detection = 1.00
+		night = { 
+			attack = 0.1
+		}
+	}
+
+	super_heavy_battleship = {
+		surface_detection = 1.00
+		air_detection = 1.00
+		night = { 
+			attack = 0.1
+		}
 	}
 	
 	pocket_battleship = {
 		surface_detection = 1.00
 		air_detection = 1.00
+		night = { 
+			attack = 0.1
+		}
 	}
 
 	carrier = {
 		surface_detection = 1.00
 		air_detection = 1.00
+		night = { 
+			attack = 0.1
+		}
 	}
 
 	allow = {
