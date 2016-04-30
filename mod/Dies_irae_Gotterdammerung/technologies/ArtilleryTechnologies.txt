@@ -152,10 +152,6 @@ aa_barrell_ammo = {
 		air_attack = 0.3
 		air_defence = 0.3
 	}
-	mot_aa_brigade = {
-		air_attack = 0.3
-		air_defence = 0.3
-	}
 
 	allow = {
 		infantry_activation = 1
@@ -191,11 +187,6 @@ aa_carriage_sights = {
 		defensiveness = 0.1
 	}
 	sp_anti_air_brigade = {
-		hard_attack = 0.3
-		soft_attack = 0.3
-		defensiveness = 0.2
-	}
-	mot_aa_brigade = {
 		hard_attack = 0.3
 		soft_attack = 0.3
 		defensiveness = 0.2

@@ -42,9 +42,6 @@ elastic_defence = {
 	sp_rct_artillery_brigade = {    
 		default_morale = 0.05   
 	}
-	mot_aa_brigade = {    
-		default_morale = 0.05   
-	}
 	sp_anti_air_brigade = {    
 		default_morale = 0.05   
 	}
@@ -146,7 +143,6 @@ blitzkrieg = {
     armored_car_brigade = {     default_organisation = 5    }
 	motorized_flak_brigade = {       default_organisation = 5    }
 	sp_anti_air_brigade = {    default_organisation = 5    }
-	mot_aa_brigade = {    default_organisation = 5    }
 	panzer_lehr_brigade = {     default_organisation = 5    }
 	fallschirmjager_panzer_brigade = {     default_organisation = 5    }
 	assault_gun_brigade = {     default_organisation = 5    }
@@ -213,7 +209,6 @@ tactical_command_structure = {
 	summer_motorized_brigade = {       default_morale = 0.05   }
 	grossdeutschland_motorized_brigade = {      default_morale = 0.05   }
     cavalry_brigade = {     default_morale = 0.05   }
-	waffen_brigade = {       default_morale = 0.05   }
 
     research_bonus_from = {
         superior_firepower_theory = 0.3
@@ -349,8 +344,6 @@ mechanized_offensive = {
 	summer_motorized_brigade = {      default_organisation = 5    }
 	grossdeutschland_motorized_brigade = {      default_organisation = 5    }
     cavalry_brigade = {         default_organisation = 5    }
-	waffen_brigade = {       default_organisation = 5    }
-
 
     research_bonus_from = {
         superior_firepower_theory = 0.3
@@ -557,8 +550,10 @@ grand_battle_plan = {
 assault_concentration = {
     anti_air_brigade = {        default_organisation = 5    }
     anti_tank_brigade = {       default_organisation = 5    }
+	motorized_flak_brigade = {    default_organisation = 0.05 }
     sp_artillery_brigade = {    default_organisation = 5    }
     sp_rct_artillery_brigade = {    default_organisation = 5    }
+	sp_anti_air_brigade = {	default_organisation = 0.05 }
     rocket_artillery_brigade = {    default_organisation = 5    }
     artillery_brigade = {       default_organisation = 5    }
 
@@ -643,6 +638,9 @@ guerilla_warfare = {
     hq_brigade = {
         supply_consumption = -0.01
     }
+	light_jager_brigade = {
+		supply_consumption = -0.02
+	}
 
     tactic_ambush = 3
     research_bonus_from = {
