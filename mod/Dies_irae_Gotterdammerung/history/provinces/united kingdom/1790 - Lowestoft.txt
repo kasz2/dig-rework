@@ -1,7 +1,7 @@
 owner = ENG
 controller = ENG
 add_core = ENG
+points = 1
 
 naval_base = 1
-infra = 10
-points = 1
+infra = 9

@@ -1004,7 +1004,7 @@ civil_law = open_society
 	supply_organisation = 4
 	civil_defence = 3
 	construction_practical = 10
-	amphibious_invasion_craft = 1
+	#amphibious_invasion_craft = 1 -disabled
 }
 1944.6.20 = {
 	head_of_state = 6001
@@ -1157,9 +1157,9 @@ civil_law = open_society
 	supply_organisation = 6
 	civil_defence = 4
 	construction_practical = 15
-	amphibious_invasion_technology = 1
-	amphibious_assault_units = 1
-	advanced_invasion_craft = 1
+	#amphibious_invasion_technology = 1 -disabled
+	#amphibious_assault_units = 1 -disabled
+	#advanced_invasion_craft = 1 -disabled
 }
 1944.11.7 = {
 	popularity = { 

@@ -204,7 +204,7 @@ airborne_assault_tactics = 0
 strategic_air_command = 0
 cas_development = 1
 spotting = 1
-amphibious_invasion_craft = 1
+#amphibious_invasion_craft = 1 -disabled
 
 oob = "JAP_1936.txt"
 
@@ -712,8 +712,8 @@ civil_law = limited_restrictions
 	nuclear_bomb = 0 
 	transport_practical = 5
 	construction_practical = 2.5
-	amphibious_invasion_technology = 1
-	amphibious_assault_units = 1
+	#amphibious_invasion_technology = 1 -disabled
+	#amphibious_assault_units = 1 -disabled
 }
 1941.12.11 = {
 	capital = 5315
@@ -925,8 +925,8 @@ civil_law = limited_restrictions
 	nav_pilot_training = 5
 	navalstrike_tactics = 5
 	construction_practical = 5
-	amphibious_invasion_technology = 2
-	amphibious_assault_units = 2
+	#amphibious_invasion_technology = 2 -disabled
+	#amphibious_assault_units = 2 -disabled
 }
 1944.6.20 = {
 	head_of_state = 5001

@@ -430,7 +430,7 @@ civil_law = totalitarian_system
 }
 1938.9.30 = { neutrality = 25 } # The Treaty of Munich
 1938.11.2 = { neutrality = 20 } # First Vienna Award
-1939.8.23 = { 
+1939.8.23 = {
 	neutrality = 5 
 	set_country_flag = mol_rib_pact # Molotov - Ribbentrop Pact
 } 
@@ -555,7 +555,7 @@ civil_law = totalitarian_system
 	officers_ratio = 1.0
 	threat = 15
 	total_exploitation = POL
-
+	
 	set_country_flag = infantry_grossdeutschland
 	set_country_flag = german_soviet_agreement_39
 	set_country_flag = keep_the_forts_sudeten
@@ -580,7 +580,8 @@ civil_law = totalitarian_system
 	chief_of_navy = 9
 	chief_of_air = 10
 	oob = "GER_1940.txt"
-
+	threat = 25
+	officers_ratio = 1.5
 	## DIES IRAE
 	set_country_flag = early_atlantic
 	set_country_flag = germany_is_at_war
@@ -588,9 +589,6 @@ civil_law = totalitarian_system
 	set_country_flag = brandenburg_regiment
 	set_country_flag = german_soviet_agreement_40
 	set_country_flag = foreign_wehrmacht_units_decision_ok
-
-	threat = 25
-	officers_ratio = 1.5
 }
 
 1941.6.22 = {
@@ -698,7 +696,7 @@ civil_law = totalitarian_system
 	full_occupation = GRE
 	full_occupation = YUG
 
-		##DIES IRAE
+	##DIES IRAE
 	set_country_flag = french_atlantic_ports
 	set_country_flag = amsterdam_conquered
 	set_country_flag = mid_atlantic
@@ -780,7 +778,7 @@ civil_law = totalitarian_system
 	construction_practical = 10
 	threat = 50 
 	total_exploitation = SOV
-
+	
 	set_country_flag = escort_strikes_back_II
 	set_country_flag = Afrika_Korps_decision
 }
@@ -833,7 +831,7 @@ civil_law = totalitarian_system
 	nuclear_bomb = 0 
 	transport_practical = 5
 	construction_practical = 10
-
+	
 	grossdeutchland_tigers = 1
 	set_country_flag = mot_grossdeutschland
 	winter_clothes = 1
@@ -946,7 +944,8 @@ civil_law = totalitarian_system
 	interdiction_tactics = 4
 	construction_practical = 10
 	officers_ratio = 1.3
-
+	set_country_flag = fall_of_stalingrad
+	
 	brigade_hermann_goering = 1
 	luftwaffe_field_activation = 1
 	set_country_flag = division_georing
@@ -1060,7 +1059,7 @@ civil_law = totalitarian_system
 	construction_practical = 10
 	conscription_law = two_year_draft
 	officers_ratio = 1.1
-
+	
 	grossdeutchland_mech = 1
 	set_country_flag = panzer_lehr
 	set_country_flag = totalen_krieg
@@ -1068,4 +1067,3 @@ civil_law = totalitarian_system
 	set_country_flag = walkyrie_stage_one
 	set_country_flag = maginot_atlantik
 }
-

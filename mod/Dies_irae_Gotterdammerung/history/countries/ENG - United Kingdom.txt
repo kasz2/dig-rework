@@ -211,7 +211,7 @@ airborne_assault_tactics = 0
 strategic_air_command = 2
 cas_development = 1
 nav_development = 1
-amphibious_invasion_craft = 1
+#amphibious_invasion_craft = 1	-disabled
 oob = "ENG_1936.txt"
 
 popularity = { 
@@ -676,7 +676,6 @@ civil_law = open_society
 	supply_organisation = 3
 	civil_defence = 3
 	construction_practical = 5
-	
 	## DIES IRAE
 	escort_strikes_back = 1
 }	
@@ -738,7 +737,6 @@ civil_law = open_society
 	nuclear_bomb = 0 
 	transport_practical = 5
 	construction_practical = 7.5
-	
 	## DIES IRAE
 	escort_strikes_back = 2
 	set_country_flag = Afrika_Korps_decision
@@ -854,8 +852,8 @@ civil_law = open_society
 	nuclear_bomb = 0 
 	transport_practical = 5 
 	construction_practical = 7.5
-	amphibious_invasion_technology = 1
-	amphibious_assault_units = 1
+	#amphibious_invasion_technology = 1 -disabled
+	#amphibious_assault_units = 1 -disabled
 }
 1942.11.10 = {
 	decision = the_end_of_the_begining
@@ -1117,5 +1115,5 @@ civil_law = open_society
 	steel_production = 5
 	raremetal_refinning_techniques = 5
 	construction_practical = 15
-	advanced_invasion_craft = 1
+	#advanced_invasion_craft = 1 -disabled
 }

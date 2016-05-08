@@ -394,6 +394,10 @@ civil_law = totalitarian_system
 	construction_practical = 5
 	officers_ratio = 0.65
 }
+1939.8.23 = {
+	neutrality = 30
+	set_country_flag = mol_rib_pact
+} # Molotov-Ribbentrop pact
 1939.9.17 = {
 	conscription_law = one_year_draft
 	neutrality = 0
@@ -470,8 +474,7 @@ civil_law = totalitarian_system
 	cas_groundcrew_training = 2
 	construction_practical = 5
 	officers_ratio = 0.7
-	threat = 10 
-	
+	threat = 10
 }
 1941.6.22 = {
 	head_of_state = 4001
@@ -657,9 +660,8 @@ civil_law = totalitarian_system
 	nuclear_bomb = 0 
 	transport_practical = 2.5
 	construction_practical = 5
-	officers_ratio = 0.8
-	set_global_flag = operation_barbarossa	
-
+	officers_ratio = 0.8	
+	set_global_flag = operation_barbarossa
 }
 1941.12.8 = {
 	decision = great_patriotic_war
@@ -715,7 +717,6 @@ civil_law = totalitarian_system
 	construction_practical = 7.5
 	officers_ratio = 0.85
 }
-
 1943.2.1 = { oob = "SOV_TheTideHasTurned.txt"
 	set_country_flag = Soviet_industry
 	infantry_theory = 10

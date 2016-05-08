@@ -16,3 +16,11 @@ air_base = 10
 naval_base = 10
 manpower = 6.00
 leadership = 0.23
+
+1941.9.8 = {
+	land_fort = 1
+}
+
+1945.6.7 = {
+	controller = SOV
+}
