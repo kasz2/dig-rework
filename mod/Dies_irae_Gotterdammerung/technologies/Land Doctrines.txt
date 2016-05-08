@@ -550,10 +550,10 @@ grand_battle_plan = {
 assault_concentration = {
     anti_air_brigade = {        default_organisation = 5    }
     anti_tank_brigade = {       default_organisation = 5    }
-	motorized_flak_brigade = {    default_organisation = 0.05 }
+	motorized_flak_brigade = {    default_organisation = 5 }
     sp_artillery_brigade = {    default_organisation = 5    }
     sp_rct_artillery_brigade = {    default_organisation = 5    }
-	sp_anti_air_brigade = {	default_organisation = 0.05 }
+	sp_anti_air_brigade = {	default_organisation = 5 }
     rocket_artillery_brigade = {    default_organisation = 5    }
     artillery_brigade = {       default_organisation = 5    }
 
