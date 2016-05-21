@@ -1,0 +1,455 @@
+###############################################################
+################### 	DIES IRAE MR-PACT CHAIN 	###########
+###############################################################
+
+diplomatic_decisions = {
+
+## GERMAN PROPOSAL
+	molotov_ribbentrop_pact = {
+		potential = {
+			tag = GER
+			not = { has_country_flag = the_molotov_ribbentrop_pact }
+			not = { has_country_flag = mol_rib_pact }
+			not = { has_country_flag = no_deal }
+			not = { alliance_with = SOV }
+			exists = SOV
+			exists = POL
+			year = 1939	# Initial talks
+			not = { year = 1940 }
+			not = { war_with = SOV }
+			not = { war_with = POL }
+			or = {
+				has_country_flag = first_vienna_award
+				controls = 2562 # Praha
+			}
+		}
+		allow = {
+			POL = {
+				not = { faction = axis }
+				not = { alliance_with = GER }
+			}
+			GER = { is_subject = no }
+			SOV = { is_subject = no }
+			POL = { is_subject = no }
+			foreign_minister = 55
+			date = 1939.7.1
+		}
+		effect = {
+			set_country_flag = the_molotov_ribbentrop_pact
+			non_aggression_pact = SOV
+			relation = { who = SOV value = 15 }
+			relation = { who = EST value = -75 }
+			relation = { who = LAT value = -75 }
+			relation = { who = LIT value = -75 }
+			SOV = { country_event = 1501 }
+			ENG = { neutrality = -5 }
+			FRA = { neutrality = -5 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+## SOVIET PROPOSAL
+	molotov_ribbentrop_pact_sov = {
+		potential = {
+			tag = SOV
+			not = { has_country_flag = the_molotov_ribbentrop_pact }
+			not = { alliance_with = GER }
+			exists = GER
+			exists = POL
+			year = 1939	# Initial talks
+			not = { year = 1940 }
+			not = { war_with = GER }
+			not = { war_with = POL }
+			or = {			
+				GER = { has_country_flag = first_vienna_award }
+				2562 = { controlled_by = GER } # Praha
+			}
+			not = { has_country_flag = mol_rib_pact }
+		}
+		allow = {
+			POL = {
+				not = { faction = axis }
+				not = { alliance_with = GER }
+			}
+			GER = { is_subject = no }
+			SOV = { is_subject = no }
+			POL = { is_subject = no }
+			GER = { foreign_minister = 55 }
+			date = 1939.8.23
+		}
+		effect = {
+			set_country_flag = the_molotov_ribbentrop_pact
+			relation = { who = GER value = 15 }
+			relation = { who = EST value = -75 }
+			relation = { who = LAT value = -75 }
+			relation = { who = LIT value = -75 }
+			GER = { country_event = 10041 }
+			ENG = { neutrality = -5 }
+			FRA = { neutrality = -5 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+# SOVIET INVASION OF POLAND
+	soviet_invasion_of_poland = {
+		potential = {
+			tag = SOV
+			not = { has_country_flag = soviet_invasion_of_poland }
+			has_country_flag = mol_rib_pact
+			exists = POL
+			POL = {
+				controls = 1989		# Soviet border
+			}
+			not = { war_with = POL }
+		}
+		allow = {
+			not = { alliance_with = POL }
+			GER = { is_subject = no }
+			GER = { war_with = POL }
+			POL = { not = { vassal_of = GER } }
+			war = no
+			1626 = { controlled_by = GER } # Danzig
+			date = 1939.9.17
+		}
+		effect = {
+			set_country_flag = soviet_invasion_of_poland
+			neutrality = -10
+			relation = { who = POL value = -25 }
+			relation = { who = ENG value = -25 }
+			relation = { who = FRA value = -25 }
+			POL = { leave_faction = allies }
+			POL = { neutrality = 100 }
+			GER = { war = { target = POL } }
+			war = { target = POL }
+			POL = { join_faction = allies }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+## SOVIET PUTS FORWARD ITS CLAIMS TO BESSARABIA
+	claim_bessarabia = {
+		potential = {
+			tag = SOV
+			exists = GER
+			exists = ROM
+			not = { year = 1942 }
+			#has_country_flag = mol_rib_pact
+			not = { has_country_flag = claims_on_bessarabia }
+			not = { war_with = GER }
+			bessarabia = { controlled_by = ROM }
+			GER = { controls = 1928 } # Warszawa
+			GER = { controls = 2613 } # Paris
+		}
+		allow = {
+			not = { war_with = ROM }			
+			or = { 
+				not = { has_country_flag = mol_rib_pact }
+				date = 1940.6.26
+			}
+		}
+		effect = {
+			set_country_flag = claims_on_bessarabia
+			relation = { who = ROM value = -10 }
+			ROM = { country_event = 1509 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+### ROMANIA IN THE AXIS
+	axis_romania = {
+		potential = {
+			tag = ROM
+			year = 1940
+			is_in_any_faction = no
+			not = { has_country_flag = axis_romania }
+		}
+		allow = {
+			or = {
+				#Bessarabia to Soviet
+				has_country_flag = bessarabia_to_the_soviet
+				#Extremists strong
+				fascistic = { popularity = 40 organisation = 40 }
+				national_socialist = { popularity = 40 organisation = 40 }
+				paternal_autocrat = { popularity = 40 organisation = 40 }
+			}
+		}
+		effect = {
+			set_country_flag = axis_romania
+			GER = { country_event = 1521 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+## ULTIMATUM TO ESTONIA, LATVIA AND LITHUANIA
+	ultimatum_to_the_baltic_states = {
+		potential = {
+			tag = SOV
+			year = 1940
+			not = { has_country_flag = ultimatum_to_baltic_states }
+			#has_country_flag = mol_rib_pact
+			exists = GER
+			exists = EST
+			exists = LAT
+			exists = LIT
+			GER = { controls = 1928 } # Warszawa
+			not = { 1178 = { controller = { faction = axis } } }
+			not = { 1442 = { controller = { faction = axis } } }
+			not = { 906 = { controller = { faction = axis } } }
+		}
+		allow = {
+			not = { war_with = EST }
+			not = { war_with = LAT }
+			not = { war_with = LIT }
+			not = { war_with = GER }
+			or = { 
+				not = { has_country_flag = mol_rib_pact }
+				date = 1940.6.15
+			}
+		}
+		effect = {
+			set_country_flag = ultimatum_to_baltic_states
+			EST = { country_event = 1512 }
+			LAT = { country_event = 1515 }
+			LIT = { country_event = 1518 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+## GERMANY ATTACKS ESTONIA
+germany_attacks_estonia = {
+		potential = {
+			tag = SOV
+			exists = EST
+			GER = { war_with = EST }
+			or = {
+				GER = { controls = 1928 } # Warszawa
+				war_with = FRA
+				war_with = ENG
+			}
+			has_country_flag = mol_rib_pact
+			not = { has_country_flag = germany_attacks_estonia }
+			1409 = { controlled_by = SOV }
+		}
+		allow = {
+		}
+		effect = {
+			set_country_flag = germany_attacks_estonia
+			country_event = 10042
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+## GERMANY ATTACKS LATVIA
+germany_attacks_latvia = {
+		potential = {
+			tag = SOV
+			exists = LAT
+			GER = { war_with = LAT }
+			or = {
+				GER = { controls = 1928 } # Warszawa
+				war_with = FRA
+				war_with = ENG
+			}
+			has_country_flag = mol_rib_pact
+			not = { has_country_flag = germany_attacks_latvia }
+			1409 = { controlled_by = SOV }
+		}
+		allow = {
+		}
+		effect = {
+			country_event = 10042
+			set_country_flag = germany_attacks_latvia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+## GERMANY ATTACKS LITHUANIA
+germany_attacks_lithuania = {
+		potential = {
+			tag = SOV
+			exists = LIT
+			GER = { war_with = LIT }
+			or = {
+				GER = { controls = 1928 } # Warszawa
+				war_with = FRA
+				war_with = ENG
+			}
+			has_country_flag = mol_rib_pact
+			not = { has_country_flag = germany_attacks_lithuania }
+			1409 = { controlled_by = SOV }
+		}
+		allow = {
+		}
+		effect = {
+			country_event = 10042
+			set_country_flag = germany_attacks_lithuania
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+###########################
+######## M-R PACT NOT SIGNED
+#### NO BARBAROSSA YET
+
+#### 1940 - SOVIET ATTACK
+
+	1940_sov_attack_decision = {
+		potential = {
+			tag = SOV
+			not = { war_with = GER }
+			GER = { war_with = ENG }
+			not = { has_global_flag = operation_barbarossa }
+			or = {
+				not = { has_country_flag = mol_rib_pact }	
+				check_variable = {
+					which = "soviet_aggression"
+					value = 10
+				}				
+			}
+			year = 1940
+			not = { date = 1940.10.1 }
+			not = { has_country_flag = 1940_sov_attack_decision }
+			is_subject = no
+			1409 = { controlled_by = SOV }
+		}
+
+		allow = {
+			date = 1940.4.1
+			# don't launch the invasion after october
+			not = { date = 1940.10.1 }
+			not = { alliance_with = GER }
+		}
+
+		effect = {
+			country_event = 10043 #20% chances of attack
+			set_country_flag = 1940_sov_attack_decision
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+#### 1941 - SOVIET ATTACK
+
+	1941_sov_attack_decision = {
+		potential = {
+			tag = SOV
+			not = { war_with = GER }
+			GER = { war_with = ENG }
+			year = 1941
+			not = { date = 1941.10.1 }
+			not = { has_global_flag = operation_barbarossa }
+			or = {
+				not = { has_country_flag = mol_rib_pact }	
+				check_variable = {
+					which = "soviet_aggression"
+					value = 5
+				}				
+			}
+			not = { has_country_flag = 1941_sov_attack_decision }
+			is_subject = no
+			1409 = { controlled_by = SOV }
+		}
+
+		allow = {
+			date = 1941.7.1
+			# don't launch the invasion after october
+			not = { date = 1941.10.1 }
+			not = { alliance_with = GER }
+		}
+
+		effect = {
+			country_event = 10044 #50% chances of attack
+			set_country_flag = 1941_sov_attack_decision
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+###########################
+######## M-R PACT SIGNED OR NOT
+#### NO BARBAROSSA YET
+
+#### 1942 - SOVIET ATTACK
+
+	1942_sov_attack_decision = {
+		potential = {
+			tag = SOV
+			not = { war_with = GER }
+			year = 1942
+			not = { date = 1942.10.1 }
+			not = { has_global_flag = operation_barbarossa }
+			not = { has_country_flag = 1942_sov_attack_decision }
+			not = { has_country_flag = GER_SOV_alliance }
+			is_subject = no
+			1409 = { controlled_by = SOV }
+		}
+
+		allow = {
+			date = 1942.4.1
+			# don't launch the invasion after october
+			not = { date = 1942.10.1 }
+			not = { alliance_with = GER }
+		}
+
+		effect = {
+			country_event = 10044 #50% chances of attack
+			set_country_flag = 1942_sov_attack_decision
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+#### 1943 - SOVIET ATTACK
+
+	1943_sov_attack_decision = {
+		potential = {
+			tag = SOV
+			not = { war_with = GER }
+			year = 1943
+			not = { date = 1943.10.1 }
+			not = { has_global_flag = operation_barbarossa }
+			not = { has_country_flag = 1943_sov_attack_decision }
+			not = { has_country_flag = GER_SOV_alliance }
+			is_subject = no
+			1409 = { controlled_by = SOV }
+		}
+
+		allow = {
+			date = 1943.4.1
+			not = { date = 1943.10.1 }
+		}
+
+		effect = {
+			country_event = 10045 #80% chances of attack
+			set_country_flag = 1943_sov_attack_decision
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#EOF
+}

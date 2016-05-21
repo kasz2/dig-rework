@@ -39,14 +39,14 @@ diplomatic_decisions = {
 			not = { has_country_flag = odessa_people_decision }
 			3309 = { controlled_by = SOV } #odessa
 			or = {
-				3377 = { controller = { faction = axis } }	#Cetatea Alba
-				3308 = { controller = { faction = axis } }	#Ermoclia
-				3241 = { controller = { faction = axis } }	#Bender
-				3174 = { controller = { faction = axis } }	#Tiraspol
-				3108 = { controller = { faction = axis } }	#Lyubashivka
-				3040 = { controller = { faction = axis } }	#Pervomaysk
-				3175 = { controller = { faction = axis } }	#Berezivka
-				3523 = { controller = { faction = axis } }	#Berezanka
+				3377 = { controller = { faction = axis } }
+				3308 = { controller = { faction = axis } }
+				3241 = { controller = { faction = axis } }
+				3174 = { controller = { faction = axis } }
+				3108 = { controller = { faction = axis } }
+				3040 = { controller = { faction = axis } }
+				3175 = { controller = { faction = axis } }
+				2523 = { controller = { faction = axis } }
 			}
 		}
 
@@ -115,8 +115,8 @@ diplomatic_decisions = {
 			not = { has_country_flag = sebastopol_people_decision }
 			3581 = { controlled_by = SOV } #sebastopol.
 			or = {
-				3378 = { controller = { faction = axis } }	#Illicheve
-				2847 = { controller = { faction = axis } }	#Krasnoperekop
+				3515 = { controller = { faction = axis } }
+				3448 = { controller = { faction = axis } }
 			}
 		}
 
@@ -138,21 +138,21 @@ diplomatic_decisions = {
 			partisan_brigade = 3581
 			partisan_brigade = 3581
 			partisan_brigade = 3581
-			SOV_7289 = {
+			SOV_7356 = {
 				limit = { controller = { faction = axis } }
 				add_province_modifier = {
 					name = "little_resistance"
 					duration = 360
 				}
 			}
-			SOV_3380 = {
+			SOV_3516 = {
 				limit = { controller = { faction = axis } }
 				add_province_modifier = {
 					name = "medium_resistance"
 					duration = 180
 				}
 			}
-			SOV_2856 = {
+			SOV_2725 = {
 				limit = { controller = { faction = axis } }
 				add_province_modifier = {
 					name = "heavy_resistance"
@@ -175,19 +175,18 @@ diplomatic_decisions = {
 			not = { has_country_flag = dnip_people_decision }
 			2843 = { controlled_by = SOV } #dnip
 			or = {
-				2976 = { controller = { faction = axis } }	#Zaporizhzhya
-				2977 = { controller = { faction = axis } }	#Polohy
-				2652 = { controller = { faction = axis } }	#Rozivka
-				2779 = { controller = { faction = axis } }	#Pavlohrad
-				2648 = { controller = { faction = axis } }	#Sakhnovshchyna
-				2582 = { controller = { faction = axis } }	#Krasnohrad
-				2583 = { controller = { faction = axis } }	#Fedorivka
-				2519 = { controller = { faction = axis } }	#Poltava
-				2404 = { controller = { faction = axis } }	#Kozelshchyna
-				2646 = { controller = { faction = axis } }	#Kremenchuk
-				2778 = { controller = { faction = axis } }	#Piatykhatky
-				2714 = { controller = { faction = axis } }	#Kamianka
-				3044 = { controller = { faction = axis } }	#Nikopol
+				3044 = { controller = { faction = axis } }
+				2714 = { controller = { faction = axis } }
+				2778 = { controller = { faction = axis } }
+				2646 = { controller = { faction = axis } }
+				2404 = { controller = { faction = axis } }
+				2519 = { controller = { faction = axis } }
+				2583 = { controller = { faction = axis } }
+				2582 = { controller = { faction = axis } }
+				2648 = { controller = { faction = axis } }
+				2779 = { controller = { faction = axis } }
+				2652 = { controller = { faction = axis } }
+				3976 = { controller = { faction = axis } }
 			}
 		}
 
@@ -256,18 +255,18 @@ diplomatic_decisions = {
 			not = { has_country_flag = stalino_people_decision }
 			2911 = { controlled_by = SOV } #stalino
 			or = {
-				2912 = { controller = { faction = axis } }
-				2849 = { controller = { faction = axis } }
-				2781 = { controller = { faction = axis } }
-				2587 = { controller = { faction = axis } }
-				2524 = { controller = { faction = axis } }
-				2463 = { controller = { faction = axis } }
-				2462 = { controller = { faction = axis } }
-				2522 = { controller = { faction = axis } }
 				2650 = { controller = { faction = axis } }
-				2719 = { controller = { faction = axis } }
-				3327 = { controller = { faction = axis } }
+				2522 = { controller = { faction = axis } }
+				2462 = { controller = { faction = axis } }
+				2463 = { controller = { faction = axis } }
+				2524 = { controller = { faction = axis } }
+				2587 = { controller = { faction = axis } }
+				2781 = { controller = { faction = axis } }
+				2849 = { controller = { faction = axis } }
+				2912 = { controller = { faction = axis } }
 				2846 = { controller = { faction = axis } }
+				3327 = { controller = { faction = axis } }
+				2719 = { controller = { faction = axis } }
 			}
 		}
 
@@ -343,8 +342,8 @@ diplomatic_decisions = {
 				2781 = { controller = { faction = axis } }
 				2783 = { controller = { faction = axis } }
 				2784 = { controller = { faction = axis } }
-				3915 = { controller = { faction = axis } }
-				3981 = { controller = { faction = axis } }
+				2915 = { controller = { faction = axis } }
+				2981 = { controller = { faction = axis } }
 				3115 = { controller = { faction = axis } }
 				3116 = { controller = { faction = axis } }
 				3049 = { controller = { faction = axis } }
@@ -403,20 +402,20 @@ diplomatic_decisions = {
 			not = { has_country_flag = stalingrad_people_decision }
 			2857 = { controlled_by = SOV } #stalingrad
 			or = {
-				2298 = { controller = { faction = axis } }
-				2355 = { controller = { faction = axis } }
-				3412 = { controller = { faction = axis } }
+				2593 = { controller = { faction = axis } }
 				2531 = { controller = { faction = axis } }
-				3593 = { controller = { faction = axis } }
-				2659 = { controller = { faction = axis } }
-				2725 = { controller = { faction = axis } }
-				2791 = { controller = { faction = axis } }
-				2726 = { controller = { faction = axis } }
-				2661 = { controller = { faction = axis } }
-				2596 = { controller = { faction = axis } }
-				2473 = { controller = { faction = axis } }
-				2414 = { controller = { faction = axis } }
+				2412 = { controller = { faction = axis } }
+				2355 = { controller = { faction = axis } }
+				2298 = { controller = { faction = axis } }
 				2356 = { controller = { faction = axis } }
+				2414 = { controller = { faction = axis } }
+				2473 = { controller = { faction = axis } }
+				2596 = { controller = { faction = axis } }
+				2661 = { controller = { faction = axis } }
+				2726 = { controller = { faction = axis } }
+				2791 = { controller = { faction = axis } }
+				2725 = { controller = { faction = axis } }
+				2659 = { controller = { faction = axis } }
 			}
 		}
 
@@ -497,18 +496,17 @@ diplomatic_decisions = {
 			not = { has_country_flag = kiev_people_decision }
 			2223 = { controlled_by = SOV } #kiev
 			or = {
-				2224 = { controller = { faction = axis } }
 				2338 = { controller = { faction = axis } }
-				2454 = { controller = { faction = axis } }
-				2398 = { controller = { faction = axis } }
-				2578 = { controller = { faction = axis } }
-				2644 = { controller = { faction = axis } }
-				2516 = { controller = { faction = axis } }
-				2515 = { controller = { faction = axis } }
-				2339 = { controller = { faction = axis } }
-				2108 = { controller = { faction = axis } }
+				2224 = { controller = { faction = axis } }
+				2396 = { controller = { faction = axis } }
 				2167 = { controller = { faction = axis } }
-				2369 = { controller = { faction = axis } }
+				2108 = { controller = { faction = axis } }
+				2339 = { controller = { faction = axis } }
+				2515 = { controller = { faction = axis } }
+				2456 = { controller = { faction = axis } }
+				2578 = { controller = { faction = axis } }
+				2398 = { controller = { faction = axis } }
+				2454 = { controller = { faction = axis } }
 			}
 		}
 
@@ -549,17 +547,17 @@ diplomatic_decisions = {
 			not = { has_country_flag = homyel_people_decision }
 			1991 = { controlled_by = SOV } #homyel
 			or = {
-				1935 = { controller = { faction = axis } }
 				2048 = { controller = { faction = axis } }
-				1881 = { controller = { faction = axis } }
-				2288 = { controller = { faction = axis } }
-				2107 = { controller = { faction = axis } }
-				2052 = { controller = { faction = axis } }
-				1645 = { controller = { faction = axis } }
-				1936 = { controller = { faction = axis } }
-				1759 = { controller = { faction = axis } }
-				1876 = { controller = { faction = axis } }
+				1935 = { controller = { faction = axis } }
 				1544 = { controller = { faction = axis } }
+				1876 = { controller = { faction = axis } }
+				1759 = { controller = { faction = axis } }
+				1936 = { controller = { faction = axis } }
+				1645 = { controller = { faction = axis } }
+				2052 = { controller = { faction = axis } }
+				2107 = { controller = { faction = axis } }
+				2288 = { controller = { faction = axis } }
+				1881 = { controller = { faction = axis } }
 			}
 		}
 
@@ -616,7 +614,7 @@ diplomatic_decisions = {
 			or = {
 				1693 = { controller = { faction = axis } }
 				1813 = { controller = { faction = axis } }
-				1754 = { controller = { faction = axis } }
+				1874 = { controller = { faction = axis } }
 				1934 = { controller = { faction = axis } }
 				1875 = { controller = { faction = axis } }
 				1757 = { controller = { faction = axis } }
@@ -668,17 +666,17 @@ diplomatic_decisions = {
 			not = { has_country_flag = smolensk_people_decision }
 			1535 = { controlled_by = SOV } #smolensk
 			or = {
-				1582 = { controller = { faction = axis } }
-				1636 = { controller = { faction = axis } }
+				1581 = { controller = { faction = axis } }
+				1635 = { controller = { faction = axis } }
+				1695 = { controller = { faction = axis } }
 				1696 = { controller = { faction = axis } }
-				1586 = { controller = { faction = axis } }
+				1637 = { controller = { faction = axis } }
 				1584 = { controller = { faction = axis } }
-				1535 = { controller = { faction = axis } }
-				1494 = { controller = { faction = axis } }
-				1147 = { controller = { faction = axis } }
-				1492 = { controller = { faction = axis } }
-				1229 = { controller = { faction = axis } }
-				1407 = { controller = { faction = axis } }
+				1536 = { controller = { faction = axis } }
+				1448 = { controller = { faction = axis } }
+				1403 = { controller = { faction = axis } }
+				1402 = { controller = { faction = axis } }
+				1446 = { controller = { faction = axis } }
 			}
 		}
 
@@ -717,17 +715,17 @@ diplomatic_decisions = {
 			tag = SOV
 			war_with = GER
 			not = { has_country_flag = novgorod_people_decision }
-			999 = { controlled_by = SOV } #novgorod
+			909 = { controlled_by = SOV } #novgorod
 			or = {
-				3195 = { controller = { faction = axis } }
-				1027 = { controller = { faction = axis } }
-				990 = { controller = { faction = axis } }
-				1030 = { controller = { faction = axis } }
-				910 = { controller = { faction = axis } }
-				867 = { controller = { faction = axis } }
-				868 = { controller = { faction = axis } }
-				866 = { controller = { faction = axis } }
 				1028 = { controller = { faction = axis } }
+				866 = { controller = { faction = axis } }
+				868 = { controller = { faction = axis } }
+				967 = { controller = { faction = axis } }
+				910 = { controller = { faction = axis } }
+				1030 = { controller = { faction = axis } }
+				990 = { controller = { faction = axis } }
+				1027 = { controller = { faction = axis } }
+				3195 = { controller = { faction = axis } }
 			}
 		}
 
@@ -737,14 +735,14 @@ diplomatic_decisions = {
 		effect = {
 			set_country_flag = novgorod_people_decision
 			manpower = 75
-			partisan_brigade = 999
-			partisan_brigade = 999
-			partisan_brigade = 999
-			partisan_brigade = 999
-			partisan_brigade = 999
-			partisan_brigade = 999
-			partisan_brigade = 999
-			partisan_brigade = 999
+			partisan_brigade = 909
+			partisan_brigade = 909
+			partisan_brigade = 909
+			partisan_brigade = 909
+			partisan_brigade = 909
+			partisan_brigade = 909
+			partisan_brigade = 909
+			partisan_brigade = 909
 			belgium_south = {
 				limit = { controller = { faction = axis } }
 				add_province_modifier = {
@@ -768,14 +766,15 @@ diplomatic_decisions = {
 			not = { has_country_flag = leningrad_people_decision }
 			782 = { controlled_by = SOV } #leningrad
 			or = {
-				89 = { controller = { faction = axis } }
-				740 = { controller = { faction = axis } }
+				3261 = { controller = { faction = axis } }
 				781 = { controller = { faction = axis } }
 				865 = { controller = { faction = axis } }
 				908 = { controller = { faction = axis } }
 				866 = { controller = { faction = axis } }
-				668 = { controller = { faction = axis } }
+				868 = { controller = { faction = axis } }
 				783 = { controller = { faction = axis } }
+				658 = { controller = { faction = axis } }
+				698 = { controller = { faction = axis } }
 			}
 		}
 
@@ -828,18 +827,19 @@ diplomatic_decisions = {
 			not = { has_country_flag = brjansk_people_decision }
 			1819 = { controlled_by = SOV } #brjansk
 			or = {
+				1637 = { controller = { faction = axis } }
 				1587 = { controller = { faction = axis } }
 				1540 = { controller = { faction = axis } }
 				1500 = { controller = { faction = axis } }
 				1641 = { controller = { faction = axis } }
-				1820 = { controller = { faction = axis } }
+				2642 = { controller = { faction = axis } }
+				1821 = { controller = { faction = axis } }
 				1703 = { controller = { faction = axis } }
 				1995 = { controller = { faction = axis } }
 				1765 = { controller = { faction = axis } }
 				2050 = { controller = { faction = axis } }
 				1543 = { controller = { faction = axis } }
 				1760 = { controller = { faction = axis } }
-				1637 = { controller = { faction = axis } }
 			}
 		}
 
@@ -880,6 +880,9 @@ diplomatic_decisions = {
 			not = { has_country_flag = kursk_people_decision }
 			2170 = { controlled_by = SOV } #kursk
 			or = {
+				2057 = { controller = { faction = axis } }
+				2055 = { controller = { faction = axis } }
+				1998 = { controller = { faction = axis } }
 				1943 = { controller = { faction = axis } }
 				1944 = { controller = { faction = axis } }
 				2000 = { controller = { faction = axis } }
@@ -888,9 +891,6 @@ diplomatic_decisions = {
 				2286 = { controller = { faction = axis } }
 				2289 = { controller = { faction = axis } }
 				2174 = { controller = { faction = axis } }
-				2057 = { controller = { faction = axis } }
-				2055 = { controller = { faction = axis } }
-				1998 = { controller = { faction = axis } }
 			}
 		}
 
@@ -931,21 +931,21 @@ diplomatic_decisions = {
 			not = { has_country_flag = kharkov_people_decision }
 			2401 = { controlled_by = SOV } #kharkov
 			or = {
-				2585 = { controller = { faction = axis } }
-				2649 = { controller = { faction = axis } }
-				2463 = { controller = { faction = axis } }
-				2176 = { controller = { faction = axis } }
-				2234 = { controller = { faction = axis } }
-				2287 = { controller = { faction = axis } }
-				2232 = { controller = { faction = axis } }
-				2173 = { controller = { faction = axis } }
-				2229 = { controller = { faction = axis } }
-				2289 = { controller = { faction = axis } }
 				2228 = { controller = { faction = axis } }
-				2400 = { controller = { faction = axis } }
-				2582 = { controller = { faction = axis } }
-				2648 = { controller = { faction = axis } }
+				2289 = { controller = { faction = axis } }
+				2229 = { controller = { faction = axis } }
+				2173 = { controller = { faction = axis } }
+				2232 = { controller = { faction = axis } }
+				2287 = { controller = { faction = axis } }
+				2234 = { controller = { faction = axis } }
+				2176 = { controller = { faction = axis } }
+				2463 = { controller = { faction = axis } }
+				2649 = { controller = { faction = axis } }
+				2585 = { controller = { faction = axis } }
 				2522 = { controller = { faction = axis } }
+				2648 = { controller = { faction = axis } }
+				2582 = { controller = { faction = axis } }
+				2400 = { controller = { faction = axis } }
 			}
 		}
 
@@ -988,7 +988,7 @@ diplomatic_decisions = {
 			or = {
 				1762 = { controller = { faction = axis } }
 				1820 = { controller = { faction = axis } }
-				1642 = { controller = { faction = axis } }
+				1942 = { controller = { faction = axis } }
 				1590 = { controller = { faction = axis } }
 				1644 = { controller = { faction = axis } }
 				1704 = { controller = { faction = axis } }
@@ -1039,6 +1039,9 @@ diplomatic_decisions = {
 			not = { has_country_flag = voronez_people_decision }
 			2233 = { controlled_by = SOV } #voronez
 			or = {
+				1826 = { controller = { faction = axis } }
+				1886 = { controller = { faction = axis } }
+				2001 = { controller = { faction = axis } }
 				1767 = { controller = { faction = axis } }
 				1827 = { controller = { faction = axis } }
 				1888 = { controller = { faction = axis } }
@@ -1050,9 +1053,6 @@ diplomatic_decisions = {
 				2175 = { controller = { faction = axis } }
 				2231 = { controller = { faction = axis } }
 				2058 = { controller = { faction = axis } }
-				1826 = { controller = { faction = axis } }
-				1886 = { controller = { faction = axis } }
-				2001 = { controller = { faction = axis } }
 			}
 		}
 
@@ -1094,7 +1094,7 @@ diplomatic_decisions = {
 			1589 = { controlled_by = SOV } #tula
 			or = {
 				1498 = { controller = { faction = axis } }
-				1544 = { controller = { faction = axis } }
+				1454 = { controller = { faction = axis } }
 				1499 = { controller = { faction = axis } }
 				1366 = { controller = { faction = axis } }
 				1411 = { controller = { faction = axis } }
@@ -1147,6 +1147,9 @@ diplomatic_decisions = {
 			not = { has_country_flag = moscou_people_decision }
 			1409 = { controlled_by = SOV } #moscou
 			or = {
+				1275 = { controller = { faction = axis } }
+				1190 = { controller = { faction = axis } }
+				1150 = { controller = { faction = axis } }
 				1191 = { controller = { faction = axis } }
 				1151 = { controller = { faction = axis } }
 				1192 = { controller = { faction = axis } }
@@ -1156,9 +1159,6 @@ diplomatic_decisions = {
 				1411 = { controller = { faction = axis } }
 				1366 = { controller = { faction = axis } }
 				1365 = { controller = { faction = axis } }
-				1275 = { controller = { faction = axis } }
-				1190 = { controller = { faction = axis } }
-				1150 = { controller = { faction = axis } }
 			}
 		}
 
@@ -1239,6 +1239,9 @@ diplomatic_decisions = {
 			war_with = GER
 			not = { has_country_flag = moscou_encircled_decision }
 			capital = 1409
+			1275 = { controller = { faction = axis } }
+			1190 = { controller = { faction = axis } }
+			1150 = { controller = { faction = axis } }
 			1191 = { controller = { faction = axis } }
 			1151 = { controller = { faction = axis } }
 			1192 = { controller = { faction = axis } }
@@ -1248,9 +1251,6 @@ diplomatic_decisions = {
 			1411 = { controller = { faction = axis } }
 			1366 = { controller = { faction = axis } }
 			1365 = { controller = { faction = axis } }
-			1275 = { controller = { faction = axis } }
-			1190 = { controller = { faction = axis } }
-			1150 = { controller = { faction = axis } }
 			controls = 8528 #Omsk far east
 		}
 
@@ -1283,19 +1283,19 @@ diplomatic_decisions = {
 			not = { has_country_flag = kalinin_people_decision }
 			1231 = { controlled_by = SOV } #kalinin
 			or = {
-				956 = { controller = { faction = axis } }
-				1035 = { controller = { faction = axis } }
-				998 = { controller = { faction = axis } }
-				1150 = { controller = { faction = axis } }
-				1149 = { controller = { faction = axis } }
-				1232 = { controller = { faction = axis } }
-				1274 = { controller = { faction = axis } }
-				1408 = { controller = { faction = axis } }
-				1363 = { controller = { faction = axis } }
 				1228 = { controller = { faction = axis } }
 				1069 = { controller = { faction = axis } }
 				1033 = { controller = { faction = axis } }
 				996 = { controller = { faction = axis } }
+				956 = { controller = { faction = axis } }
+				1035 = { controller = { faction = axis } }
+				998 = { controller = { faction = axis } }
+				1150 = { controller = { faction = axis } }
+				1232 = { controller = { faction = axis } }
+				1149 = { controller = { faction = axis } }
+				1274 = { controller = { faction = axis } }
+				1408 = { controller = { faction = axis } }
+				1363 = { controller = { faction = axis } }
 			}
 		}
 

@@ -1,0 +1,337 @@
+###############################################################
+#################### DIES IRAE RHINELAND CHAIN ################
+###############################################################
+
+diplomatic_decisions = {
+
+### RHINELAND REMILITARIZED - FRANCE DECISION
+
+	reoccupation_of_the_rhineland_france = {
+		potential = {
+			not = { has_country_flag = the_reoccupation_of_the_rhineland }
+			tag = FRA
+			not = { year = 1937 }
+		}
+		allow = {
+			GER = {
+				total_amount_of_brigades = 120
+				not = { war_with = FRA }
+				not = { alliance_with = FRA }
+				or = {
+					2490 = { units_in_province = 1 } #Saarlouis
+					2553 = { units_in_province = 1 } #Saarbrücken
+					2619 = { units_in_province = 1 } #Pirmasens
+					2685 = { units_in_province = 1 } #Landau
+					2751 = { units_in_province = 1 } #Karlsruhe
+				}
+				or = {
+					2882 = { units_in_province = 1 } #Baden
+					2948 = { units_in_province = 1 } #Offenburg
+					3016 = { units_in_province = 1 } #Freiburg
+					3084 = { units_in_province = 1 } #Lörrach
+				}
+			}
+		}
+		effect = {
+			set_country_flag = the_reoccupation_of_the_rhineland
+			FRA = { country_event = 10000 } #What to do?
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+### RHINELAND REMILITARIZED - GERMANY DECISION
+
+	reoccupation_of_the_rhineland = {
+		potential = {
+			not = { year = 1937 }	
+			tag = GER
+			not = { has_country_flag = the_reoccupation_of_the_rhineland }
+			not = { has_country_flag = fold_to_allies_demands }
+		}
+		allow = {
+			or = {
+				has_country_flag = rhineland_occupied
+				has_country_flag = rhineland_war
+				FRA = { has_country_flag = the_reoccupation_of_the_rhineland }
+			}
+			total_amount_of_brigades = 120
+			not = { war_with = FRA }
+			not = { alliance_with = FRA }
+			or = {
+				2490 = { units_in_province = 1 }
+				2553 = { units_in_province = 1 }
+				2619 = { units_in_province = 1 }
+				2685 = { units_in_province = 1 }
+				2751 = { units_in_province = 1 }
+			}
+			or = {
+				2882 = { units_in_province = 1 }
+				2948 = { units_in_province = 1 }
+				3016 = { units_in_province = 1 }
+				3084 = { units_in_province = 1 }
+			}
+		}
+		effect = {
+			set_country_flag = the_reoccupation_of_the_rhineland
+			set_country_flag = reoccupation_of_the_rhineland
+			relation = { who = FRA value = -15 }
+			relation = { who = ENG value = -5 }
+			relation = { who = BEL value = -10 }
+			relation = { who = HOL value = -5 }
+			neutrality = -3
+			dissent = -2
+			money = 500
+			manpower = 250
+			national_unity = 3
+			ENG = { neutrality = -3 }
+			FRA = { neutrality = -3 }
+			threat = { who = FRA value = 3 }
+			change_variable = {
+				which = "world_at_war"
+				value = +1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+### RHINELAND WAR - FRA
+
+	war_of_the_rhineland_france = {
+		potential = {
+			tag = FRA
+			not = { war_with = GER }
+			not = { alliance_with = GER }
+			has_country_flag = rhineland_war
+			date = 1936.2.1
+			not = { year = 1937 }
+			not = { has_country_flag = rhineland_war_ok }
+			GER = { has_country_flag = the_reoccupation_of_the_rhineland }			
+		}
+		allow = {
+			not = { date = 1936.12.31 }
+		}
+		effect = {
+			set_country_flag = rhineland_war_ok
+			GER = { set_country_flag = rhineland_war_ok }
+			GER = { war = { target = ENG } }
+			GER = { country_event = 10003 }
+			dissent = 5
+			manpower = 250
+			neutrality = -20
+			change_variable = {
+				which = "world_at_war"
+				value = +10
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+### RHINELAND WAR - GER
+
+	war_of_the_rhineland_germany = {
+		potential = {
+			tag = GER
+			not = { war_with = FRA }
+			not = { alliance_with = FRA }
+			has_country_flag = rhineland_war
+			not = { year = 1937 }
+			not = { has_country_flag = rhineland_war_ok }			
+		}
+		allow = {
+			has_country_flag = the_reoccupation_of_the_rhineland
+			not = { date = 1936.12.31 }			
+		}
+		effect = {
+			set_country_flag = rhineland_war_ok
+			FRA = { set_country_flag = rhineland_war_ok }
+			war = { target = FRA }
+			GER = { 
+				add_wargoal = {	
+					target = FRA
+					war_goal = { casus_belli=aquire_territory  region=alsace_lorraine_region }
+				}
+			}
+			manpower = 250
+			neutrality = -20
+			change_variable = {
+				which = "world_at_war"
+				value = +15
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+### POL - FRANCO-POLISH MILITARY ALLIANCE
+	
+	franco_polish_alliance = {
+		potential = {
+			tag = POL
+			not = { war_with = FRA }
+			not = { war_with = GER }
+			not = { alliance_with = GER }
+			not = { faction = axis }
+			not = { faction = comintern }
+			FRA = { has_country_flag = rhineland_war }
+			not = { has_country_flag = rhineland_war_ok }
+		}
+		allow = {
+			FRA = { has_country_flag = rhineland_war_ok }
+			or = {
+				2613 = { any_neighbor_province = { controlled_by = GER } } #Paris
+				2550 = { any_neighbor_province = { controlled_by = GER } } #Reims
+				2746 = { any_neighbor_province = { controlled_by = GER } } #Troyes
+				3351 = { any_neighbor_province = { controlled_by = GER } } #Besancon
+				2747 = { any_neighbor_province = { controlled_by = GER } } #St-Dizier
+				3147 = { any_neighbor_province = { controlled_by = GER } } #Is-sur-Tille
+			}
+		}
+		effect = {
+			set_country_flag = rhineland_war_ok
+			create_alliance = FRA
+			war = { target = GER }
+			manpower = 100
+			neutrality = -20
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+#########
+### PEACE
+#########
+### Three possibilities:
+## 1937 peace, if stalemate until jan 1st 1937 an event will ask germany to cease fire
+## German victory:
+# Over Poland, Germany can ask for Danzig
+# Over France, Germany can ask for reparations
+## German defeat, Germany will pay reparations to France and Poland (thus making them more powerful for WWII)
+
+### 1937 PEACE
+
+	1937_peace = {
+		potential = {
+			tag = FRA
+			war_with = GER			
+			has_country_flag = rhineland_war_ok
+			not = { has_global_flag = rhineland_peace }
+		}
+		allow = {
+			year = 1937
+		}
+		effect = {
+			set_global_flag = rhineland_peace
+			GER = { country_event = 10004 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+### GERMAN VICTORY
+
+## GERMAN VICTORY - OVER POLAND
+	
+	german_victory_over_poland = {
+		potential = {
+			tag = POL
+			war_with = GER			
+			has_country_flag = rhineland_war_ok
+			not = { has_global_flag = rhineland_peace }
+		}
+		allow = {
+			or = {
+				1928 = { any_neighbor_province = { controlled_by = GER } } #Warsaw
+				lost_national = 0.20
+			}
+		}
+		effect = {
+			set_global_flag = rhineland_peace			
+			neutrality = 20
+			leave_alliance = FRA
+			GER = { country_event = 10005 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+## GERMAN VICTORY - OVER FRANCE
+	
+	german_victory_over_france = {
+		potential = {
+			tag = FRA
+			war_with = GER			
+			has_country_flag = rhineland_war_ok
+			not = { has_global_flag = rhineland_peace }
+		}
+		allow = {
+			or = {
+				2613 = { any_neighbor_province = { controlled_by = GER } } #Paris
+				2746 = { any_neighbor_province = { controlled_by = GER } } #Troyes
+				3351 = { any_neighbor_province = { controlled_by = GER } } #Besancon
+				lost_national = 0.03
+			}
+		}
+		effect = {
+			set_global_flag = rhineland_peace			
+			neutrality = 20
+			GER = { country_event = 10006 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+### GERMAN DEFEAT
+
+	german_defeat = {
+		potential = {
+			tag = GER
+			war = yes		
+			has_country_flag = rhineland_war_ok
+			not = { year = 1938 }
+			not = { has_global_flag = rhineland_peace }
+			lost_national = 0.01
+		}
+		allow = {
+			not = { year = 1938 }
+			lost_national = 0.05
+		}
+		
+		effect = {
+			set_global_flag = rhineland_peace			
+			neutrality = 20
+			FRA = { neutrality = 20 }
+			ENG = { neutrality = 20 }
+			dissent = 15
+			any_country = { limit = { war_with = GER } end_war = GER }
+			add_country_modifier = {
+				name = "germany_defeat"
+				duration = 360
+			}
+			FRA = {
+				add_country_modifier = {
+					name = "germany_victory_fra"
+					duration = 360
+				}
+			}
+			non_aggression_pact = FRA
+			non_aggression_pact = ENG			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#EOF
+}
