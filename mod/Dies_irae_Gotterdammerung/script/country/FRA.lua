@@ -406,7 +406,7 @@ function P.NavalRatio(voProductionData)
 		destroyer = 8,
 		submarine = 2,
 		light_cruiser = 12,
-		battleship = 2
+		battleship = 2,
 		carrier = 1};
 	
 	return laArray
