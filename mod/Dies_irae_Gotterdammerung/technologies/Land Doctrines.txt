@@ -367,6 +367,9 @@ combined_arms_warfare = {
 
     # combined_arms_bonus = 0.1
     armor_unit_type = 0.1
+	fallschirmjager_panzer_type = 0.1
+	panzer_lehr_type = 0.1
+	
 
 	activate_unit = sp_rct_artillery_brigade 
 

@@ -1,7 +1,7 @@
 grossdeutschland_motorized_brigade = {
 	type = land
 	sprite = Motor
-	unit_group = infantry_unit_type
+	unit_group = grossdeutschland_type
 	active = no
 	is_buildable = no
 	

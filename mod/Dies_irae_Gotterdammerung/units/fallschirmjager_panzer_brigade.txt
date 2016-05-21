@@ -1,7 +1,7 @@
 fallschirmjager_panzer_brigade = {
 	type = land
 	sprite = Tank
-	unit_group = armor_unit_type
+	unit_group = fallschirmjager_panzer_type
 	active = no
 	is_buildable = no
 	

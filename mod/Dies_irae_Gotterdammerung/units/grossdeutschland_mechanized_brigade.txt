@@ -1,7 +1,7 @@
 grossdeutschland_mechanized_brigade = {
 	type = land
 	sprite = Mech
-	unit_group = infantry_unit_type
+	unit_group = grossdeutschland_type
 	active = no
 	is_buildable = no
 	

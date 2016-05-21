@@ -1,7 +1,7 @@
 panzer_lehr_brigade = {
 	type = land
 	sprite = Tank
-	unit_group = armor_unit_type
+	unit_group = panzer_lehr_type
 	active = no
 	is_buildable = no
 	
