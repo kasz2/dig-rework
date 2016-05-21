@@ -10,13 +10,12 @@ country_event = {
 		exists = SOV
 		faction = comintern
 		year = 1944
-		controls = 8766
-		controls = 8818
 		controls = 8793
-		controls = 8819
-		controls = 8794
-		controls = 8844
-		controls = 8820
+		controls = 8767 
+		controls = 8794 
+		controls = 8741 
+		controls = 8768 
+		controls = 8820 
 	}
 
 	mean_time_to_happen =  {
@@ -57,12 +56,11 @@ country_event = {
 		ai_chance = { factor = 100 }
 		relation = { who = CHI value = -100 }
 		inherit = TAN
-		add_core = 8766
-		add_core = 8818
-		add_core = 8793
-		add_core = 8819
-		add_core = 8794
-		add_core = 8844
+		add_core = 8793 
+		add_core = 8767 
+		add_core = 8794 
+		add_core = 8741 
+		add_core = 8768 
 		add_core = 8820
 		dissent = -1
 		money = 100
@@ -86,7 +84,7 @@ country_event = {
 
 	
 	trigger = {
-			tag = SOV
+			TAG = SOV
 			war_with = GER
 			NOT = { has_country_flag = Soviet_MP }
 			GER = {
@@ -133,7 +131,7 @@ country_event = {
 	desc = "EVTDESC2104"
 
 	trigger = {	
-		tag = SOV
+		TAG = SOV
 		war_with = GER
 		NOT = { has_country_flag = Soviet_industry }
 	}

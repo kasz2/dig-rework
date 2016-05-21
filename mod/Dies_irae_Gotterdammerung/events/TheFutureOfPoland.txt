@@ -1,0 +1,283 @@
+########################
+# The Future of Poland #
+########################
+# Poland - Reaction Event
+country_event = {
+	
+	id = 1401
+
+	is_triggered_only = yes
+
+	title = "EVTNAME1401"
+	desc = "EVTDESC1401"
+	picture = "DIG_guarantee_POL"
+
+	option = {
+		name = "EVTOPTA1401"			# Accept
+		ai_chance = { factor = 100 }
+		relation = { who = ENG value = 10 }
+		relation = { who = FRA value = 10 }
+		relation = { who = GER value = -15 }
+		relation = { who = SOV value = -10 }
+		ENG = { country_event = 1402 }
+	}
+
+	option = {
+		name = "EVTOPTB1401"			# Decline
+		relation = { who = ENG value = -5 }
+		relation = { who = FRA value = -5 }
+		relation = { who = GER value = 5 }
+		relation = { who = SOV value = 5 }
+		ENG = { country_event = 1403 }
+	}
+}
+
+# Response to the UK - Poland Accepts
+country_event = {
+
+	id = 1402
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME1402"
+	desc = "EVTDESC1402"
+	picture = "DIG_chameberlain"
+
+	option = {
+		name = "EVTOPTA1402"			# Great!
+		POL = { join_faction = allies }
+	}
+}
+
+# Response to the UK - Poland Declines
+country_event = {
+
+	id = 1403
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME1403"
+	desc = "EVTDESC1403"
+	picture = "DIG_poland"
+
+	option = {
+		name = "EVTOPTA1403"			# Their loss
+	}
+}
+
+#################
+# Danzig or War #
+#################
+# Poland - Reaction Event
+country_event = {
+
+	id = 1404
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME1404"
+	desc = "EVTDESC1404"
+	picture = "DIG_Danzig"
+
+	option = {
+		name = "EVTOPTA1404"			# Then it is War		
+		relation = { who = SOV value = 5 }
+		relation = { who = ENG value = 10 }
+		relation = { who = FRA value = 10 }
+		dissent = -5
+		GER = { country_event = 1405 }
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.10
+				national_socialist = { organisation = 60 popularity = 40 }
+			}	
+			modifier = {
+				factor = 2
+				check_variable = {
+					which = "world_at_war"
+					value = 12
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB1404"			# Fold
+		relation = { who = GER value = 10 }
+		relation = { who = SOV value = -5 }
+		relation = { who = ENG value = -5 }
+		relation = { who = FRA value = -5 }
+		dissent = 5
+		1626 = { secede_province = GER }	# Danzig
+		GER = { country_event = 1406 }
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 4
+				national_socialist = { organisation = 60 popularity = 40 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = {
+					which = "world_at_war"
+					value = 12
+				}
+			}
+		}
+	}
+}
+
+# Response to Germany - War
+country_event = {
+
+	id = 1405
+
+	is_triggered_only = yes
+
+	title = "EVTNAME1405"
+	desc = "EVTDESC1405"
+	picture = "DIG_Danzig"
+
+	option = {
+		name = "EVTOPTA1405"			# Fortune will grant us victory!
+		ai_chance = { factor = 100 }
+		GER = {	war = {	
+					target = POL
+					attacker_goal = { casus_belli = conquer }
+					attacker_goal = { casus_belli = aquire_all_cores }
+					} 
+				}
+	}
+}
+
+# Response to Germany - Fold
+country_event = {
+
+	id = 1406
+
+	is_triggered_only = yes
+
+	title = "EVTNAME1406"
+	desc = "EVTDESC1406"
+	picture = "DIG_Danzig"
+
+	option = {
+		name = "EVTOPTA1406"			# Excellent
+		ai_chance = { factor = 100 }
+		set_country_flag = danzig_seceded
+		add_country_modifier = {
+			name = "patriotic_fervour"
+			duration = 30
+		}
+		national_socialist = { organisation = 10 popularity = 10 }
+		relation = { who = POL value = 5 }
+	}
+}
+
+#################
+# Silesia or War #
+#################
+# Poland - Reaction Event
+country_event = {
+
+	id = 1407
+	
+	is_triggered_only = yes
+	
+	title = "EVTNAME1407"
+	desc = "EVTDESC1407"
+	picture = "DIG_Danzig"
+
+	option = {
+		name = "EVTOPTA1407"			# Then it is War		
+		relation = { who = SOV value = 5 }
+		relation = { who = ENG value = 10 }
+		relation = { who = FRA value = 10 }
+		dissent = -5
+		GER = { country_event = 1408 }
+		ai_chance = {
+			factor = 99
+			modifier = {
+				factor = 0.50
+				national_socialist = { organisation = 70 popularity = 40 }
+			}	
+			modifier = {
+				factor = 1
+				check_variable = {
+					which = "world_at_war"
+					value = 15
+				}
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB1407"			# Fold
+		relation = { who = GER value = 10 }
+		relation = { who = SOV value = -5 }
+		relation = { who = ENG value = -5 }
+		relation = { who = FRA value = -5 }
+		dissent = 5
+		2271 = { secede_province = GER }
+		2328 = { secede_province = GER }
+		2386 = { secede_province = GER }
+		2444 = { secede_province = GER }
+		2504 = { secede_province = GER }
+		2505 = { secede_province = GER }
+		2566 = { secede_province = GER }
+		2567 = { secede_province = GER }
+		GER = { country_event = 1409 }
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 50
+				national_socialist = { organisation = 70 popularity = 40 }
+			}
+			modifier = {
+				factor = 0
+				check_variable = {
+					which = "world_at_war"
+					value = 15
+				}
+			}
+		}
+	}
+}
+
+# Response to Germany - War
+country_event = {
+
+	id = 1408
+
+	is_triggered_only = yes
+
+	title = "EVTNAME1408"
+	desc = "EVTDESC1408"
+	picture = "DIG_Silesia"
+
+	option = {
+		name = "EVTOPTA1408"			# Fortune will grant us victory!
+		ai_chance = { factor = 100 }
+		war = { target = POL }
+	}
+}
+
+# Response to Germany - Fold
+country_event = {
+
+	id = 1409
+
+	is_triggered_only = yes
+
+	title = "EVTNAME1409"
+	desc = "EVTDESC1409"
+	picture = "DIG_Silesia"
+
+	option = {
+		name = "EVTOPTA1409"			# Excellent
+		ai_chance = { factor = 100 }
+		set_country_flag = silesia_ceceded
+		dissent = -10
+		relation = { who = POL value = 25 }
+	}
+}
+

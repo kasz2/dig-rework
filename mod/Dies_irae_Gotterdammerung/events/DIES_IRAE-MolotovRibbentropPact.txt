@@ -109,12 +109,6 @@ country_event = {
 		add_core = 2269 
 		add_core = 2386 
 		add_core = 2566
-		#add_core = 1685
-		#add_core = 1746
-		#add_core = 1806
-		#add_core = 2036
-		#poland_bydgoszgz = { add_core = GER }
-		#poland_poznan = { add_core = GER }
 		non_aggression_pact = SOV
 	}
 }
@@ -146,35 +140,12 @@ country_event = {
 		relation = { who = LAT value = -10}
 		relation = { who = EST value = -10 }		
 		neutrality = -5
-		add_core = 1867
-		add_core = 1807 
-		add_core = 1626 
-		add_core = 1685 
-		add_core = 1745 
-		add_core = 1746 
-		add_core = 1806 
-		add_core = 1866 
-		add_core = 1805 
-		add_core = 1865 
-		add_core = 1925 
-		add_core = 1981 
-		add_core = 1980 
-		add_core = 1979 
-		add_core = 2036 
-		add_core = 2038 
-		add_core = 1924 
-		add_core = 2037 
-		add_core = 2096 
-		add_core = 2154 
-		add_core = 2269 
-		add_core = 2386 
-		add_core = 2566
-		#add_core = 1685
-		#add_core = 1746
-		#add_core = 1806
-		#add_core = 2036
-		#poland_bydgoszgz = { add_core = GER }
-		#poland_poznan = { add_core = GER }
+		add_core = 1685
+		add_core = 1746
+		add_core = 1806
+		add_core = 2036
+		poland_bydgoszgz = { add_core = GER }
+		poland_poznan = { add_core = GER }
 		SOV = {
 			# Estonia
 			EST_820 = { add_core = SOV }
@@ -197,9 +168,9 @@ country_event = {
 			LIT_1442 = { add_core = SOV }
 			LIT_1308 = { add_core = SOV }			
 			# Finland
-			add_core = 404
-			add_core = 471
-			add_core = 542
+			add_core = 404 # Kuolismaa
+			add_core = 471 # Värtsilä
+			add_core = 542 # Sortavala
 			finland_salla = { add_core = SOV }
 			finland_raja_karjala = { add_core = SOV }
 			finland_keski_kannas = { add_core = SOV }
@@ -237,12 +208,6 @@ country_event = {
 		add_core = 2269 
 		add_core = 2386 
 		add_core = 2566
-		#add_core = 1685
-		#add_core = 1746
-		#add_core = 1806
-		#add_core = 2036
-		#poland_poznan = { add_core = GER }
-		#poland_bydgoszgz = { add_core = GER }
 		SOV = { country_event = 1504 }
 	}
 	option = {
@@ -272,12 +237,6 @@ country_event = {
 		add_core = 2269 
 		add_core = 2386 
 		add_core = 2566
-		#add_core = 1685
-		#add_core = 1746
-		#add_core = 1806
-		#add_core = 2036
-		#poland_bydgoszgz = { add_core = GER }
-		#poland_poznan = { add_core = GER }
 		change_variable = {
 			which = "soviet_aggression"
 			value = +2
@@ -320,9 +279,9 @@ country_event = {
 		LIT_1442 = { add_core = SOV }
 		LIT_1308 = { add_core = SOV }
 		# Finland
-		add_core = 404
-		add_core = 471
-		add_core = 542
+		add_core = 404 # Kuolismaa
+		add_core = 471 # Värtsilä
+		add_core = 542 # Sortavala
 		finland_salla = { add_core = SOV }
 		finland_raja_karjala = { add_core = SOV }
 		finland_keski_kannas = { add_core = SOV }
@@ -379,9 +338,9 @@ country_event = {
 		LIT_1442 = { add_core = SOV }
 		LIT_1308 = { add_core = SOV }
 		# Finland
-		add_core = 404
-		add_core = 471
-		add_core = 542
+		add_core = 404 # Kuolismaa
+		add_core = 471 # Värtsilä
+		add_core = 542 # Sortavala
 		finland_salla = { add_core = SOV }
 		finland_raja_karjala = { add_core = SOV }
 		finland_keski_kannas = { add_core = SOV }
@@ -529,43 +488,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA1509"					# Accept
 		ai_chance = { factor = 100 }
-		ROM_3307 = {
-			add_core = SOV
-			secede_province = SOV
-		}
-		2902 = {
-			add_core = SOV
-			secede_province = SOV
-		}
-		2969 = {
-			add_core = SOV
-			secede_province = SOV
-		}
-		3308 = {
-			add_core = SOV
-			secede_province = SOV
-		}
-		3377 = {
-			add_core = SOV
-			secede_province = SOV
-		}
-		3376 = {
-			add_core = SOV
-			secede_province = SOV
-		}
-		3446 = {
-			add_core = SOV
-			secede_province = SOV
-		}
-		3038 = {
-			add_core = SOV
-			secede_province = SOV
-		}
-		3106 = {
-			add_core = SOV
-			secede_province = SOV
-		}
-		3172 = {
+		bessarabia = {
 			add_core = SOV
 			secede_province = SOV
 		}

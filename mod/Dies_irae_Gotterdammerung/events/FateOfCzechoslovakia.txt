@@ -330,14 +330,14 @@ country_event = {
 				has_country_flag = uk_protests
 			}			
 		}
-		CZE_2766 = { secede_province = GER add_core = SLO }
-		CZE_2827 = { secede_province = GER add_core = SLO }
-		CZE_2895 = { secede_province = GER add_core = SLO }
-		CZE_2960 = { secede_province = GER add_core = SLO }
-		CZE_3027 = { secede_province = GER add_core = SLO }		
-		southern_slovakia = { secede_province = HUN add_core = SLO }
-		subcarpathian_ruthenia = { secede_province = HUN add_core = SLO }
-		2697 = { secede_province = POL add_core = POL }	# Cesky Tesin
+		CZE_2766 = { add_core = SLO }
+		CZE_2827 = { add_core = SLO }
+		CZE_2895 = { add_core = SLO }
+		CZE_2960 = { add_core = SLO }
+		CZE_3027 = { add_core = SLO }
+		southern_slovakia = { secede_province = HUN add_core = HUN }
+		subcarpathian_ruthenia = { secede_province = HUN add_core = HUN }
+		2697 = { secede_province = POL add_core = POL }
 		SLO = { split_troops = 0.2 }
 		GER = { country_event = 1212 }
 		HUN = { country_event = 1213 }
@@ -382,9 +382,9 @@ country_event = {
 				has_country_flag = uk_protests
 			}
 		}
-		slovakia = { secede_province = GER add_core = SLO }
-		subcarpathian_ruthenia = { secede_province = GER add_core = SLO }
-		2697 = { secede_province = POL add_core = POL }	# Cesky Tesin
+		slovakia = { secede_province = SLO add_core = SLO }
+		subcarpathian_ruthenia = { secede_province = SLO add_core = SLO }
+		2697 = { secede_province = POL add_core = POL }
 		SLO = { split_troops = 0.5 }
 		GER = { country_event = 1212 }
 	}

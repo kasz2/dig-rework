@@ -146,55 +146,6 @@ country_event = {
 	}
 }
 
-# Vichy France - Italy
-country_event = {
-	
-	id = 517
-
-	is_triggered_only = yes
-
-	title = "EVTNAME504"
-	desc = "EVTDESC504"
-	picture = "DIG_VIC"
-
-	option = {
-		name = "EVTOPTA514"
-		france_mondane = { limit = { controlled_by = ITA } add_core = ITA }
-		france_briancon = { limit = { controlled_by = ITA } add_core = ITA  }
-		france_nice = { limit = { controlled_by = ITA } add_core = ITA }
-		FRA_4359 = { limit = { controlled_by = ITA } add_core = ITA }
-		}
-	}
-
-# Vichy France - Nationalist Spain
-country_event = {
-	
-	id = 530
-
-	is_triggered_only = yes
-
-	title = "EVTNAME504"
-	desc = "EVTDESC504"
-	picture = "DIG_VIC"
-	
-	trigger = {
-		SPA = {
-			faction = axis
-		}
-		NOT = {
-			exists = SPR
-		}
-	}
-	
-	option = {
-		name = "EVTOPTA514"
-		FRA_3959 = { limit = { controlled_by = SPA } add_core = SPA }
-		FRA_4099 = { limit = { controlled_by = SPA } add_core = SPA }
-		FRA_4027 = { limit = { controlled_by = SPA } add_core = SPA }
-	}
-}
-
-
 # Bitter Peace
 country_event = {
 	id = 507

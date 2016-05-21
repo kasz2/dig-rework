@@ -19,12 +19,12 @@ country_event = {
 		relation = { who = SOV value = -5 }
 		relation = { who = POL value = -10 }
 		1306 = { secede_province = GER }		# Memel
-		1440 = { secede_province = GER }		# Silute
+		1440 = { secede_province = GER }		
 		GER = { country_event = 1302 }
 	}
 	option = {
 		name = "EVTOPTB1301"			# Never!
-		relation = { who = GER value = 15 }
+		relation = { who = GER value = -15 }
 		relation = { who = SOV value = 5 }
 		relation = { who = POL value = 10 }
 		GER = { country_event = 1303 }
@@ -49,7 +49,6 @@ country_event = {
 		non_aggression_pact = LIT
 		dissent = -5
 	}
-	
 	option = {
 		name = "No need to sign the non agression pact"			# Ok
 		dissent = 2

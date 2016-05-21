@@ -74,6 +74,9 @@ country_event = {
 	option = {
 		name = "EVTOPTA2503"			# Excellent!
 		threat = { which = FIN value = 5 }
+		285 = { secede_province = FIN } # Repola and Porajärvi (in East Karelia) transferred to Finland
+		305 = { secede_province = FIN }
+		286 = { secede_province = FIN }
 	}
 }
 
@@ -136,6 +139,7 @@ country_event = {
 #################################
 # End of the Finnish Winter War #
 #################################
+
 country_event = {
 
 	id = 2506
@@ -143,6 +147,7 @@ country_event = {
 	trigger = {
 		tag = SOV
 		NOT = {has_country_flag = FIN_ENDWAR_EVENT}
+		year = 1940
 		or = {
 			and = {
 				finland_etela_kannas = { controlled_by = SOV }
@@ -156,7 +161,6 @@ country_event = {
 				finland_etela_kannas = { controlled_by = SOV }
 				controls = 698	# Viipuri
 			}
-			controls = 739
 			FIN = { surrender_progress = 0.2 }
 		}
 		FIN = {
@@ -166,7 +170,77 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 1	
+		months = 2
+
+		modifier = {
+			factor = 0.8
+			controls = 143	# Kemijärvi			
+		}
+
+		modifier = {
+			factor = 0.6
+			controls = 283	# Kajaani			
+		}
+
+		modifier = {
+			factor = 0.6
+			controls = 180	# Rovaniemi			
+		}
+
+		modifier = {
+			factor = 0.5
+			controls = 402	# Joensuu			
+		}
+
+		modifier = {
+			factor = 0.5
+			controls = 505	# Savonlinna				
+		}
+
+		modifier = {
+			factor = 0.5
+			controls = 542	# Sortavala		
+		}
+
+		modifier = {
+			factor = 0.4
+			controls = 698	# Viipuri				
+		}
+
+		modifier = {
+			factor = 0.2
+			controls = 234	# Oulu			
+		}
+
+		modifier = {
+			factor = 0.2
+			controls = 400	# Kuopio			
+		}
+
+		modifier = {
+			factor = 0.2
+			controls = 504	# Mikkeli			
+		}
+
+		modifier = {
+			factor = 0.2
+			controls = 618	# Kouvola			
+		}
+		
+		modifier = {
+			factor = 0.1
+			controls = 655	# Lahti			
+		}
+
+		modifier = {
+			factor = 0.1
+			controls = 780	# Porvoo			
+		}
+
+		modifier = {
+			factor = 0.01
+			controls = 739	# Helsinki				
+		}
 	}
 	
 	title = "EVTNAME2506"
@@ -286,6 +360,8 @@ country_event = {
 	
 	mean_time_to_happen = {
 		months = 1
+
+		modifier = {}		
 	}
 	
 	title = "EVTNAME2509"
@@ -351,5 +427,75 @@ country_event = {
 		name = "EVTOPTA2511"			# Good!
 		SOV = { end_war = FIN }
 		dissent = -10
+	}
+}
+
+
+##Soviet  - Finland falls quickly ##
+
+country_event = {
+
+	id = 2513
+	
+	trigger = {
+		tag = SOV
+		NOT = {has_country_flag = FIN_ENDWAR_EVENT}
+		year = 1939
+		not = { year = 1940 }
+		or = {
+			controls = 739	# Helsinki	
+			and = {	
+				controls = 698	# Viipuri	
+				controls = 542	# Sortavala	
+				or = {
+					controls = 180	# Rovaniemi	
+					controls = 234	# Oulu
+					controls = 400	# Kuopio
+					controls = 504	# Mikkeli
+					controls = 618	# Kouvola
+				}			
+			}
+			FIN = { surrender_progress = 0.5 }
+		}
+		FIN = {
+			war_with = SOV
+			not = { faction = axis }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {}
+	}
+	
+	title = "EVTNAME2506"
+	desc = "EVTDESC2506"
+
+	option = {
+		name = "EVTOPTA2506"			# We'll settle for what we asked for
+		remove_country_modifier = disorganized_officer_corps
+		relation = { who = FIN value = 10 }
+		FIN = { country_event = 2507 }
+		set_country_flag = FIN_ENDWAR_EVENT
+	}
+	option = {
+		name = "EVTOPTB2506"			# Let's bring them Socialism!
+		ai_chance = { factor = 100 }
+		relation = { who = FIN value = -150 }
+		relation = { who = ENG value = -100 }
+		relation = { who = FRA value = -100 }
+		relation = { who = GER value = -75 }
+		relation = { who = USA value = -75 }
+		remove_country_modifier = disorganized_officer_corps
+		end_non_aggression_pact = GER
+		end_non_aggression_pact = FRA
+		end_non_aggression_pact = ENG
+		end_non_aggression_pact = USA
+		SOV = {	add_wargoal = {	
+					target = FIN
+					war_goal = { casus_belli=conquer }
+					} 
+				}  
+		set_country_flag = FIN_ENDWAR_EVENT
 	}
 }
