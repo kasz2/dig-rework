@@ -73,8 +73,12 @@ function P.LandTechs(voTechnologyData)
 			{"marine_infantry", 0},
 			{"jungle_warfare_equipment", 0},
 			{"amphibious_warfare_equipment", 0},
-			{"armored_car_armour", 0},
-			{"armored_car_gun", 0}};
+
+			{"super_heavy_tank_brigade", 0},
+			{"super_heavy_tank_gun", 0},
+			{"super_heavy_tank_engine", 0},
+			{"super_heavy_tank_armour", 0},
+			{"super_heavy_tank_reliability", 0}};
 	else
 		ignoreTech = {
 			{"cavalry_smallarms", 0}, 
@@ -91,15 +95,21 @@ function P.LandTechs(voTechnologyData)
 			{"lighttank_gun", 2},
 			{"lighttank_engine", 2},
 			{"lighttank_armour", 2},
-			{"lighttank_reliability", 2}};
+			{"lighttank_reliability", 2},
+			{"super_heavy_tank_brigade", 0},
+			{"super_heavy_tank_gun", 0},
+			{"super_heavy_tank_engine", 0},
+			{"super_heavy_tank_armour", 0},
+			{"super_heavy_tank_reliability", 0}};
 	end
 	
 	local preferTech = {
+		"mechanised_infantry",
 		"infantry_activation",
 		"smallarms_technology",
 		"infantry_support",
 		"infantry_guns",
-		"infantry_at",
+
 		"lighttank_brigade",
 		"lighttank_gun",
 		"lighttank_engine",
@@ -120,16 +130,21 @@ end
 
 function P.LandDoctrinesTechs(voTechnologyData)
 	local ignoreTech = {
-		{"special_forces", 4},
-		{"large_front", 3},
+
+
 		{"guerilla_warfare", 0},
-		{"peoples_army", 3},
+
 		{"large_formations", 1}};
 		
 	local preferTech = {
+		"mobile_warfare",
+		"elastic_defence",
+		"spearhead_doctrine",
 		"schwerpunkt",
 		"blitzkrieg",
 		"operational_level_command_structure",
+		"tactical_command_structure",
+		"delay_doctrine",
 		"integrated_support_doctrine",
 		"mechanized_offensive",
 		"combined_arms_warfare",
@@ -137,7 +152,8 @@ function P.LandDoctrinesTechs(voTechnologyData)
 		"central_planning",
 		"mass_assault",
 		"grand_battle_plan",
-		"assault_concentration"};
+		"assault_concentration",
+		"operational_level_organisation"};
 		
 	return ignoreTech, preferTech
 end
@@ -193,6 +209,11 @@ end
 		
 function P.NavalTechs(voTechnologyData)
 	local ignoreTech = {
+		{"lightcruiser_technology", 0},
+		{"lightcruiser_armament", 0},
+		{"lightcruiser_antiaircraft", 0},
+		{"lightcruiser_engine", 0},
+		{"lightcruiser_armour", 0},
 		{"battlecruiser_technology", 0},
 		{"battlecruiser_antiaircraft", 0},
 		{"battlecruiser_engine", 0},
@@ -206,24 +227,24 @@ function P.NavalTechs(voTechnologyData)
 		{"carrier_armour", 0},
 		{"carrier_hanger", 0}};
 
-	local preferTech = {
-		"destroyer_technology",
-		"destroyer_armament",
-		"destroyer_antiaircraft",
-		"destroyer_engine",
-		"destroyer_armour",
-		"heavycruiser_technology",
-		"heavycruiser_armament",
-		"heavycruiser_antiaircraft",
-		"heavycruiser_engine",
-		"heavycruiser_armour",
-		"submarine_technology",
-		"submarine_antiaircraft",
-		"submarine_engine",
-		"submarine_hull",
-		"submarine_torpedoes",
-		"submarine_sonar",
-		"submarine_airwarningequipment"};		
+	local preferTech = {"destroyer_technology"};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
 	return ignoreTech, preferTech
 end
@@ -239,14 +260,14 @@ function P.NavalDoctrineTechs(voTechnologyData)
 		{"naval_underway_repleshment", 0},
 		{"radar_training", 0}};
 
-	local preferTech = {
-		"fleet_auxiliary_submarine_doctrine",
-		"trade_interdiction_submarine_doctrine",
-		"cruiser_warfare",
-		"submarine_crew_training",
-		"cruiser_crew_training",
-		"unrestricted_submarine_warfare_doctrine",
-		"spotting"};		
+	local preferTech = {"fleet_auxiliary_submarine_doctrine"};
+
+
+
+
+
+
+
 		
 	return ignoreTech, preferTech
 end
@@ -326,10 +347,10 @@ function P.ProductionWeights(voProductionData)
 	
 	elseif (voProductionData.ManpowerTotal < 300 and voProductionData.LandCountTotal > 400) then
 		laArray = {
-			0.00, -- Land
+			0.20, -- Land
 			0.60, -- Air
 			0.10, -- Sea
-			0.30}; -- Other
+			0.10}; -- Other
 	elseif loGerSovDiplo:HasWar() then
 		local loWar = loGerSovDiplo:GetWar()
 		local liWarMonths = loWar:GetCurrentRunningTimeInMonths()
@@ -356,7 +377,7 @@ function P.ProductionWeights(voProductionData)
 				laArray = {
 					0.74, -- Land
 					0.25, -- Air
-					0.00, -- Sea
+					0.0, -- Sea
 					0.01}; -- Other
 			end
 		end
@@ -399,18 +420,20 @@ function P.LandRatio(voProductionData)
 	
 	if voProductionData.Year < 1942 then
 		laArray = {
-			garrison_brigade = 1,
-			infantry_brigade = 14,
-			motorized_brigade = 0,
+			garrison_brigade = 2,
+			infantry_brigade = 24,
+
+			motorized_brigade = 3,
 			armor_brigade = 1};
 	else
 		laArray = {
-			garrison_brigade = 0,
-			infantry_brigade = 20,
-			motorized_brigade = 3,
+			garrison_brigade = 2,
+			infantry_brigade = 24,
+
+			motorized_brigade = 4,
 			mechanized_brigade = 1,
-			armor_brigade = 2,
-			militia_brigade = 1};
+			armor_brigade = 1,
+			heavy_armor_brigade = 0.3};
 	end
 	
 	return laArray

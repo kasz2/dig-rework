@@ -30,10 +30,10 @@ function P.LandTechs(voTechnologyData)
 	
 	if lbArmor then
 		ignoreTech = {
-			{"cavalry_smallarms", 3}, 
-			{"cavalry_support", 3},
-			{"cavalry_guns", 3}, 
-			{"cavalry_at", 3},
+			{"cavalry_smallarms", 0}, 
+			{"cavalry_support", 0},
+			{"cavalry_guns", 0}, 
+			{"cavalry_at", 0},
 			{"heavy_tank_brigade", 0},
 			{"heavy_tank_gun", 0},
 			{"heavy_tank_engine", 0},
@@ -52,10 +52,10 @@ function P.LandTechs(voTechnologyData)
 		}
 	else
 		ignoreTech = {
-			{"cavalry_smallarms", 3}, 
-			{"cavalry_support", 3},
-			{"cavalry_guns", 3}, 
-			{"cavalry_at", 3},
+			{"cavalry_smallarms", 0}, 
+			{"cavalry_support", 0},
+			{"cavalry_guns", 0}, 
+			{"cavalry_at", 0},
 			{"heavy_tank_brigade", 0},
 			{"heavy_tank_gun", 0},
 			{"heavy_tank_engine", 0},
@@ -416,8 +416,8 @@ end
 -- Air ratio distribution
 function P.AirRatio(voProductionData)
 	local laArray = {
-		interceptor = 5,
-		multi_role = 0,
+		interceptor = 4,
+		multi_role = 1,
 		rocket_interceptor = 0,
 		cas = 0,
 		tactical_bomber = 3,
@@ -431,7 +431,6 @@ function P.NavalRatio(voProductionData)
 	local laArray = {
 		destroyer = 6,
 		submarine = 2,
-		nuclear_submarine = 0,
 		light_cruiser = 3,
 		heavy_cruiser = 1,
 		battleship = 2,
