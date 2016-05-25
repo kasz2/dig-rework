@@ -369,7 +369,6 @@ unit_names = {
 		"100. Truppentransporterflottille" 
 	}
 
-}
 ###############################
 ########DIES IRAE##############
 ###############################
@@ -415,7 +414,7 @@ submarine_coastal = {
 		"Osnabrück" "Ludwigshafen" "Leverkusen" "Oldenburg" "Neuss" "Paderborn" "Heidelberg" "Darmstadt" "Potsdam" "Würzburg" "Göttingen" 
 		"Recklinghausen" "Bottrop" "Wolfsburg" "Heilbronn" "Ingolstadt" 
 	}
-
+}
 ##########################
 
 ministers = {
