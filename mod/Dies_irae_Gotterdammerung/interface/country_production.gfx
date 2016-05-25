@@ -1568,8 +1568,8 @@ spriteTypes = {
 
 	spriteType = { 
 		name = "GFX_ca_groups"
-		texturefile = "gfx\\interface\\ca_groups.dds"
-		noOfFrames = 10
+		texturefile = "mod\\Dies_irae_Gotterdammerung\\gfx\\interface\\ca_groups.dds"
+		noOfFrames = 16
 		effectFile = "gfx\\FX\\buttonstate.fx"
 		loadType = "INGAME"
 		norefcount = yes
