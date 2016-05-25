@@ -14,6 +14,7 @@ us_new_deal = {
 
 great_patriotic_war = {
 	global_leadership_modifier = 0.05
+	ruling_party_support = 0.1
 }
 
 
@@ -2489,8 +2490,8 @@ rodina={
 }
 
 patrotic_war = {
-	global_manpower_modifier = 0.2
-	territorial_pride = 0.25
+	global_manpower_modifier = 0.3
+	territorial_pride = 0.2
 }
 
 love_of_freedom = {
@@ -2504,7 +2505,7 @@ the_nation_expects = {
 }
 
 infamous_day = {
-	global_manpower_modifier = 0.2	
+	global_manpower_modifier = 0.45
 }
 	
 shamed = {
@@ -2579,7 +2580,6 @@ Controls_Madrid = {
 	land_organisation = 0.1
 }
 #End SCW scenario
-
 ############## DIES IRAE MODIFIERS
 
 officer_boost = {
