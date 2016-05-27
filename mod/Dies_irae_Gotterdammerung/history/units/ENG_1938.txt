@@ -2,6 +2,79 @@ theatre = {
 	name = "Home Command Theatre"
 	location = 1964
 	regiment = { type = hq_brigade name = "Home Command Theatre HQ" historical_model = 0 }
+	army = { 
+		name = "Aldershot Command"
+		location = 2020
+		regiment = { type = hq_brigade name = "Aldershot Command HQ" historical_model = 0 }	
+		division= {
+			name = "1st Infantry Division"
+			location = 2020
+			regiment = { type = motorized_brigade name = "1st Guards Infantry Brigade" historical_model = 1 }
+			regiment = { type = motorized_brigade name = "2nd Infantry Brigade" historical_model = 1 }
+			regiment = { type = motorized_brigade name = "3rd Infantry Brigade" historical_model = 1 }
+		}
+		division= {
+			name = "2nd Infantry Division"
+			location = 2020
+			regiment = { type = motorized_brigade name = "4th Infantry Brigade" historical_model = 1 }
+			regiment = { type = motorized_brigade name = "5th Infantry Brigade" historical_model = 1 }
+			regiment = { type = motorized_brigade name = "6th Infantry Brigade" historical_model = 1 }
+		}
+	}
+	army = {
+		name = "Eastern Command"
+		location = 1964
+		regiment = { type = hq_brigade name = "Eastern Command HQ" historical_model = 0 }
+		division= {
+			name = "4th Infantry Division"
+			location = 1850
+			regiment = { type = motorized_brigade name = "10th Infantry Brigade" historical_model = 2 }
+			regiment = { type = motorized_brigade name = "11th Infantry Brigade" historical_model = 2 }
+			regiment = { type = motorized_brigade name = "12th Infantry Brigade" historical_model = 2 }
+		}
+		corps = {
+			name = "East Anglia Area"
+			location = 1849
+			regiment = { type = hq_brigade name = "East Anglia Area HQ" historical_model = 0 }
+			division= {
+				name = "18th Infantry Division"
+				location = 1849
+				is_reserve = yes
+				regiment = { type = motorized_brigade name = "35th Infantry Brigade" historical_model = 0 }
+				regiment = { type = motorized_brigade name = "36th Infantry Brigade" historical_model = 0 }
+				regiment = { type = motorized_brigade name = "37th Infantry Brigade" historical_model = 0 }
+			}
+			division= {
+				name = "54th 'East Anglia' Division"
+				location = 1849
+				is_reserve = yes
+				regiment = { type = motorized_brigade name = "161st Infantry Brigade" historical_model = 1 }
+				regiment = { type = motorized_brigade name = "162nd Infantry Brigade" historical_model = 1 }
+				regiment = { type = motorized_brigade name = "163rd Infantry Brigade" historical_model = 1 }
+			}
+		}
+		corps = {
+			name = "Home Counties Area"
+			location = 1964
+			regiment = { type = hq_brigade name = "Home Counties Area HQ" historical_model = 0 }
+			division= {
+				name = "12th 'Eastern' Division"
+				location = 1964
+				is_reserve = yes
+				regiment = { type = motorized_brigade name = "35th Infantry Brigade" historical_model = 0 }
+				regiment = { type = motorized_brigade name = "36th Infantry Brigade" historical_model = 0 }
+				regiment = { type = motorized_brigade name = "37th Infantry Brigade" historical_model = 0 }
+			}
+			division= {
+				name = "44th 'Home Counties' Division"
+				location = 1964
+				is_reserve = yes
+				regiment = { type = motorized_brigade name = "131st Infantry Brigade" historical_model = 1 }
+				regiment = { type = motorized_brigade name = "132nd Infantry Brigade" historical_model = 1 }
+				regiment = { type = motorized_brigade name = "133rd Infantry Brigade" historical_model = 1 }
+			}
+		}
+	}
 	corps = {
 		name = "London District"
 		location = 1964
@@ -9,17 +82,18 @@ theatre = {
 		division= {
 			name = "1st 'London' Division"
 			location = 1964
+			is_reserve = yes
 			regiment = { type = motorized_brigade name = "1st London Infantry Brigade" historical_model = 0 }
 			regiment = { type = motorized_brigade name = "2nd London Brigade" historical_model = 0 }
 		}
 		division= {
-			name = "2nd 'London' Division"
+			name = "52nd 'London' Division"
 			location = 1964
 			is_reserve = yes
 			regiment = { type = motorized_brigade name = "3rd London Brigade" historical_model = 1 }
 			regiment = { type = motorized_brigade name = "4th London Brigade" historical_model = 1 }
 		}
-	}	
+	}
 	army = {
 		name = "Northern Command"
 		location = 1433
@@ -45,6 +119,7 @@ theatre = {
 			division= {
 				name = "50th 'Northumbrian' Division"
 				location = 1255
+				is_reserve = yes
 				regiment = { type = motorized_brigade name = "150th Infantry Brigade" historical_model = 1 }
 				regiment = { type = motorized_brigade name = "151st Infantry Brigade" historical_model = 1 }
 			}
@@ -54,7 +129,7 @@ theatre = {
 			location = 1433
 			regiment = { type = hq_brigade name = "West Riding Area HQ" historical_model = 0 }
 			division= {
-				name = "46th 'West Riding' Division"
+				name = "46th 'North Midlands' Division"
 				location = 1433
 				is_reserve = yes
 				regiment = { type = motorized_brigade name = "137th Infantry Brigade" historical_model = 1 }
@@ -64,6 +139,7 @@ theatre = {
 			division= {
 				name = "49th 'West Riding' Division"
 				location = 1433
+				is_reserve = yes
 				regiment = { type = motorized_brigade name = "146th Infantry Brigade" historical_model = 1 }
 				regiment = { type = motorized_brigade name = "147th Infantry Brigade" historical_model = 1 }
 				regiment = { type = motorized_brigade name = "148th Infantry Brigade" historical_model = 1 }
@@ -79,16 +155,9 @@ theatre = {
 			location = 1017
 			regiment = { type = hq_brigade name = "Highland Area HQ" historical_model = 0 }
 			division= {
-				name = "9th 'Scottish' Division"
-				location = 1017
-				is_reserve = yes
-				regiment = { type = motorized_brigade name = "26th Infantry Brigade" historical_model = 2 }
-				regiment = { type = motorized_brigade name = "27th Infantry Brigade" historical_model = 2 }
-				regiment = { type = motorized_brigade name = "28th Infantry Brigade" historical_model = 2 }
-			}
-			division= {
 				name = "51st 'Highland' Division"
 				location = 1017
+				is_reserve = yes
 				regiment = { type = motorized_brigade name = "152nd Infantry Brigade" historical_model = 2 }
 				regiment = { type = motorized_brigade name = "153th Infantry Brigade" historical_model = 2 }
 				regiment = { type = motorized_brigade name = "154th Infantry Brigade" historical_model = 2 }
@@ -99,134 +168,12 @@ theatre = {
 			location = 1127
 			regiment = { type = hq_brigade name = "Lowland Area HQ" historical_model = 0 }
 			division= {
-				name = "15th 'Scottish' Division"
-				location = 1127
-				is_reserve = yes
-				regiment = { type = motorized_brigade name = "44th Infantry Brigade" historical_model = 2 }
-				regiment = { type = motorized_brigade name = "45th Infantry Brigade" historical_model = 2 }
-				regiment = { type = motorized_brigade name = "46th Infantry Brigade" historical_model = 2 }
-			}
-			division= {
 				name = "52nd 'Lowland' Division"
 				location = 1127
+				is_reserve = yes
 				regiment = { type = motorized_brigade name = "155th Infantry Brigade" historical_model = 2 }
 				regiment = { type = motorized_brigade name = "156th Infantry Brigade" historical_model = 2 }
 				regiment = { type = motorized_brigade name = "157th Infantry Brigade" historical_model = 2 }
-			}
-		}
-	}
-	army = {
-		name = "Eastern Command"
-		location = 1964
-		regiment = { type = hq_brigade name = "Eastern Command HQ" historical_model = 0 }
-		division= {
-			name = "4th Infantry Division"
-			location = 1850
-			regiment = { type = motorized_brigade name = "10th Infantry Brigade" historical_model = 2 }
-			regiment = { type = motorized_brigade name = "11th Infantry Brigade" historical_model = 2 }
-			regiment = { type = motorized_brigade name = "12th Infantry Brigade" historical_model = 2 }
-		}
-		corps = {
-			name = "East Anglia Area"
-			location = 1849
-			regiment = { type = hq_brigade name = "East Anglia Area HQ" historical_model = 0 }
-			division= {
-				name = "18th 'East Anglia' Infantry Division"
-				location = 1849
-				is_reserve = yes
-				regiment = { type = motorized_brigade name = "35th Infantry Brigade" historical_model = 0 }
-				regiment = { type = motorized_brigade name = "36th Infantry Brigade" historical_model = 0 }
-				regiment = { type = motorized_brigade name = "37th Infantry Brigade" historical_model = 0 }
-			}
-			division= {
-				name = "54th 'East Anglia' Division"
-				location = 1849
-				regiment = { type = motorized_brigade name = "161st Infantry Brigade" historical_model = 1 }
-				regiment = { type = motorized_brigade name = "162nd Infantry Brigade" historical_model = 1 }
-				regiment = { type = motorized_brigade name = "163rd Infantry Brigade" historical_model = 1 }
-			}
-		}
-		corps = {
-			name = "Home Counties Area"
-			location = 1964
-			regiment = { type = hq_brigade name = "Home Counties Area HQ" historical_model = 0 }
-			division= {
-				name = "12th 'Eastern' Division"
-				location = 1964
-				is_reserve = yes
-				regiment = { type = motorized_brigade name = "35th Infantry Brigade" historical_model = 0 }
-				regiment = { type = motorized_brigade name = "36th Infantry Brigade" historical_model = 0 }
-				regiment = { type = motorized_brigade name = "37th Infantry Brigade" historical_model = 0 }
-			}
-			division= {
-				name = "44th 'Home Counties' Division"
-				location = 1964
-				regiment = { type = motorized_brigade name = "131st Infantry Brigade" historical_model = 1 }
-				regiment = { type = motorized_brigade name = "132nd Infantry Brigade" historical_model = 1 }
-				regiment = { type = motorized_brigade name = "133rd Infantry Brigade" historical_model = 1 }
-			}
-		}
-	}
-	army = {
-		name = "Western Command"
-		location = 1613
-		regiment = { type = hq_brigade name = "Western Command HQ" historical_model = 0 }
-		corps = {
-			name = "Welsh Area"
-			location = 1727
-			regiment = { type = hq_brigade name = "Welsh Area HQ" historical_model = 0 }
-			division= {
-				name = "38th 'Welsh' Division"
-				location = 1727
-				is_reserve = yes
-				regiment = { type = motorized_brigade name = "113th Infantry Brigade" historical_model = 0 }
-				regiment = { type = motorized_brigade name = "114th Infantry Brigade" historical_model = 0 }
-				regiment = { type = motorized_brigade name = "115th Infantry Brigade" historical_model = 0 }
-			}
-			division= {
-				name = "53rd 'Welsh' Division"
-				location = 1727
-				regiment = { type = motorized_brigade name = "158th Infantry Brigade" historical_model = 1 }
-				regiment = { type = motorized_brigade name = "159th Infantry Brigade" historical_model = 1 }
-				regiment = { type = motorized_brigade name = "160th Infantry Brigade" historical_model = 1 }
-			}
-		}
-		corps = {
-			name = "West Lancashire Area"
-			location = 1521
-			regiment = { type = hq_brigade name = "West Lanacashire Area HQ" historical_model = 0 }
-			division= {
-				name = "55th 'West Lancashire' Division"
-				location = 1521
-				regiment = { type = motorized_brigade name = "164th Infantry Brigade" historical_model = 0 }
-				regiment = { type = motorized_brigade name = "164th Infantry Brigade" historical_model = 0 }
-			}
-			division= {
-				name = "59th 'Staffordshire' Division"
-				location = 1521
-				is_reserve = yes
-				regiment = { type = motorized_brigade name = "176th Infantry Brigade" historical_model = 0 }
-				regiment = { type = motorized_brigade name = "177th Infantry Brigade" historical_model = 0 }
-			}
-		}
-		corps = {
-			name = "East Lancashire Area"
-			location = 1522
-			regiment = { type = hq_brigade name = "East Lanacashire Area HQ" historical_model = 0 }
-			division= {
-				name = "42nd 'East Lancashire' Division"
-				location = 1522
-				regiment = { type = motorized_brigade name = "125th Infantry Brigade" historical_model = 1 }
-				regiment = { type = motorized_brigade name = "126th Infantry Brigade" historical_model = 1 }
-				regiment = { type = motorized_brigade name = "127th Infantry Brigade" historical_model = 1 }
-			}
-			division= {
-				name = "66th 'East Lancashire' Division"
-				location = 1522
-				is_reserve = yes
-				regiment = { type = motorized_brigade name = "197th Infantry Brigade" historical_model = 0 }
-				regiment = { type = motorized_brigade name = "198th Infantry Brigade" historical_model = 0 }
-				regiment = { type = motorized_brigade name = "199th Infantry Brigade" historical_model = 0 }
 			}
 		}
 	}
@@ -256,6 +203,7 @@ theatre = {
 			division= {
 				name = "43rd 'Wessex' Division"
 				location = 2077
+				is_reserve = yes
 				regiment = { type = motorized_brigade name = "128th Infantry Brigade" historical_model = 1 }
 				regiment = { type = motorized_brigade name = "129th Infantry Brigade" historical_model = 1 }
 				regiment = { type = motorized_brigade name = "130th Infantry Brigade" historical_model = 1 }
@@ -276,12 +224,13 @@ theatre = {
 			division= {
 				name = "48th 'South Midlands' Division"
 				location = 1907
+				is_reserve = yes
 				regiment = { type = motorized_brigade name = "143rd Infantry Brigade" historical_model = 0 }
 				regiment = { type = motorized_brigade name = "144th Infantry Brigade" historical_model = 0 }
 				regiment = { type = motorized_brigade name = "145th Infantry Brigade" historical_model = 0 }
 			}
 			division= {
-				name = "61st 'South Midlands' Division"
+				name = "61st Infantry Division"
 				location = 1907
 				is_reserve = yes
 				regiment = { type = motorized_brigade name = "182nd Infantry Brigade" historical_model = 1 }
@@ -290,30 +239,69 @@ theatre = {
 			}
 		}
 	}
-	army = { 
-		name = "Aldershot Command"
-		location = 2020
-		regiment = { type = hq_brigade name = "Aldershot Command HQ" historical_model = 0 }	
-		division= {
-			name = "1st Infantry Division"
-			location = 2020
-			regiment = { type = motorized_brigade name = "1st Guards Infantry Brigade" historical_model = 0 }
-			regiment = { type = motorized_brigade name = "2nd Infantry Brigade" historical_model = 0 }
-			regiment = { type = motorized_brigade name = "3rd Infantry Brigade" historical_model = 0 }
+	army = {
+		name = "Western Command"
+		location = 1613
+		regiment = { type = hq_brigade name = "Western Command HQ" historical_model = 0 }
+		corps = {
+			name = "Welsh Area"
+			location = 1727
+			regiment = { type = hq_brigade name = "Welsh Area HQ" historical_model = 0 }
+			division= {
+				name = "38th 'Welsh' Division"
+				location = 1727
+				is_reserve = yes
+				regiment = { type = motorized_brigade name = "113th Infantry Brigade" historical_model = 0 }
+				regiment = { type = motorized_brigade name = "114th Infantry Brigade" historical_model = 0 }
+				regiment = { type = motorized_brigade name = "115th Infantry Brigade" historical_model = 0 }
+			}
+			division= {
+				name = "53rd 'Welsh' Division"
+				location = 1727
+				is_reserve = yes
+				regiment = { type = motorized_brigade name = "158th Infantry Brigade" historical_model = 1 }
+				regiment = { type = motorized_brigade name = "159th Infantry Brigade" historical_model = 1 }
+				regiment = { type = motorized_brigade name = "160th Infantry Brigade" historical_model = 1 }
+			}
 		}
-		division= {
-			name = "2nd Infantry Division"
-			location = 2020
-			regiment = { type = motorized_brigade name = "4th Infantry Brigade" historical_model = 0 }
-			regiment = { type = motorized_brigade name = "5th Infantry Brigade" historical_model = 0 }
-			regiment = { type = motorized_brigade name = "6th Infantry Brigade" historical_model = 0 }
+		corps = {
+			name = "West Lancashire Area"
+			location = 1521
+			regiment = { type = hq_brigade name = "West Lanacashire Area HQ" historical_model = 0 }
+			division= {
+				name = "55th 'West Lancashire' Division"
+				location = 1521
+				is_reserve = yes
+				regiment = { type = motorized_brigade name = "164th Infantry Brigade" historical_model = 0 }
+				regiment = { type = motorized_brigade name = "164th Infantry Brigade" historical_model = 0 }
+			}
+			division= {
+				name = "59th 'Staffordshire' Division"
+				location = 1521
+				is_reserve = yes
+				regiment = { type = motorized_brigade name = "176th Infantry Brigade" historical_model = 0 }
+				regiment = { type = motorized_brigade name = "177th Infantry Brigade" historical_model = 0 }
+			}
 		}
-	}
+		corps = {
+			name = "East Lancashire Area"
+			location = 1522
+			regiment = { type = hq_brigade name = "East Lanacashire Area HQ" historical_model = 0 }
+			division= {
+				name = "42nd 'East Lancashire' Division"
+				location = 1522
+				is_reserve = yes
+				regiment = { type = motorized_brigade name = "125th Infantry Brigade" historical_model = 1 }
+				regiment = { type = motorized_brigade name = "126th Infantry Brigade" historical_model = 1 }
+				regiment = { type = motorized_brigade name = "127th Infantry Brigade" historical_model = 1 }
+			}
+		}
+	}	
 	division = {
 		name = "Gibraltar Command"
 		location = 5191
 		regiment = { type = garrison_brigade name = "Gibraltar Brigade" historical_model = 0 }
-	}	
+	}
 }
 theatre = {
 	name = "Middle East Command Theatre"
@@ -402,8 +390,6 @@ theatre = {
 		name = "Aden Command"
 		location = 9786
 		regiment = { type = garrison_brigade name = "Aden Brigade" historical_model = 0 }
-		regiment = { type = garrison_brigade name = "Aden Brigade" historical_model = 0 }
-		regiment = { type = garrison_brigade name = "Aden Brigade" historical_model = 0 }
 	}
 	division = {
 		name = "Ugandan Colonial Army"
@@ -450,7 +436,7 @@ theatre = {
 			location = 9257
 			regiment = { type = infantry_brigade name = "26th Indian Brigade" historical_model = 0 }
 			regiment = { type = infantry_brigade name = "27th Indian Brigade" historical_model = 0 }
-			regiment = { type = bergsjaeger_brigade name = "3rd Gurkha Rifles" historical_model = 0 }
+			regiment = { type = bergsjaeger_brigade name = "4th Gurkha Rifles" historical_model = 0 }
 		}
 		division = {
 			name = "7th Indian Infantry"
@@ -574,29 +560,22 @@ navy = {
 	ship = { type = battleship name = "HMS Rodney" historical_model = 2 }
 	ship = { type = battleship name = "HMS Royal Oak" historical_model = 1 }
 	ship = { type = battleship name = "HMS Royal Sovereign" historical_model = 1 }
-	ship = { type = battleship name = "HMS Ramillies" historical_model = 1 }
-	ship = { type = battlecruiser name = "HMS Hood" historical_model = 2 pride = yes }
-	ship = { type = battlecruiser name = "HMS Repulse" historical_model = 1 }
-	ship = { type = battlecruiser name = "HMS Renown" historical_model = 1 }
-	ship = { type = carrier name = "HMS Ark Royal" historical_model = 2 historical_model = 1 air = { location = 604 wing = { type = cag historical_model = 1 } } air = { location = 604 wing = { type = cag historical_model = 1 } } }
-	ship = { type = carrier name = "HMS Furious" historical_model = 1 historical_model = 1 air = { location = 604 wing = { type = cag historical_model = 1 } } air = { location = 604 wing = { type = cag historical_model = 1 } } }
-	ship = { type = light_cruiser name = "HMS Aurora" historical_model = 2 }
-	ship = { type = light_cruiser name = "HMS Sheffield" historical_model = 3 }
+	ship = { type = battleship name = "HMS Ramillies" historical_model = 1 air = { location = 604 wing = { type = cag historical_model = 1 } } air = { location = 604 wing = { type = cag historical_model = 1 } } }
+	ship = { type = carrier name = "HMS Furious" historical_model = 1 }
+	ship = { type = heavy_cruiser name = "HMS Norfolk" historical_model = 1 }
+	ship = { type = heavy_cruiser name = "HMS Suffolk" historical_model = 1 }
 	ship = { type = heavy_cruiser name = "HMS Effingham" historical_model = 1 }
+	ship = { type = light_cruiser name = "HMS Sheffield" historical_model = 3 }
+	ship = { type = light_cruiser name = "HMS Aurora" historical_model = 2 }
+	ship = { type = light_cruiser name = "HMS Achilles" historical_model = 2 }
+	ship = { type = light_cruiser name = "HMS Leander" historical_model = 2 }
 	ship = { type = light_cruiser name = "HMS Emerald" historical_model = 1 }
 	ship = { type = light_cruiser name = "HMS Enterprise" historical_model = 1 }
+	ship = { type = light_cruiser name = "HMS Diomede" historical_model = 0 }
 	ship = { type = light_cruiser name = "HMS Calypso" historical_model = 0 }
 	ship = { type = light_cruiser name = "HMS Calcutta" historical_model = 0 }
 	ship = { type = light_cruiser name = "HMS Cardiff" historical_model = 0 }
 	ship = { type = light_cruiser name = "HMS Delhi" historical_model = 0 }
-	ship = { type = heavy_cruiser name = "HMS Norfolk" historical_model = 1 }
-	ship = { type = light_cruiser name = "HMS Newcastle" historical_model = 3 }
-	ship = { type = light_cruiser name = "HMS Edinburgh" historical_model = 3 }
-	ship = { type = light_cruiser name = "HMS Belfast" historical_model = 3 }
-	ship = { type = light_cruiser name = "HMS Diomede" historical_model = 0 }
-	ship = { type = light_cruiser name = "HMS Dragon" historical_model = 0 }
-	ship = { type = light_cruiser name = "HMS Dunedin" historical_model = 0 }
-	ship = { type = light_cruiser name = "HMS Caledon" historical_model = 0 }
 	ship = { type = destroyer name = "1st Destroyer Flotilla" historical_model = 1 }
 	ship = { type = destroyer name = "2nd Destroyer Flotilla" historical_model = 1 }
 	ship = { type = destroyer name = "3rd Destroyer Flotilla" historical_model = 1 }
@@ -609,19 +588,30 @@ navy = {
 	ship = { type = destroyer name = "10th Destroyer Flotilla" historical_model = 1 }
 }
 navy = {
+	name = "Battlecruiser squadron"
+	base = 604
+	location = 604
+	ship = { type = battlecruiser name = "HMS Hood" historical_model = 2 pride = yes }
+	ship = { type = battlecruiser name = "HMS Repulse" historical_model = 1 }
+	ship = { type = battlecruiser name = "HMS Renown" historical_model = 1 }
+	ship = { type = light_cruiser name = "HMS Newcastle" historical_model = 3 }
+	ship = { type = light_cruiser name = "HMS Edinburgh" historical_model = 3 }
+}
+navy = {
 	name = "Reserve Fleet"
 	base = 604
 	location = 604
+	ship = { type = escort_carrier name = "HMS Argus" historical_model = 0 air = { location = 604 wing = { type = cag historical_model = 1 } }}
 	ship = { type = battleship name = "HMS Queen Elizabeth" historical_model = 1 }
 	ship = { type = battleship name = "HMS Valiant" historical_model = 1 }
 	ship = { type = heavy_cruiser name = "HMS Frobisher" historical_model = 1 }
 	ship = { type = heavy_cruiser name = "HMS Hawkins" historical_model = 1 }
 	ship = { type = heavy_cruiser name = "HMS London" historical_model = 1 }
-	ship = { type = light_cruiser name = "HMS Achilles" historical_model = 2 }
-	ship = { type = light_cruiser name = "HMS Leander" historical_model = 2 }
 	ship = { type = light_cruiser name = "HMS Carlisle" historical_model = 0 }
 	ship = { type = light_cruiser name = "HMS Curacoa" historical_model = 0 }
-	ship = { type = heavy_cruiser name = "HMS Suffolk" historical_model = 1 }
+	ship = { type = light_cruiser name = "HMS Dragon" historical_model = 0 }
+	ship = { type = light_cruiser name = "HMS Dunedin" historical_model = 0 }
+	ship = { type = light_cruiser name = "HMS Caledon" historical_model = 0 }
 	ship = { type = light_cruiser name = "HMS Curlew" historical_model = 0 }
 }
 navy = {
@@ -640,8 +630,8 @@ navy = {
 }
 navy = {
 	name = "1st Transport Squadron"
-	base = 604
-	location = 604
+	base = 2078
+	location = 2078
 	ship = { type = transport_ship name = "1st Transport Flotilla" historical_model = 0 }
 	ship = { type = transport_ship name = "2nd Transport Flotilla" historical_model = 0 }
 	ship = { type = transport_ship name = "3rd Transport Flotilla" historical_model = 0 }
@@ -653,8 +643,8 @@ navy = {
 	location = 2078
 	ship = { type = battleship name = "HMS Resolution" historical_model = 1 }
 	ship = { type = battleship name = "HMS Revenge" historical_model = 1 }
-	ship = { type = carrier name = "HMS Courageous" historical_model = 1 }
-	ship = { type = escort_carrier name = "HMS Hermes" historical_model = 0 historical_model = 1 air = { location = 2078 wing = { type = cag historical_model = 1 } } }
+	ship = { type = carrier name = "HMS Courageous" historical_model = 1 air = { location = 2078 wing = { type = cag historical_model = 1 } } air = { location = 2078 wing = { type = cag historical_model = 1 } } }
+	ship = { type = escort_carrier name = "HMS Hermes" historical_model = 0 air = { location = 2078 wing = { type = cag historical_model = 1 } }}
 	ship = { type = light_cruiser name = "HMS Ceres" historical_model = 0 }
 	ship = { type = light_cruiser name = "HMS Caradoc" historical_model = 0 }
 	ship = { type = light_cruiser name = "HMS Cairo" historical_model = 0 }
@@ -686,6 +676,7 @@ navy = {
 	name = "Humber Force"
 	base = 1524
 	location = 1524
+	ship = { type = light_cruiser name = "HMS Belfast" historical_model = 3 }
 	ship = { type = light_cruiser name = "HMS Southampton" historical_model = 3 }
 	ship = { type = light_cruiser name = "HMS Glasgow" historical_model = 3 }
 	ship = { type = destroyer name = "13th Destroyer Flotilla" historical_model = 1 }
@@ -705,7 +696,7 @@ navy = {
 	ship = { type = battleship name = "HMS Warspite" historical_model = 1 }
 	ship = { type = battleship name = "HMS Barham" historical_model = 1 }
 	ship = { type = battleship name = "HMS Malaya" historical_model = 1 }
-	ship = { type = carrier name = "HMS Glorious" historical_model = 1 historical_model = 1 air = { location = 5586 wing = { type = cag historical_model = 1 } } air = { location = 5586 wing = { type = cag historical_model = 1 } } }
+	ship = { type = carrier name = "HMS Glorious" historical_model = 1 air = { location = 5586 wing = { type = cag historical_model = 1 } } air = { location = 5586 wing = { type = cag historical_model = 1 } } }
 	ship = { type = heavy_cruiser name = "HMS Devonshire" historical_model = 1 }
 	ship = { type = heavy_cruiser name = "HMS Shropshire" historical_model = 1 }
 	ship = { type = heavy_cruiser name = "HMS Sussex" historical_model = 1 }
@@ -722,12 +713,6 @@ navy = {
 	ship = { type = destroyer name = "23rd Destroyer Flotilla" historical_model = 1 }
 }
 navy = {
-	name = "Argus"
-	base = 5586
-	location = 5586
-	ship = { type = escort_carrier name = "HMS Argus" historical_model = 1 air = { location = 5586 wing = { type = cag historical_model = 1 } } historical_model = 0 }
-}
-navy = {
 	name = "1st Submarine Squadron"
 	base = 5586
 	location = 5586
@@ -736,7 +721,7 @@ navy = {
 	ship = { type = submarine name = "4th Submarine Flotilla" historical_model = 2 }
 }
 navy = {
-	name = "5th Submarine Squadron"
+	name = "7th Submarine Squadron"
 	base = 5586
 	location = 5586
 	ship = { type = submarine name = "2nd Submarine Flotilla" historical_model = 0 }
@@ -752,8 +737,8 @@ navy = {
 }
 navy = {
 	name = "4th Transport Squadron"
-	base = 604
-	location = 604
+	base = 2021
+	location = 2021
 	ship = { type = transport_ship name = "13th Transport Flotilla" historical_model = 0 }
 	ship = { type = transport_ship name = "14th Transport Flotilla" historical_model = 0 }
 	ship = { type = transport_ship name = "15th Transport Flotilla" historical_model = 0 }
@@ -794,8 +779,8 @@ navy = {
 }
 navy = {
 	name = "America and West Indies Station"
-	base = 10628
-	location = 10628
+	base = 8734
+	location = 8734
 	ship = { type = heavy_cruiser name = "HMS Berwick" historical_model = 1 }
 	ship = { type = light_cruiser name = "HMS Orion" historical_model = 2 }
 	ship = { type = heavy_cruiser name = "HMS York" historical_model = 1 }
@@ -804,7 +789,7 @@ navy = {
 	name = "China Station"
 	base = 5868
 	location = 5868
-	ship = { type = escort_carrier name = "HMS Eagle" historical_model = 1 air = { location = 5868 wing = { type = cag historical_model = 1 } } historical_model = 1 }
+	ship = { type = escort_carrier name = "HMS Eagle" historical_model = 1 air = { location = 5868 wing = { type = cag historical_model = 1 } } }
 	ship = { type = heavy_cruiser name = "HMS Kent" historical_model = 1 }
 	ship = { type = heavy_cruiser name = "HMS Cornwall" historical_model = 1 }
 	ship = { type = light_cruiser name = "HMS Birmingham" historical_model = 3 }
@@ -825,109 +810,143 @@ navy = {
 	base = 6320
 	location = 6320
 	ship = { type = light_cruiser name = "HMS Gloucester" historical_model = 3 }
-	ship = { type = light_cruiser name = "HMS Liverpool" historical_model = 3 }
 	ship = { type = light_cruiser name = "HMS Manchester" historical_model = 3 }
 }
 air = {
-	name = "Advanced Air Striking Force(No.1 Group)"
-	base = 1731
-	location = 1731
-	wing = { type = tactical_bomber name = "Advanced Air Striking Force" historical_model = 1 }
+	name = "No.18 Group Coastal Command"
+	base = 604
+	location = 604
+	wing = { type = naval_bomber name = "No.18 Group Squadrons" historical_model = 0 }
 }
 air = {
-	name = "No.2 Group"
+	name = "No.13 (Fighter) Group"
+	base = 1127
+	location = 1127
+	wing = { type = interceptor name = "No.13 Group Squadrons" historical_model = 1 }
+}
+air = {
+	name = "No.15 Group Coastal Command"
 	base = 1521
 	location = 1521
-	wing = { type = strategic_bomber name = "No.2 Group" historical_model = 0 }
+	wing = { type = naval_bomber name = "No.15 Group Squadrons" historical_model = 0 }
 }
 air = {
-	name = "No.3 Group"
-	base = 1255
-	location = 1255
-	wing = { type = strategic_bomber name = "No.3 Group" historical_model = 0 }
+	name = "No.12 (Fighter) Group"
+	base = 1567
+	location = 1567
+	wing = { type = interceptor name = "No.12 Group Squadrons" historical_model = 1 }
 }
 air = {
-	name = "No.16 Group"
-	base = 1255
-	location = 1255
-	wing = { type = naval_bomber name = "No.16 Group" historical_model = 0 }
-}
-air = {
-	name = "No.18 Group"
-	base = 1255
-	location = 1255
-	wing = { type = naval_bomber name = "No.18 Group" historical_model = 0 }
-}
-air = {
-	name = "No.4 Group"
-	base = 1255
-	location = 1255
-	wing = { type = strategic_bomber name = "No.4 Group" historical_model = 0 }
-}
-air = {
-	name = "No.5 Group"
+	name = "No.1 (Bomber) Group"
 	base = 1731
 	location = 1731
-	wing = { type = tactical_bomber name = "No.5 Group" historical_model = 1 }
+	wing = { type = tactical_bomber name = "No.71 (Bomber) Wing" historical_model = 1 }
+	wing = { type = tactical_bomber name = "No.75 (Bomber) Wing" historical_model = 1 }
 }
 air = {
-	name = "No.11 Group"
-	base = 2021
-	location = 2021
-	wing = { type = interceptor name = "No.11 Group" historical_model = 1 }
+	name = "No.3 (Bomber) Group"
+	base = 1731
+	location = 1731
+	wing = { type = strategic_bomber name = "No.71 (Bomber) Wing" historical_model = 0 }
 }
 air = {
-	name = "No.12 Group"
-	base = 2021
-	location = 2021
-	wing = { type = interceptor name = "No.12 Group" historical_model = 1 }
+	name = "No.4 (Bomber) Group"
+	base = 1731
+	location = 1731
+	wing = { type = strategic_bomber name = "No.4 Group Squadrons" historical_model = 0 }
 }
 air = {
-	name = "No.13 Group"
+	name = "No.5 (Bomber) Group"
+	base = 1731
+	location = 1731
+	wing = { type = tactical_bomber name = "No.5 Group Squadrons" historical_model = 1 }
+}
+air = {
+	name = "No.10 (Fighter) Group"
 	base = 2078
 	location = 2078
-	wing = { type = interceptor name = "No.13 Group" historical_model = 1 }
-}
-air = {
-	name = "Middle East Air Command"
-	base = 9213
-	location = 9213
-	wing = { type = tactical_bomber name = "Middle East Group" historical_model = 2 }
+	wing = { type = interceptor name = "No.10 Group Squadrons" historical_model = 1 }
 }
 air = {
 	name = "India Air Command"
 	base = 5875
 	location = 5875
-	wing = { type = tactical_bomber name = "Indian Group" historical_model = 2 }
+	wing = { type = tactical_bomber name = "Indian Group" historical_model = 1 }
 }
 air = {
 	name = "Far East Air Command"
 	base = 6394
 	location = 6394
-	wing = { type = tactical_bomber name = "Far East Group" historical_model = 2 }
+	wing = { type = tactical_bomber name = "Far East Group" historical_model = 1 }
+}
+
+air = {
+	name = "No.2 (Bomber) Group"
+	base = 1728
+	location = 1728
+	wing = { type = tactical_bomber name = "No.73 (Bomber) Wing" historical_model = 1 }
+	wing = { type = tactical_bomber name = "No.74 (Bomber) Wing" historical_model = 1 }
+}
+air = {
+	name = "No.16 Group Coastal Command"
+	base = 2021
+	location = 2021
+	wing = { type = naval_bomber name = "No.16 Group Squadrons" historical_model = 0 }
+}
+air = {
+	name = "No.11 (Fighter) Group"
+	base = 2021
+	location = 2021
+	wing = { type = interceptor name = "No.11 Group" historical_model = 1 }
+}
+air = {
+	name = "Middle East Air Command"
+	base = 5535
+	location = 5535
+	wing = { type = tactical_bomber name = "Middle East Group" historical_model = 1 }
 }
 
 
 
 military_construction = {
 	country = ENG
-	battleship = {
-		name = "HMS King George V"
+	light_cruiser = {
+		name = "HMS Liverpool"
 		historical_model = 3
 	}
-	cost = 8.50
+	cost = 5.40
 	progress = 0
-	duration = 461
+	duration = 55
 }
 military_construction = {
 	country = ENG
-	battleship = {
-		name = "HMS Prince of Wales"
-		historical_model = 3
+	carrier = {
+		name = "HMS Ark Royal"
+		historical_model = 2
 	}
-	cost = 8.50
+	cost = 5.40
 	progress = 0
-	duration = 569
+	duration = 65
+}
+military_construction = {
+	country = ENG
+	cag = {
+		name = "1. Ark Royal"
+		historical_model = 1
+	}
+	cost = 10.62
+	progress = 0
+	duration = 65
+}
+military_construction = {
+	country = ENG
+	cag = {
+		name = "2. Ark Royal"
+		historical_model = 1
+	}
+	cost = 10.62
+	progress = 0
+	duration = 65
 }
 military_construction = {
 	country = ENG
@@ -935,9 +954,9 @@ military_construction = {
 		name = "HMS Illustrious"
 		historical_model = 3
 	}
-	cost = 5.90
+	cost = 6.30
 	progress = 0
-	duration = 265
+	duration = 406
 }
 military_construction = {
 	country = ENG
@@ -945,9 +964,9 @@ military_construction = {
 		name = "1. Illustrious"
 		historical_model = 1
 	}
-	cost = 10.86
+	cost = 10.62
 	progress = 0
-	duration = 265
+	duration = 406
 }
 military_construction = {
 	country = ENG
@@ -955,39 +974,39 @@ military_construction = {
 		name = "2. Illustrious"
 		historical_model = 1
 	}
-	cost = 10.86
+	cost = 10.62
 	progress = 0
-	duration = 265
+	duration = 406
 }
 military_construction = {
 	country = ENG
-	carrier = {
-		name = "HMS Victorious"
+	battleship = {
+		name = "HMS King George V"
 		historical_model = 3
 	}
-	cost = 5.90
+	cost = 9.00
 	progress = 0
-	duration = 615
+	duration = 422
 }
 military_construction = {
 	country = ENG
-	cag = {
-		name = "1. Victorious"
-		historical_model = 1
+	battleship = {
+		name = "HMS Prince of Wales"
+		historical_model = 3
 	}
-	cost = 10.86
+	cost = 9.00
 	progress = 0
-	duration = 615
+	duration = 430
 }
 military_construction = {
 	country = ENG
-	cag = {
-		name = "2. Victorious"
-		historical_model = 1
+	battleship = {
+		name = "HMS Duke of York"
+		historical_model = 3
 	}
-	cost = 10.86
+	cost = 9.00
 	progress = 0
-	duration = 615
+	duration = 437
 }
 military_construction = {
 	country = ENG
@@ -995,9 +1014,9 @@ military_construction = {
 		name = "HMS Formidable"
 		historical_model = 3
 	}
-	cost = 5.90
+	cost = 6.30
 	progress = 0
-	duration = 444
+	duration = 468
 }
 military_construction = {
 	country = ENG
@@ -1005,9 +1024,9 @@ military_construction = {
 		name = "1. Formidable"
 		historical_model = 1
 	}
-	cost = 10.86
+	cost = 10.62
 	progress = 0
-	duration = 444
+	duration = 468
 }
 military_construction = {
 	country = ENG
@@ -1015,37 +1034,87 @@ military_construction = {
 		name = "2. Formidable"
 		historical_model = 1
 	}
-	cost = 10.86
+	cost = 10.62
 	progress = 0
-	duration = 444
+	duration = 468
 }
 military_construction = {
 	country = ENG
-	destroyer = {
-		name = "31st Destroyer Flotilla"
+	carrier = {
+		name = "HMS Victorious"
+		historical_model = 3
+	}
+	cost = 6.30
+	progress = 0
+	duration = 493
+}
+military_construction = {
+	country = ENG
+	cag = {
+		name = "1. Victorious"
 		historical_model = 1
 	}
-	cost = 1.70
+	cost = 10.62
 	progress = 0
-	duration = 31
+	duration = 493
 }
 military_construction = {
 	country = ENG
-	submarine = {
-		name = "13th Submarine Flotilla"
-		historical_model = 2
+	cag = {
+		name = "2. Victorious"
+		historical_model = 1
 	}
-	cost = 1.70
+	cost = 10.62
 	progress = 0
-	duration = 31
+	duration = 493
 }
 military_construction = {
 	country = ENG
-	submarine = {
-		name = "14th Submarine Flotilla"
-		historical_model = 2
+	battleship = {
+		name = "HMS Howe"
+		historical_model = 3
 	}
-	cost = 1.70
+	cost = 9.00
 	progress = 0
-	duration = 61
+	duration = 557
+}
+military_construction = {
+	country = ENG
+	battleship = {
+		name = "HMS Anson"
+		historical_model = 3
+	}
+	cost = 9.00
+	progress = 0
+	duration = 566
+}
+military_construction = {
+	country = ENG
+	carrier = {
+		name = "HMS Indomitable"
+		historical_model = 3
+	}
+	cost = 6.30
+	progress = 0
+	duration = 584
+}
+military_construction = {
+	country = ENG
+	cag = {
+		name = "1. Indomitable"
+		historical_model = 1
+	}
+	cost = 10.62
+	progress = 0
+	duration = 584
+}
+military_construction = {
+	country = ENG
+	cag = {
+		name = "2. Indomitable"
+		historical_model = 1
+	}
+	cost = 10.62
+	progress = 0
+	duration = 584
 }

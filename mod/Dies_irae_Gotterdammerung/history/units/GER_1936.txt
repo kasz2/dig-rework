@@ -32,13 +32,13 @@ theatre= {
 			regiment = { type = infantry_brigade experience = 45 name = "Infanterie-Regiment 67" historical_model = 1 }
 			regiment = { type = infantry_brigade experience = 45 name = "Infanterie-Regiment 68" historical_model = 1 }
 		}	
-#		division = {
-#			name = "SS-Verfügungstruppe"
-#			location = 1861	
-#			regiment = { type = waffen_brigade experience = 45 name = "Leibstandarte SS 'Adolf Hitler'" historical_model = 1 }
-#			regiment = { type = waffen_brigade experience = 45 name = "1. SS-Standarte 'Deutschland'" historical_model = 1 }
-#			regiment = { type = waffen_brigade experience = 45 name = "2. SS-Standarte 'Germania'" historical_model = 1 }
-#		}
+		division = {
+			name = "SS-Verfügungstruppe"
+			location = 1861	
+			regiment = { type = motorized_brigade experience = 45 name = "Leibstandarte SS 'Adolf Hitler'" historical_model = 1 }
+			regiment = { type = motorized_brigade experience = 45 name = "1. SS-Standarte 'Deutschland'" historical_model = 1 }
+			regiment = { type = motorized_brigade experience = 45 name = "2. SS-Standarte 'Germania'" historical_model = 1 }
+		}
 	}		
 	corps = {		
 		name = "I. Armeekorps"	
@@ -410,7 +410,7 @@ navy = {
 	name = "Kriegsmarine"
 	base = 1570
 	location = 1570
-	ship = { type = pocket_battleship name = "Deutschland" historical_model = 3 }
+	ship = { type = pocket_battleship name = "Deutschland" historical_model = 3 pride = yes experience = 25 }
 	ship = { type = pocket_battleship name = "Admiral Scheer" historical_model = 3 }
 	ship = { type = light_cruiser name = "Nürnberg" historical_model = 3 }
 	ship = { type = light_cruiser name = "Leipzig" historical_model = 2 }
@@ -425,18 +425,19 @@ navy = {
 	base = 1570
 	location = 1570
 	ship = { type = submarine_coastal name = "1. Unterseebootsflottille" historical_model = 0 }
+	
 }
 navy = {
 	name = "II. Unterseebootsflotte"
 	base = 1572
 	location = 1572
-	ship = { type = submarine_coastal name = "2. Unterseebootsflottille" historical_model = 1 }
+	ship = { type = submarine_coastal name = "2. Unterseebootsflottille" historical_model = 0 }
 }
 navy = {
 	name = "III. Unterseebootsflotte"
 	base = 1572
 	location = 1572
-	ship = { type = submarine_mr name = "3. Unterseebootsflottille" historical_model = 1 }
+	ship = { type = submarine_mr name = "3. Unterseebootsflottille" historical_model = 0 }
 }
 navy = {
 	name = "Baltische Flotte"
@@ -469,7 +470,7 @@ air = {
 	base = 2153
 	location = 2153
 	wing = { type = tactical_bomber name = "KG 53 'Legion Condor'" historical_model = 0 }
-	wing = { type = tactical_bomber name = "Kampfgeschwader 25" historical_model = 0 }
+	wing = { type = tactical_bomber name = "KG 25" historical_model = 0 }
 	wing = { type = tactical_bomber name = "KG 30 'Adler'" historical_model = 0 }
 }
 air = {
@@ -485,6 +486,8 @@ air = {
 	location = 2952
 	wing = { type = tactical_bomber name = "KG 4 'General Wever'" historical_model = 0 }
 }
+
+
 
 military_construction = {
 	country = GER
