@@ -18,7 +18,7 @@ partisan_brigade = {
 
 	#Misc Abilities
 	maximum_speed = 3.00
-	transport_weight = 5.00
+	transport_weight = 500.00
 	supply_consumption = 0.00
 	fuel_consumption = 0.00
 	radio_strength = 1
